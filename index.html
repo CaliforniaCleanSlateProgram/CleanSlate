@@ -1,77 +1,224 @@
-<section id="continuum" style="padding: 60px 20px; background-color: #f9fbfd; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <div style="max-width: 1100px; margin: 0 auto; text-align: center; margin-bottom: 50px;">
-        <h2 style="color: #0d3b66; font-size: 2.5rem; margin-bottom: 15px; font-weight: 700;">Our 5-Phase "Streets to Sheets" Continuum</h2>
-        <p style="color: #546e7a; font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">
-            A structural, clinical, and relational pathway designed to restore dignity, cultivate accountability, and permanently reincorporate individuals back into the community.
-        </p>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California Clean Slate Program | Streets to Sheets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #0d3b66;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .logo-highlight {
+            color: #f4d35e;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f4d35e;
+        }
+        .hero {
+            background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.85)), url('phase1.jpg.png') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+        .phase-card {
+            display: flex; 
+            flex-wrap: wrap; 
+            background: #ffffff; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            align-items: center;
+        }
+        .phase-card.reverse {
+            flex-direction: row-reverse;
+        }
+        .phase-image-container {
+            flex: 1; 
+            min-width: 300px; 
+            height: 380px; 
+            overflow: hidden;
+        }
+        .phase-image-container img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
+        .phase-text-container {
+            flex: 1; 
+            min-width: 300px; 
+            padding: 40px; 
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: #0d3b66;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.95rem;
+            border-top: 4px solid #f4d35e;
+        }
+    </style>
+</head>
+<body>
 
-    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px;">
-        
-        <div style="display: flex; flex-wrap: wrap; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); align-items: center;">
-            <div style="flex: 1; min-width: 300px; max-height: 380px; overflow: hidden;">
-                <img src="phase1.jpg.png" alt="Phase 1: Street Outreach" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            </div>
-            <div style="flex: 1; min-width: 300px; padding: 40px; box-sizing: border-box;">
-                <span style="background: #e3f2fd; color: #0288d1; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 1</span>
-                <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Street Outreach &amp; Hygiene</h3>
-                <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
-                    Building direct, trust-based relationships on the streets. Our team meets unhoused community members right where they are, handing out essential resources, providing a human connection, and offering immediate, baseline support.
-                </p>
-            </div>
+    <header>
+        <div class="nav-container">
+            <div class="logo-text">California <span class="logo-highlight">Clean Slate</span> Program</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#continuum">Our Continuum</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Restoring Hope. Rebuilding Lives.</h1>
+            <p>Providing structural support, personal accountability, and community reintegration pathways.</p>
+        </div>
+    </section>
+
+    <section id="continuum" style="padding: 60px 20px; background-color: #f9fbfd;">
+        <div style="max-width: 1100px; margin: 0 auto; text-align: center; margin-bottom: 50px;">
+            <h2 style="color: #0d3b66; font-size: 2.5rem; margin-bottom: 15px; font-weight: 700;">Our 5-Phase "Streets to Sheets" Continuum</h2>
+            <p style="color: #546e7a; font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+                A structural, clinical, and relational pathway designed to restore dignity, cultivate accountability, and permanently reincorporate individuals back into the community.
+            </p>
         </div>
 
-        <div style="display: flex; flex-wrap: wrap; flex-direction: row-reverse; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); align-items: center;">
-            <div style="flex: 1; min-width: 300px; max-height: 380px; overflow: hidden;">
-                <img src="van (1).jpg" alt="Phase 2: Mobile Hygiene Unit" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px;">
+            
+            <div class="phase-card">
+                <div class="phase-image-container">
+                    <img src="phase1.jpg.png" alt="Phase 1: Street Outreach">
+                </div>
+                <div class="phase-text-container">
+                    <span style="background: #e3f2fd; color: #0288d1; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 1</span>
+                    <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Street Outreach &amp; Hygiene</h3>
+                    <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
+                        Building direct, trust-based relationships on the streets. Our team meets unhoused community members right where they are, handing out essential resources, providing a human connection, and offering immediate, baseline support.
+                    </p>
+                </div>
             </div>
-            <div style="flex: 1; min-width: 300px; padding: 40px; box-sizing: border-box;">
-                <span style="background: #e8f5e9; color: #2e7d32; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 2</span>
-                <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Mobile Service Units</h3>
-                <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
-                    Restoring fundamental dignity through our customized mobile hygiene systems. By deploying specialized truck and trailer setups directly to high-need areas, we provide safe access to warm showers, fresh clothing changes, and critical resource navigation.
-                </p>
-            </div>
-        </div>
 
-        <div style="display: flex; flex-wrap: wrap; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); align-items: center;">
-            <div style="flex: 1; min-width: 300px; max-height: 380px; overflow: hidden;">
-                <img src="phase3.jpg.png" alt="Phase 3: Detox &amp; Recovery Referrals" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            <div class="phase-card reverse">
+                <div class="phase-image-container">
+                    <img src="van (1).jpg" alt="Phase 2: Mobile Service Unit">
+                </div>
+                <div class="phase-text-container">
+                    <span style="background: #e8f5e9; color: #2e7d32; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 2</span>
+                    <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Mobile Service Units</h3>
+                    <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
+                        Restoring fundamental dignity through our customized mobile hygiene systems. By deploying specialized truck and trailer setups directly to high-need areas, we provide safe access to warm showers, fresh clothing changes, and critical resource navigation.
+                    </p>
+                </div>
             </div>
-            <div style="flex: 1; min-width: 300px; padding: 40px; box-sizing: border-box;">
-                <span style="background: #fff3e0; color: #ef6c00; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 3</span>
-                <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Detox &amp; Recovery Referrals</h3>
-                <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
-                    Acting as an intentional, warm bridge to licensed external clinical providers. We guide participants smoothly from initial stabilization into medical detox and inpatient treatment facilities, standing by them as they complete their critical clinical milestones.
-                </p>
-            </div>
-        </div>
 
-        <div style="display: flex; flex-wrap: wrap; flex-direction: row-reverse; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); align-items: center;">
-            <div style="flex: 1; min-width: 300px; max-height: 380px; overflow: hidden;">
-                <img src="phase4.jpg.png" alt="Phase 4: Sober Living Environments" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            <div class="phase-card">
+                <div class="phase-image-container">
+                    <img src="phase3.jpg.png" alt="Phase 3: Detox &amp; Recovery Referrals">
+                </div>
+                <div class="phase-text-container">
+                    <span style="background: #fff3e0; color: #ef6c00; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 3</span>
+                    <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Detox &amp; Recovery Referrals</h3>
+                    <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
+                        Acting as an intentional, warm bridge to licensed external clinical providers. We guide participants smoothly from initial stabilization into medical detox and inpatient treatment facilities, standing by them as they complete their critical clinical milestones.
+                    </p>
+                </div>
             </div>
-            <div style="flex: 1; min-width: 300px; padding: 40px; box-sizing: border-box;">
-                <span style="background: #f3e5f5; color: #8e24aa; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 4</span>
-                <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Sober Living Environments</h3>
-                <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
-                    Transitioning individuals into supportive, structured housing. Our sober living environments champion peer accountability, communal safety covenants, and a healthy routine that helps participants establish an enduring, stable foundation.
-                </p>
-            </div>
-        </div>
 
-        <div style="display: flex; flex-wrap: wrap; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); align-items: center;">
-            <div style="flex: 1; min-width: 300px; max-height: 380px; overflow: hidden;">
-                <img src="phase5.jpg.png" alt="Phase 5: Full Community Reincorporation" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            <div class="phase-card reverse">
+                <div class="phase-image-container">
+                    <img src="phase4.jpg.png" alt="Phase 4: Sober Living Environments">
+                </div>
+                <div class="phase-text-container">
+                    <span style="background: #f3e5f5; color: #8e24aa; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 4</span>
+                    <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Sober Living Environments</h3>
+                    <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
+                        Transitioning individuals into supportive, structured housing. Our sober living environments champion peer accountability, communal safety covenants, and a healthy routine that helps participants establish an enduring, stable foundation.
+                    </p>
+                </div>
             </div>
-            <div style="flex: 1; min-width: 300px; padding: 40px; box-sizing: border-box;">
-                <span style="background: #e0f7fa; color: #00838f; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 5</span>
-                <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Community Reincorporation</h3>
-                <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
-                    The ultimate goal achieved. Through strategic workforce development partners, program graduates are matched with real, sustainable employment opportunities—fully restoring independence and sealing their journey to an entirely clean slate.
-                </p>
-            </div>
-        </div>
 
-    </div>
-</section>
+            <div class="phase-card">
+                <div class="phase-image-container">
+                    <img src="phase5.jpg.png" alt="Phase 5: Full Community Reincorporation">
+                </div>
+                <div class="phase-text-container">
+                    <span style="background: #e0f7fa; color: #00838f; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phase 5</span>
+                    <h3 style="color: #0d3b66; font-size: 1.8rem; margin: 15px 0 10px 0; font-weight: 600;">Community Reincorporation</h3>
+                    <p style="color: #546e7a; line-height: 1.7; font-size: 1rem; margin: 0;">
+                        The ultimate goal achieved. Through strategic workforce development partners, program graduates are matched with real, sustainable employment opportunities—fully restoring independence and sealing their journey to an entirely clean slate.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 California Clean Slate Program. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
