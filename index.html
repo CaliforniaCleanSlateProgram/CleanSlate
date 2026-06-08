@@ -39,10 +39,10 @@
             color: #f4d35e;
         }
 
-        /* YOUTUBE BACKGROUND HERO BANNER - STYLING PRESERVED */
+        /* YOUTUBE BACKGROUND HERO BANNER - MADE TALLER TO SHOW MORE VIDEO */
         .hero {
             position: relative;
-            height: 400px;
+            height: 550px; /* Increased from 400px to reveal the top and bottom parts */
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -69,7 +69,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(13, 59, 102, 0.75);
+            background: rgba(13, 59, 102, 0.65); /* Made slightly lighter to let the video shine */
             z-index: 2;
         }
         .hero-content {
@@ -79,7 +79,25 @@
             padding: 20px;
         }
 
-        /* TIMELINE CONTAINER WITH IMAGES ON THE LEFT - ALL CONTENT PRESERVED */
+        /* VIDEO AUDIO CTA BUTTON */
+        .video-btn {
+            display: inline-block;
+            background-color: #f4d35e;
+            color: #0d3b66;
+            padding: 12px 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            font-size: 1.1rem;
+        }
+        .video-btn:hover {
+            background-color: #ffffff;
+            color: #0d3b66;
+        }
+
+        /* TIMELINE CONTAINER WITH IMAGES ON THE LEFT */
         .container {
             max-width: 1000px;
             margin: 40px auto;
@@ -139,10 +157,11 @@
     </header>
 
     <section class="hero" id="home">
-        <iframe src="https://www.youtube.com/embed/1jT8LUaMA0o?autoplay=1&mute=1&loop=1&playlist=1jT8LUaMA0o&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/1jT8LUaMA0o?autoplay=1&mute=1&loop=1&playlist=1jT8LUaMA0o&controls=0&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            </div>
+            <a href="https://www.youtube.com/watch?v=1jT8LUaMA0o" target="_blank" class="video-btn">▶ Watch Full Video with Audio</a>
+        </div>
     </section>
 
     <div class="container" id="continuum">
@@ -151,7 +170,7 @@
         <div class="phase-block">
             <img src="phase1.jpg.png" alt="Phase 1" class="phase-image">
             <div class="phase-text">
-                <h3 class="phase-title">Phase 1: Street Outreach & Hygiene</h3>
+                <h3 class="phase-title">Phase 1: Street Outreach &amp; Hygiene</h3>
                 <p>Building direct, trust-based relationships on the streets. Our team meets unhoused community members right where they are, handing out essential resources, providing a human connection, and offering immediate, baseline support.</p>
             </div>
         </div>
@@ -167,7 +186,7 @@
         <div class="phase-block">
             <img src="phase3.jpg.png" alt="Phase 3" class="phase-image">
             <div class="phase-text">
-                <h3 class="phase-title">Phase 3: Detox & Recovery Referrals</h3>
+                <h3 class="phase-title">Phase 3: Detox &amp; Recovery Referrals</h3>
                 <p>Acting as an intentional, warm bridge to licensed external clinical providers. We guide participants smoothly from initial stabilization into medical detox and inpatient treatment facilities, standing by them as they complete their critical clinical milestones.</p>
             </div>
         </div>
