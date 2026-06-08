@@ -142,6 +142,26 @@
             padding: 20px;
             margin-top: 40px;
         }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 768px) {
+            .phase-block {
+                flex-direction: column;
+                text-align: center;
+            }
+            .phase-image {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            .hero {
+                height: 300px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -177,6 +197,7 @@
 
     <div class="container" id="continuum">
         <h2 class="section-title">Our 5-Phase "Streets to Sheets" Continuum</h2>
+
         <div class="phase-block">
             <img src="phase1.jpg.png" alt="Phase 1" class="phase-image">
             <div class="phase-text">
