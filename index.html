@@ -76,54 +76,54 @@
     </p>
 
 </div>
-    <!-- Add this to your CSS to make them look clickable -->
-<style>
-    .impact-card-link {
+    <style>
+    /* High Impact Section Styling */
+    .impact-section {
+        position: relative;
+        background: linear-gradient(rgba(13, 59, 102, 0.9), rgba(13, 59, 102, 0.9)), url('web1.png');
+        background-size: cover;
+        background-position: center;
+        padding: 60px 20px;
+        text-align: center;
+        color: #ffffff;
+    }
+    .impact-headline { color: #f4d35e; font-size: 2.5rem; margin-bottom: 20px; }
+    .impact-sub { font-size: 1.3rem; font-style: italic; color: #e0e0e0; margin-bottom: 40px; }
+    
+    .impact-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; }
+    
+    .impact-card {
+        flex: 1;
+        min-width: 280px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
         text-decoration: none;
-        color: inherit;
-        display: block;
+        color: white;
         transition: transform 0.2s, background 0.2s;
     }
-    .impact-card-link:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.1);
-        cursor: pointer;
-    }
+    .impact-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.2); }
+    .impact-card h4 { color: #ffffff; border-bottom: 2px solid #f4d35e; display: inline-block; margin-bottom: 15px; }
 </style>
-
-<!-- Update the Grid to this -->
-<div class="impact-grid">
-    <a href="need.html" class="impact-card impact-card-link">
-        <h4>The Urgent Need</h4>
-        <p>Recent service closures have left our neighbors without essential hygiene. <b>We are restoring it immediately.</b></p>
-    </a>
-    <a href="solution.html" class="impact-card impact-card-link">
-        <h4>Next-Gen Solutions</h4>
-        <p>Our custom mobile unit functions as <b>both a shower hub and a service navigation center.</b></p>
-    </a>
-    <a href="donate.html" class="impact-card impact-card-link">
-        <h4>Join the Build</h4>
-        <p>Help us reach our <b>$60,000</b> launch goal. <i>Your investment is the catalyst.</i></p>
-    </a>
-</div>
 
 <section class="impact-section">
     <h2 class="impact-headline">Santa Cruz Needs a Clean Start</h2>
     <p class="impact-sub">"We are not just filling a void; we are building the future of mobile care."</p>
 
     <div class="impact-grid">
-        <div class="impact-card">
+        <a href="need.html" class="impact-card">
             <h4>The Urgent Need</h4>
             <p>Recent service closures have left our neighbors without essential hygiene. <b>We are restoring it immediately.</b></p>
-        </div>
-        <div class="impact-card">
+        </a>
+        <a href="solution.html" class="impact-card">
             <h4>Next-Gen Solutions</h4>
             <p>Our custom mobile unit functions as <b>both a shower hub and a service navigation center.</b></p>
-        </div>
-        <div class="impact-card">
+        </a>
+        <a href="donate.html" class="impact-card">
             <h4>Join the Build</h4>
             <p>Help us reach our <b>$60,000</b> launch goal. <i>Your investment is the catalyst.</i></p>
-        </div>
+        </a>
     </div>
 </section>
     
