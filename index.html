@@ -41,20 +41,20 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        /* Card styling including link removal for underlines */
         .phase-card {
             flex: 0 0 300px;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent for better depth */
             padding: 20px;
             border-radius: 15px;
             scroll-snap-align: start;
-            color: #0d3b66;
+            color: #fff; /* White text for high impact */
             text-align: center;
             text-decoration: none;
             display: block;
+            border: 1px solid rgba(255,255,255,0.3);
         }
         
-        .phase-card:hover { transform: scale(1.02); transition: 0.3s; }
+        .phase-card:hover { transform: scale(1.02); transition: 0.3s; background: rgba(255, 255, 255, 0.3); }
         .phase-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
 
         footer { background-color: #0d3b66; color: white; text-align: center; padding: 20px; margin-top: 40px; }
@@ -86,28 +86,28 @@
     <div class="continuum-grid" id="continuum">
         <a href="phase1.html" class="phase-card">
             <img src="phase1.jpg.png" class="phase-img" alt="Phase 1">
-            <h3>Phase 1</h3>
-            <p>Street Outreach & Hygiene</p>
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 1</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Street Outreach & Hygiene</p>
         </a>
         <a href="phase2.html" class="phase-card">
             <img src="van (1).jpg" class="phase-img" alt="Phase 2">
-            <h3>Phase 2</h3>
-            <p>Mobile Service Units</p>
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 2</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Mobile Service Units</p>
         </a>
         <a href="phase3.html" class="phase-card">
             <img src="phase3.jpg.png" class="phase-img" alt="Phase 3">
-            <h3>Phase 3</h3>
-            <p>Stabilization & Recovery</p>
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 3</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Stabilization & Recovery</p>
         </a>
         <a href="phase4.html" class="phase-card">
             <img src="phase4.jpg.png" class="phase-img" alt="Phase 4">
-            <h3>Phase 4</h3>
-            <p>Sober Living Environments</p>
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 4</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Sober Living Environments</p>
         </a>
         <a href="phase5.html" class="phase-card">
             <img src="phase5.jpg.png" class="phase-img" alt="Phase 5">
-            <h3>Phase 5</h3>
-            <p>Community Reincorporation</p>
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 5</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Community Reincorporation</p>
         </a>
     </div>
 
