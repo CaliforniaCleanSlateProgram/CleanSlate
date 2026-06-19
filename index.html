@@ -7,10 +7,11 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* C2IMG.png as the primary background with light frost (0.4) to mask pixelation */
+        /* C2IMG.png as the primary background with DENSE light-gray frost (0.7) */
         body { 
             font-family: Arial, sans-serif; 
-            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('c2img.png') no-repeat center center fixed; 
+            /* Increased opacity to 0.7 to make the background vaguely visible through dense fog */
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('c2img.png') no-repeat center center fixed; 
             background-size: cover; 
             color: #fff; 
             line-height: 1.6; 
