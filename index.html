@@ -7,10 +7,10 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* C2IMG.png as the primary full-page background */
+        /* C2IMG.png as the primary background with light frost (0.4) to mask pixelation */
         body { 
             font-family: Arial, sans-serif; 
-            background: url('c2img.png') no-repeat center center fixed; 
+            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('c2img.png') no-repeat center center fixed; 
             background-size: cover; 
             color: #fff; 
             line-height: 1.6; 
@@ -26,7 +26,7 @@
         .hero-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
         .video-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 12px 24px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); font-size: 1.1rem; }
 
-        /* SC26.jpg as the secondary container background */
+        /* SC26.jpg as the secondary container background with original dark overlay */
         .continuum-grid { 
             max-width: 1000px; 
             margin: 40px auto; 
