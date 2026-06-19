@@ -17,22 +17,24 @@
         .hero-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
         .video-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 12px 24px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); font-size: 1.1rem; }
 
-        /* The Updated Staggered Grid with SC26.jpg Background */
+        /* The Updated Grid with more transparent background */
         .continuum-grid { 
             max-width: 1000px; 
             margin: 40px auto; 
             padding: 60px 20px; 
-            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('SC26.jpg'); 
+            /* 0.5 transparency for better image visibility */
+            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('SC26.jpg'); 
             background-size: cover; 
             background-position: center; 
             background-attachment: fixed;
             border-radius: 20px;
         }
+        
         .staggered-row { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
         .staggered-row:nth-child(even) { flex-direction: row-reverse; }
         .staggered-img { width: 45%; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
-        .staggered-text { width: 50%; }
-
+        .staggered-text { width: 50%; text-shadow: 0 1px 2px rgba(255,255,255,0.8); } /* Added shadow for readability */
+        
         @media (max-width: 768px) {
             .staggered-row, .staggered-row:nth-child(even) { flex-direction: column; text-align: center; }
             .staggered-img { width: 100%; height: 250px; }
@@ -64,7 +66,7 @@
     </section>
 
     <div class="continuum-grid" id="continuum">
-        <h2 style="text-align: center; margin-bottom: 50px; color: #0d3b66;">Our 5-Phase "Streets to Sheets" Continuum</h2>
+        <h2 style="text-align: center; margin-bottom: 50px; color: #0d3b66; text-shadow: 0 1px 2px rgba(255,255,255,0.8);">Our 5-Phase "Streets to Sheets" Continuum</h2>
         
         <div class="staggered-row">
             <img src="phase1.jpg.png" class="staggered-img" alt="Phase 1">
