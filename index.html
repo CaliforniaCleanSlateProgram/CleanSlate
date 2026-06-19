@@ -7,12 +7,12 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* Main background: c2img.png with a medium white frost (0.4) to mask pixelation */
+        /* C2IMG.png as the primary full-page background */
         body { 
             font-family: Arial, sans-serif; 
-            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('c2img.png') no-repeat center center fixed; 
+            background: url('c2img.png') no-repeat center center fixed; 
             background-size: cover; 
-            color: #333; 
+            color: #fff; 
             line-height: 1.6; 
         }
         
@@ -26,17 +26,16 @@
         .hero-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
         .video-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 12px 24px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); font-size: 1.1rem; }
 
-        /* Continuum grid: SC26.jpg with 0.6 dark overlay for contrast */
+        /* SC26.jpg as the secondary container background */
         .continuum-grid { 
             max-width: 1000px; 
             margin: 40px auto; 
             padding: 60px 20px; 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('SC26.jpg'); 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('SC26.jpg'); 
             background-size: cover; 
             background-position: center; 
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            color: #fff;
         }
         
         .staggered-row { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
