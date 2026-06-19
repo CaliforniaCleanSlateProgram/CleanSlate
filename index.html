@@ -7,11 +7,10 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* C2IMG.png as the primary background with DENSE light-gray frost (0.7) */
+        /* C2IMG.png replaced with HC1.jpg as primary background with 0.7 white fog */
         body { 
             font-family: Arial, sans-serif; 
-            /* Increased opacity to 0.7 to make the background vaguely visible through dense fog */
-            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('c2img.png') no-repeat center center fixed; 
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('HC1.jpg') no-repeat center center fixed; 
             background-size: cover; 
             color: #fff; 
             line-height: 1.6; 
@@ -27,28 +26,35 @@
         .hero-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
         .video-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 12px 24px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); font-size: 1.1rem; }
 
-        /* SC26.jpg as the secondary container background with original dark overlay */
+        /* Continuum grid: SC26.jpg with horizontal scroll */
         .continuum-grid { 
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
             max-width: 1000px; 
             margin: 40px auto; 
-            padding: 60px 20px; 
+            padding: 40px 20px; 
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('SC26.jpg'); 
             background-size: cover; 
             background-position: center; 
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
         }
-        
-        .staggered-row { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
-        .staggered-row:nth-child(even) { flex-direction: row-reverse; }
-        .staggered-img { width: 45%; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-        .staggered-text { width: 50%; }
-        
-        @media (max-width: 768px) {
-            .staggered-row, .staggered-row:nth-child(even) { flex-direction: column; text-align: center; }
-            .staggered-img { width: 100%; height: 250px; }
-            .staggered-text { width: 100%; }
+
+        .phase-card {
+            flex: 0 0 300px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 15px;
+            scroll-snap-align: start;
+            color: #0d3b66;
+            text-align: center;
         }
+
+        .phase-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+
         footer { background-color: #0d3b66; color: white; text-align: center; padding: 20px; margin-top: 40px; }
     </style>
 </head>
@@ -74,47 +80,32 @@
         </div>
     </section>
 
+    <h2 style="text-align: center; margin-top: 40px; color: #0d3b66;">Our 5-Phase "Streets to Sheets" Continuum</h2>
     <div class="continuum-grid" id="continuum">
-        <h2 style="text-align: center; margin-bottom: 50px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Our 5-Phase "Streets to Sheets" Continuum</h2>
-        
-        <div class="staggered-row">
-            <img src="phase1.jpg.png" class="staggered-img" alt="Phase 1">
-            <div class="staggered-text">
-                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 1: Street Outreach & Hygiene</h3>
-                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Building direct, trust-based relationships on the streets. Our team meets participants where they are, providing essential resources and human connection.</p>
-            </div>
+        <div class="phase-card">
+            <img src="phase1.jpg.png" class="phase-img" alt="Phase 1">
+            <h3>Phase 1</h3>
+            <p>Street Outreach & Hygiene: Building trust-based relationships on the streets.</p>
         </div>
-
-        <div class="staggered-row">
-            <img src="van (1).jpg" class="staggered-img" alt="Phase 2">
-            <div class="staggered-text">
-                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 2: Mobile Service Units</h3>
-                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Restoring fundamental dignity through customized mobile hygiene systems. We deploy specialized truck and trailer setups to high-need areas.</p>
-            </div>
+        <div class="phase-card">
+            <img src="van (1).jpg" class="phase-img" alt="Phase 2">
+            <h3>Phase 2</h3>
+            <p>Mobile Service Units: Restoring dignity through mobile hygiene systems.</p>
         </div>
-
-        <div class="staggered-row">
-            <img src="phase3.jpg.png" class="staggered-img" alt="Phase 3">
-            <div class="staggered-text">
-                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 3: Stabilization & Recovery Referrals</h3>
-                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Acting as an intentional, warm bridge to licensed external partners. We guide participants smoothly from initial contact into appropriate treatment.</p>
-            </div>
+        <div class="phase-card">
+            <img src="phase3.jpg.png" class="phase-img" alt="Phase 3">
+            <h3>Phase 3</h3>
+            <p>Stabilization: Acting as an intentional, warm bridge to recovery.</p>
         </div>
-
-        <div class="staggered-row">
-            <img src="phase4.jpg.png" class="staggered-img" alt="Phase 4">
-            <div class="staggered-text">
-                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 4: Sober Living Environments</h3>
-                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Transitioning individuals into supportive, structured housing. Our sober living environments champion peer accountability and communal safety.</p>
-            </div>
+        <div class="phase-card">
+            <img src="phase4.jpg.png" class="phase-img" alt="Phase 4">
+            <h3>Phase 4</h3>
+            <p>Sober Living: Transitioning into supportive, structured housing.</p>
         </div>
-
-        <div class="staggered-row">
-            <img src="phase5.jpg.png" class="staggered-img" alt="Phase 5">
-            <div class="staggered-text">
-                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 5: Community Reincorporation</h3>
-                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">The ultimate goal achieved. Through strategic workforce development partners, participants are matched with sustainable employment.</p>
-            </div>
+        <div class="phase-card">
+            <img src="phase5.jpg.png" class="phase-img" alt="Phase 5">
+            <h3>Phase 5</h3>
+            <p>Community Reincorporation: Matched with sustainable employment.</p>
         </div>
     </div>
 
