@@ -22,13 +22,13 @@
             border-radius: 16px; 
             box-shadow: 0 15px 35px rgba(0,0,0,0.4); 
             border-top: 6px solid #f4d35e; 
-            color: #ffffff; 
+            color: #ffffff;
+            text-align: center; /* Centers all text content */
         }
 
         h1 { color: #f4d35e; font-size: 2.5rem; letter-spacing: -0.5px; margin-bottom: 25px; }
         h2 { color: #f4d35e; margin-top: 40px; font-size: 1.75rem; }
         
-        /* Updated to use van (1).jpg */
         .van-image { 
             width: 100%; 
             max-width: 700px; 
@@ -38,6 +38,8 @@
             display: block;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
         }
+
+        ul { text-align: left; display: inline-block; } /* Keeps list left-aligned for readability */
         
         .founder-note { 
             background-color: rgba(255, 255, 255, 0.1); 
@@ -46,9 +48,10 @@
             margin-top: 40px; 
             font-style: italic;
             color: #ffffff;
+            text-align: left; /* Keeps founder quote readable */
         }
         
-        .back-link { color: #f4d35e; font-weight: 600; text-decoration: none; transition: 0.3s; }
+        .back-link { color: #f4d35e; font-weight: 600; text-decoration: none; transition: 0.3s; display: block; text-align: left; }
         .back-link:hover { opacity: 0.8; }
     </style>
 </head>
@@ -58,7 +61,6 @@
         
         <h1>Phase 2: Mobile Service Units</h1>
         
-        <!-- Updated image reference -->
         <img src="van (1).jpg" alt="California Clean Slate Program Mobile Service Unit" class="van-image">
         
         <h2>Scaling Restoration: The Santa Cruz Mobility Gap</h2>
