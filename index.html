@@ -7,7 +7,6 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* C2IMG.png replaced with HC1.jpg as primary background with 0.7 white fog */
         body { 
             font-family: Arial, sans-serif; 
             background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('HC1.jpg') no-repeat center center fixed; 
@@ -26,7 +25,6 @@
         .hero-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
         .video-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 12px 24px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); font-size: 1.1rem; }
 
-        /* Continuum grid: SC26.jpg with horizontal scroll */
         .continuum-grid { 
             display: flex;
             overflow-x: auto;
@@ -43,6 +41,7 @@
             -webkit-overflow-scrolling: touch;
         }
 
+        /* Card styling including link removal for underlines */
         .phase-card {
             flex: 0 0 300px;
             background: rgba(255, 255, 255, 0.85);
@@ -51,8 +50,11 @@
             scroll-snap-align: start;
             color: #0d3b66;
             text-align: center;
+            text-decoration: none;
+            display: block;
         }
-
+        
+        .phase-card:hover { transform: scale(1.02); transition: 0.3s; }
         .phase-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
 
         footer { background-color: #0d3b66; color: white; text-align: center; padding: 20px; margin-top: 40px; }
@@ -82,31 +84,31 @@
 
     <h2 style="text-align: center; margin-top: 40px; color: #0d3b66;">Our 5-Phase "Streets to Sheets" Continuum</h2>
     <div class="continuum-grid" id="continuum">
-        <div class="phase-card">
+        <a href="phase1.html" class="phase-card">
             <img src="phase1.jpg.png" class="phase-img" alt="Phase 1">
             <h3>Phase 1</h3>
-            <p>Street Outreach & Hygiene: Building trust-based relationships on the streets.</p>
-        </div>
-        <div class="phase-card">
+            <p>Street Outreach & Hygiene</p>
+        </a>
+        <a href="phase2.html" class="phase-card">
             <img src="van (1).jpg" class="phase-img" alt="Phase 2">
             <h3>Phase 2</h3>
-            <p>Mobile Service Units: Restoring dignity through mobile hygiene systems.</p>
-        </div>
-        <div class="phase-card">
+            <p>Mobile Service Units</p>
+        </a>
+        <a href="phase3.html" class="phase-card">
             <img src="phase3.jpg.png" class="phase-img" alt="Phase 3">
             <h3>Phase 3</h3>
-            <p>Stabilization: Acting as an intentional, warm bridge to recovery.</p>
-        </div>
-        <div class="phase-card">
+            <p>Stabilization & Recovery</p>
+        </a>
+        <a href="phase4.html" class="phase-card">
             <img src="phase4.jpg.png" class="phase-img" alt="Phase 4">
             <h3>Phase 4</h3>
-            <p>Sober Living: Transitioning into supportive, structured housing.</p>
-        </div>
-        <div class="phase-card">
+            <p>Sober Living Environments</p>
+        </a>
+        <a href="phase5.html" class="phase-card">
             <img src="phase5.jpg.png" class="phase-img" alt="Phase 5">
             <h3>Phase 5</h3>
-            <p>Community Reincorporation: Matched with sustainable employment.</p>
-        </div>
+            <p>Community Reincorporation</p>
+        </a>
     </div>
 
     <footer>
