@@ -11,7 +11,7 @@
             font-family: Arial, sans-serif; 
             background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('HC1.jpg') no-repeat center center fixed; 
             background-size: cover; 
-            color: #fff; 
+            color: #333; 
             line-height: 1.6; 
         }
         
@@ -24,6 +24,36 @@
         .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(13, 59, 102, 0.65); z-index: 2; }
         .hero-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
         .video-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 12px 24px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); font-size: 1.1rem; }
+
+        .impact-section { max-width: 800px; margin: 40px auto; padding: 20px; text-align: center; }
+        .impact-text { font-size: 1.5rem; font-weight: bold; font-style: italic; color: #0d3b66; text-shadow: 1px 1px 2px rgba(255,255,255,0.5); margin-bottom: 25px; }
+
+        /* The Gold Button Styling */
+        .gold-button {
+            display: inline-block;
+            background: linear-gradient(to bottom, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            color: #fff;
+            padding: 15px 30px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+        .gold-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }
 
         .continuum-grid { 
             display: flex;
@@ -43,11 +73,11 @@
 
         .phase-card {
             flex: 0 0 300px;
-            background: rgba(255, 255, 255, 0.2); /* Semi-transparent for better depth */
+            background: rgba(255, 255, 255, 0.2);
             padding: 20px;
             border-radius: 15px;
             scroll-snap-align: start;
-            color: #fff; /* White text for high impact */
+            color: #fff;
             text-align: center;
             text-decoration: none;
             display: block;
@@ -80,6 +110,11 @@
         <div class="hero-content">
             <a href="https://www.youtube.com/watch?v=1jT8LUaMA0o" target="_blank" class="video-btn">▶ Watch Full Video with Audio</a>
         </div>
+    </section>
+
+    <section class="impact-section">
+        <p class="impact-text">"The California Clean Slate Program is a radical departure from traditional methods, creating a seamless, human-centered bridge from the vulnerabilities of the streets to the security of sustainable self-sufficiency."</p>
+        <a href="donate.html" class="gold-button">Help Us Build Our First Unit</a>
     </section>
 
     <h2 style="text-align: center; margin-top: 40px; color: #0d3b66;">Our 5-Phase "Streets to Sheets" Continuum</h2>
