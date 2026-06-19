@@ -7,10 +7,10 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* Masked c2img.png with a stronger dark overlay to hide pixelation */
+        /* Full page background: c2img.png */
         body { 
             font-family: Arial, sans-serif; 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('c2img.png') no-repeat center center fixed; 
+            background: url('c2img.png') no-repeat center center fixed; 
             background-size: cover; 
             color: #fff; 
             line-height: 1.6; 
@@ -26,14 +26,15 @@
         .hero-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
         .video-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 12px 24px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); font-size: 1.1rem; }
 
-        /* SC26.jpg grid background with its own mask for readability */
+        /* Frosted Glass / Foggy effect for the continuum section */
         .continuum-grid { 
             max-width: 1000px; 
             margin: 40px auto; 
             padding: 60px 20px; 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('SC26.jpg'); 
-            background-size: cover; 
-            background-position: center; 
+            background: rgba(0, 0, 0, 0.4); 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
