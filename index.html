@@ -7,12 +7,12 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* Main background: HC1.jpg with light frost (white) overlay */
+        /* C2IMG.png as the primary full-page background */
         body { 
             font-family: Arial, sans-serif; 
-            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('HC1.jpg') no-repeat center center fixed; 
+            background: url('c2img.png') no-repeat center center fixed; 
             background-size: cover; 
-            color: #333; 
+            color: #fff; 
             line-height: 1.6; 
         }
         
@@ -26,23 +26,21 @@
         .hero-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
         .video-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 12px 24px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); font-size: 1.1rem; }
 
-        /* Continuum grid: SC26.jpg with reduced overlay (0.5) for more visibility */
+        /* SC26.jpg as the secondary container background */
         .continuum-grid { 
             max-width: 1000px; 
             margin: 40px auto; 
             padding: 60px 20px; 
-            /* Decreased the white overlay opacity to 0.5 to make lighthouse more visible */
-            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('SC26.jpg'); 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('SC26.jpg'); 
             background-size: cover; 
             background-position: center; 
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            color: #0d3b66; /* Dark navy text to keep contrast against lighter background */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         
         .staggered-row { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
         .staggered-row:nth-child(even) { flex-direction: row-reverse; }
-        .staggered-img { width: 45%; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .staggered-img { width: 45%; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
         .staggered-text { width: 50%; }
         
         @media (max-width: 768px) {
@@ -76,45 +74,45 @@
     </section>
 
     <div class="continuum-grid" id="continuum">
-        <h2 style="text-align: center; margin-bottom: 50px; color: #0d3b66;">Our 5-Phase "Streets to Sheets" Continuum</h2>
+        <h2 style="text-align: center; margin-bottom: 50px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Our 5-Phase "Streets to Sheets" Continuum</h2>
         
         <div class="staggered-row">
             <img src="phase1.jpg.png" class="staggered-img" alt="Phase 1">
             <div class="staggered-text">
-                <h3 style="color: #0d3b66;">Phase 1: Street Outreach & Hygiene</h3>
-                <p>Building direct, trust-based relationships on the streets. Our team meets participants where they are, providing essential resources and human connection.</p>
+                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 1: Street Outreach & Hygiene</h3>
+                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Building direct, trust-based relationships on the streets. Our team meets participants where they are, providing essential resources and human connection.</p>
             </div>
         </div>
 
         <div class="staggered-row">
             <img src="van (1).jpg" class="staggered-img" alt="Phase 2">
             <div class="staggered-text">
-                <h3 style="color: #0d3b66;">Phase 2: Mobile Service Units</h3>
-                <p>Restoring fundamental dignity through customized mobile hygiene systems. We deploy specialized truck and trailer setups to high-need areas.</p>
+                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 2: Mobile Service Units</h3>
+                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Restoring fundamental dignity through customized mobile hygiene systems. We deploy specialized truck and trailer setups to high-need areas.</p>
             </div>
         </div>
 
         <div class="staggered-row">
             <img src="phase3.jpg.png" class="staggered-img" alt="Phase 3">
             <div class="staggered-text">
-                <h3 style="color: #0d3b66;">Phase 3: Stabilization & Recovery Referrals</h3>
-                <p>Acting as an intentional, warm bridge to licensed external partners. We guide participants smoothly from initial contact into appropriate treatment.</p>
+                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 3: Stabilization & Recovery Referrals</h3>
+                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Acting as an intentional, warm bridge to licensed external partners. We guide participants smoothly from initial contact into appropriate treatment.</p>
             </div>
         </div>
 
         <div class="staggered-row">
             <img src="phase4.jpg.png" class="staggered-img" alt="Phase 4">
             <div class="staggered-text">
-                <h3 style="color: #0d3b66;">Phase 4: Sober Living Environments</h3>
-                <p>Transitioning individuals into supportive, structured housing. Our sober living environments champion peer accountability and communal safety.</p>
+                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 4: Sober Living Environments</h3>
+                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Transitioning individuals into supportive, structured housing. Our sober living environments champion peer accountability and communal safety.</p>
             </div>
         </div>
 
         <div class="staggered-row">
             <img src="phase5.jpg.png" class="staggered-img" alt="Phase 5">
             <div class="staggered-text">
-                <h3 style="color: #0d3b66;">Phase 5: Community Reincorporation</h3>
-                <p>The ultimate goal achieved. Through strategic workforce development partners, participants are matched with sustainable employment.</p>
+                <h3 style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 5: Community Reincorporation</h3>
+                <p style="color: #fff; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">The ultimate goal achieved. Through strategic workforce development partners, participants are matched with sustainable employment.</p>
             </div>
         </div>
     </div>
