@@ -13,29 +13,38 @@
             background-size: cover;
             color: #ffffff; 
             line-height: 1.7; 
-            padding: 60px 20px;
+            padding: 40px 15px; /* Slightly looser padding for mobile screens */
         }
         
         .content-box { 
             max-width: 800px; 
             margin: auto; 
             background: #0d3b66; 
-            padding: 50px; 
+            padding: 40px 25px; /* Responsive internal padding */
             border-radius: 16px; 
             box-shadow: 0 15px 35px rgba(0,0,0,0.4);
             border-top: 6px solid #f4d35e;
         }
 
+        @media (min-width: 600px) {
+            body { padding: 60px 20px; }
+            .content-box { padding: 50px; }
+        }
+
         h1 { 
             color: #f4d35e; 
-            font-size: 2.5rem; 
+            font-size: 2.2rem; 
             letter-spacing: -0.5px; 
             margin-bottom: 20px; 
             text-align: center;
         }
 
+        @media (min-width: 600px) {
+            h1 { font-size: 2.5rem; }
+        }
+
         .intro-p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             text-align: center;
             margin-bottom: 40px;
             color: #e0e0e0;
@@ -44,7 +53,7 @@
         h2 { 
             color: #f4d35e; 
             margin-top: 35px; 
-            font-size: 1.6rem; 
+            font-size: 1.5rem; 
             letter-spacing: -0.3px;
             margin-bottom: 10px;
             border-bottom: 1px solid rgba(244, 211, 94, 0.3);
@@ -52,7 +61,7 @@
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 1.5rem;
             color: #ffffff;
         }
@@ -74,34 +83,45 @@
             opacity: 0.8; 
         }
 
-        /* Premium CTA Zone */
+        /* Premium CTA Zone with Mobile Overflow Mitigations */
         .cta-section { 
             background-color: rgba(255, 255, 255, 0.08); 
             border-left: 5px solid #f4d35e;
-            padding: 35px; 
+            padding: 30px 20px; 
             border-radius: 0 12px 12px 0; 
             margin-top: 50px; 
             text-align: center;
+            overflow: hidden; /* Ensures no content pushes layout lines */
+        }
+
+        @media (min-width: 600px) {
+            .cta-section { padding: 35px; }
         }
 
         .cta-section h3 {
             color: #f4d35e;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
             font-weight: 700;
         }
 
         .cta-section p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 0;
         }
 
+        /* The Ironclad Mobile Email Wrap Shield */
         .partner-email {
             color: #f4d35e;
             text-decoration: none;
             font-weight: 700;
             border-bottom: 1px dashed #f4d35e;
             transition: 0.2s;
+            display: inline-block;
+            max-width: 100%;
+            word-wrap: break-word;
+            word-break: break-all; /* Forces break on ultra-narrow viewports */
+            vertical-align: bottom;
         }
 
         .partner-email:hover {
@@ -120,13 +140,13 @@
         <p>The California Clean Slate Program is entirely focused on a single mission: building a comprehensive, five-phase continuum of care that bridges our unhoused and struggling neighbors from the streets back into permanent independence. Right now, we are in our initial founding phase—actively securing corporate public-benefit status and gathering the baseline resources, land access, and community power required to launch our operations. We are built on raw community discipline, and we are looking for dedicated local partners ready to join us on the ground floor.</p>
 
         <h2>1. Mobile Staging Site Hosts</h2>
-        <p>Our street outreach and mobile hygiene units depend entirely on reliable, predictable geographic access. We are seeking partnerships with commercial property owners, faith-based organizations, and land owners who are willing to open a baseline staging footprint for our mobile shower and laundry trailers. We seek **repeatable, scheduled days and times** to establish a consistent pattern of trust with our participants. Our staging operations are entirely self-contained, professionally managed, and secure. We handle all logistics, security monitoring, and post-service cleanup, ensuring your lot remains a pristine, respected asset to the neighborhood.</p>
+        <p>Our street outreach and mobile hygiene units depend entirely on reliable, predictable geographic access. We are seeking partnerships with commercial property owners, faith-based organizations, and land owners who are willing to open a baseline staging footprint for our mobile shower and laundry trailers. We seek <strong>repeatable, scheduled days and times</strong> to establish a consistent pattern of trust with our participants. Our staging operations are entirely self-contained, professionally managed, and secure. We handle all logistics, security monitoring, and post-service cleanup, ensuring your lot remains a pristine, respected asset to the neighborhood.</p>
         
         <h2>2. Second-Chance Employment Partners</h2>
         <p>The final, vital milestone of our continuum is guiding participants into steady, gainful employment right here in our county. We look to form direct relationships with local business owners, commercial managers, and contractors willing to act as an intentional employment pipeline. By partnering with us, you are not taking on a blind risk; you are gaining access to motivated, drug-free individuals who have been stabilized through our treatment partnerships, held accountable by our sober living environments, and are fully equipped with the discipline to work hard and protect your team.</p>
 
         <h2>3. Founding Volunteers & Community Leaders</h2>
-        <p>Because we are aggressively driving toward our permanent federal 501(c)(3) status and are currently operating at a seed-stage level, **every single position in our organization is strictly voluntary.** We are building the engine right now, and we do not have a paid payroll yet. We are calling on eager, community-minded professionals, leaders, and ground-level volunteers who want to invest their skills—whether in administration, legal tracking, logistics, or field outreach—to build the solid infrastructure this county desperately needs. What we offer you is skin in the game and a proud seat at the table of an organization built to fix a systemic crisis.</p>
+        <p>Because we are aggressively driving toward our permanent federal 501(c)(3) status and are currently operating at a seed-stage level, <strong>every single position in our organization is strictly voluntary.</strong> We are building the engine right now, and we do not have a paid payroll yet. We are calling on eager, community-minded professionals, leaders, and ground-level volunteers who want to invest their skills—whether in administration, legal tracking, logistics, or field outreach—to build the solid infrastructure this county desperately needs. What we offer you is skin in the game and a proud seat at the table of an organization built to fix a systemic crisis.</p>
 
         <h2>4. Seed Funding & Resource Backing</h2>
         <p>For community members who want to accelerate this deployment but cannot volunteer their time or lot space, your direct financial backing is what turns this blueprint into real infrastructure. Your financial contributions are deployed directly into securing outreach gear, sanitation assets, and mobile fleet equipment. Every resource stays local, directly funding the recovery ecosystem right here in Santa Cruz.</p>
@@ -139,21 +159,21 @@
             </p>
 
             <!-- Responsive Button Wrapper -->
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
                 
                 <!-- Donation Focus -->
-                <a href="https://givebutter.com/CleanSlate-2tdzvb" target="_blank" style="background-color: #f4d35e; color: #0d3b66; padding: 14px 30px; text-decoration: none; font-weight: 800; border-radius: 8px; font-size: 1.15rem; display: inline-block; box-shadow: 0 6px 15px rgba(0,0,0,0.3); transition: transform 0.2s;">
+                <a href="https://givebutter.com/CleanSlate-2tdzvb" target="_blank" style="background-color: #f4d35e; color: #0d3b66; padding: 14px 28px; text-decoration: none; font-weight: 800; border-radius: 8px; font-size: 1.1rem; display: inline-block; box-shadow: 0 6px 15px rgba(0,0,0,0.3); transition: transform 0.2s;">
                     Support the Mission
                 </a>
                 
                 <!-- Internal Pipeline Navigation -->
-                <a href="phase1.html" style="background-color: rgba(255, 255, 255, 0.1); color: #f4d35e; border: 2px solid #f4d35e; padding: 12px 30px; text-decoration: none; font-weight: 700; border-radius: 8px; font-size: 1.15rem; display: inline-block; transition: 0.3s; box-sizing: border-box;">
+                <a href="phase1.html" style="background-color: rgba(255, 255, 255, 0.1); color: #f4d35e; border: 2px solid #f4d35e; padding: 12px 28px; text-decoration: none; font-weight: 700; border-radius: 8px; font-size: 1.1rem; display: inline-block; transition: 0.3s; box-sizing: border-box;">
                     Review the Continuum →
                 </a>
                 
             </div>
             
-            <p style="font-size: 0.85rem; color: #bdc3c7; margin-top: 30px; font-style: italic; text-align: center;">
+            <p style="font-size: 0.82rem; color: #bdc3c7; margin-top: 30px; font-style: italic; text-align: center; line-height: 1.5;">
                 Disclaimer: The California Clean Slate Program is a registered California non-profit corporation. 501(c)(3) status is currently pending with the IRS; contributions are not currently tax-deductible.
             </p>
         </div>
