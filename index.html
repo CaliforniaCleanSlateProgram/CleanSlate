@@ -16,7 +16,7 @@
         }
         
         header { background-color: #0d3b66; color: white; padding: 1rem; text-align: center; }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; margin-top: 10px; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; margin-top: 10px; flex-wrap: wrap; }
         nav ul li a { color: white; text-decoration: none; font-weight: bold; }
 
         .hero { position: relative; height: 550px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
@@ -25,11 +25,11 @@
         .hero-content { position: relative; z-index: 3; max-width: 800px; padding: 20px; }
         .video-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 12px 24px; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); font-size: 1.1rem; }
 
-        .impact-section { max-width: 800px; margin: 40px auto; padding: 20px; text-align: center; }
+        .impact-section { max-width: 850px; margin: 40px auto; padding: 20px; text-align: center; }
         .impact-text { font-size: 1.5rem; font-weight: bold; font-style: italic; color: #0d3b66; text-shadow: 1px 1px 2px rgba(255,255,255,0.5); margin-bottom: 30px; }
 
         /* Legal Disclaimer Styling */
-        .disclaimer { font-size: 0.75rem; color: #555; margin-top: 10px; font-style: italic; line-height: 1.3; }
+        .disclaimer { font-size: 0.75rem; color: #555; margin-top: 15px; font-style: italic; line-height: 1.3; }
 
         /* Larger Gold Button */
         .gold-button {
@@ -48,6 +48,7 @@
             letter-spacing: 1px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             transition: transform 0.2s;
+            margin-top: 25px;
         }
         .gold-button::after {
             content: '';
@@ -120,6 +121,18 @@
         .partner-content h2 { color: #f4d35e; margin-bottom: 15px; }
 
         footer { background-color: #0d3b66; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+
+        /* Impact Matrix Styling for Light Background Page */
+        .matrix-title { color: #0d3b66; font-size: 1.7rem; letter-spacing: -0.5px; margin-bottom: 10px; text-align: center; font-weight: bold; }
+        .matrix-subtitle { color: #555; text-align: center; font-size: 1rem; max-width: 650px; margin: 0 auto 35px auto; line-height: 1.5; }
+        .matrix-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 35px; text-align: left; }
+        .matrix-card { flex: 1 1 240px; max-width: 360px; background-color: rgba(13, 59, 102, 0.05); border: 2px solid #0d3b66; border-radius: 12px; padding: 22px; display: flex; flex-direction: column; justify-content: flex-start; box-shadow: 0 4px 12px rgba(0,0,0,0.08); position: relative; }
+        .matrix-card.featured { border-color: #bf953f; background-color: rgba(13, 59, 102, 0.08); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+        .matrix-amt { color: #0d3b66; font-size: 1.8rem; font-weight: 800; margin-bottom: 5px; }
+        .matrix-card.featured .matrix-amt { color: #aa771c; }
+        .matrix-label { color: #333; font-weight: 700; font-size: 1.1rem; margin-bottom: 12px; letter-spacing: -0.2px; }
+        .matrix-desc { font-size: 0.95rem; line-height: 1.5; color: #444; margin-bottom: 0; }
+        .matrix-tag { position: absolute; top: -11px; right: 15px; background: linear-gradient(to bottom, #bf953f, #aa771c); color: #fff; font-size: 0.7rem; font-weight: 900; padding: 2px 10px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
     </style>
 </head>
 <body>
@@ -146,6 +159,40 @@
 
     <section class="impact-section">
         <p class="impact-text">"The California Clean Slate Program is the NuEra of social integration. We don't just provide services; we engineer the critical path from the streets to self-sufficiency. By deploying proven mobile hygiene units as our point of entry, we build the trust necessary to act as an intentional, warm bridge to recovery and, ultimately, to sustainable housing and career reincorporation. We provide the structure for those ready to move from survival to stability—funding the future of our participants through a self-sustaining model of dignity and professional growth."</p>
+        
+        <div style="margin-top: 50px; padding-top: 35px; border-top: 1px solid rgba(13, 59, 102, 0.15);">
+            <h2 class="matrix-title">Operational Transparency: How Your Capital Deploys</h2>
+            <p class="matrix-subtitle">
+                We treat community capital with absolute operational discipline. Every donation tier is structurally optimized to cover direct physical supplies alongside the fleet logistics, utility management, and field compliance required to sustain our continuum.
+            </p>
+
+            <div class="matrix-grid">
+                <div class="matrix-card">
+                    <div class="matrix-amt">$30</div>
+                    <div class="matrix-label">The Dignity Spark</div>
+                    <p class="matrix-desc">
+                        Fully subsidizes comprehensive mobile hygiene, warm tankless showers, thermal socks, and full on-site sanitation loops for <strong>6 individuals</strong> in crisis.
+                    </p>
+                </div>
+
+                <div class="matrix-card">
+                    <div class="matrix-amt">$50</div>
+                    <div class="matrix-label">The Outreach Foundation</div>
+                    <p class="matrix-desc">
+                        Secures <strong>10 weather-resistant field kits</strong> packed with heavy-duty hygiene essentials and thermal apparel, completely scaling our active street outreach capabilities.
+                    </p>
+                </div>
+
+                <div class="matrix-card featured">
+                    <div class="matrix-tag">Critical Needs</div>
+                    <div class="matrix-amt">$150</div>
+                    <div class="matrix-label">Site Deployment Sponsor</div>
+                    <p class="matrix-desc">
+                        Sponsors a <strong>full morning of mobile fleet operations</strong>. Fully absorbs greywater compliance logistics, generator power systems, transit fuel, and asset maintenance buffers for a scheduled neighborhood block.
+                    </p>
+                </div>
+            </div>
+        </div>
         <a href="https://givebutter.com/CleanSlate-2tdzvb" class="gold-button">Help Us Build Our First Unit</a>
         <p class="disclaimer">The California Clean Slate Program is a registered California non-profit corporation. 501(c)(3) status is currently pending with the IRS; contributions are not currently tax-deductible.</p>
     </section>
