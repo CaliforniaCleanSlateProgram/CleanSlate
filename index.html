@@ -133,6 +133,9 @@
         .matrix-label { color: #333; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; letter-spacing: -0.2px; line-height: 1.3; }
         .matrix-desc { font-size: 0.9rem; line-height: 1.5; color: #444; margin-bottom: 0; }
         .matrix-tag { position: absolute; top: -11px; right: 15px; background: linear-gradient(to bottom, #bf953f, #aa771c); color: #fff; font-size: 0.65rem; font-weight: 900; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        
+        /* Mobile-Safe Container wrapper for Zeffy Module to prevent layout collapses */
+        .zeffy-mobile-wrap { width: 100%; max-width: 100%; overflow: hidden; min-height: 480px; margin-top: 40px; margin-bottom: 25px; border-radius: 10px; background-color: rgba(255,255,255,0.01); }
     </style>
 </head>
 <body>
@@ -144,7 +147,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#continuum">Our Continuum</a></li>
                 <li><a href="leadership-governance.html">Leadership & Governance</a></li>
-                <!-- PARTNER WITH US LIVE SIDE-BY-SIDE IN ORDER -->
                 <li><a href="partnership.html">Partner With Us</a></li>
                 <li><a href="the-harbor.html">The Harbor (Our Partners/Sponsors)</a></li>
             </ul>
@@ -162,7 +164,6 @@
     <section class="impact-section">
         <p class="impact-text">The California Clean Slate Program is the Next-Gen of community stabilization. We don't just provide services; we engineer the critical path from the streets to self-sufficiency. By deploying proven mobile hygiene units as our point of entry, we build the trust necessary to act as an intentional, warm bridge to recovery and, ultimately, to sustainable housing and professional stability. We provide the structure for those ready to move from survival to stability—funding the future of our participants through a self-sustaining model of dignity and professional growth.</p>
         
-        <!-- AUTHORITATIVE DONOR IMPACT MATRIX START -->
         <div style="margin-top: 50px; padding-top: 35px; border-top: 1px solid rgba(13, 59, 102, 0.15);">
             <h2 class="matrix-title">Operational Transparency: How Your Capital Deploys</h2>
             <p class="matrix-subtitle">
@@ -170,7 +171,6 @@
             </p>
 
             <div class="matrix-grid">
-                <!-- Tier 1 Card -->
                 <div class="matrix-card">
                     <div class="matrix-amt">$30</div>
                     <div class="matrix-label">The Dignity Spark</div>
@@ -179,7 +179,6 @@
                     </p>
                 </div>
 
-                <!-- Tier 2 Card -->
                 <div class="matrix-card">
                     <div class="matrix-amt">$50</div>
                     <div class="matrix-label">The Outreach Foundation</div>
@@ -188,7 +187,6 @@
                     </p>
                 </div>
 
-                <!-- Tier 3 Card -->
                 <div class="matrix-card">
                     <div class="matrix-amt">$150</div>
                     <div class="matrix-label">Site Deployment Sponsor</div>
@@ -197,7 +195,6 @@
                     </p>
                 </div>
 
-                <!-- Tier 4 Card (HEAVY CAPITAL FLEET EXPANSION) -->
                 <div class="matrix-card featured">
                     <div class="matrix-tag">Capital Campaign</div>
                     <div class="matrix-amt">$500</div>
@@ -208,21 +205,18 @@
                 </div>
             </div>
         </div>
-        <!-- AUTHORITATIVE DONOR IMPACT MATRIX END -->
-
-        <!-- ZEFFY INTEGRATION EMBED START -->
-        <div style="margin-top: 40px; margin-bottom: 25px;">
-            <div data-zeffy-embed data-form-url="/embed/donation-form/donate-to-change-lives-16895"></div>
+        <div class="zeffy-mobile-wrap">
+            <div data-zeffy-embed data-form-url="/donation-form/donate-to-change-lives-16895"></div>
             <div data-zeffy-embed-fallback style="display:none;">
-                <div style="position:relative;overflow:hidden;height:450px;width:100%;"><iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' data-zeffy-embed-src='https://www.zeffy.com/embed/donation-form/donate-to-change-lives-16895' allowpaymentrequest allowTransparency="true"></iframe></div>
+                <div style="position:relative;overflow:hidden;height:450px;width:100%;">
+                    <iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' data-zeffy-embed-src='https://www.zeffy.com/embed/donation-form/donate-to-change-lives-16895' allowpaymentrequest allowTransparency="true" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin"></iframe>
+                </div>
             </div>
             <script
                 src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
                 onerror="document.querySelectorAll('[data-zeffy-embed-fallback]').forEach(function(el){el.style.display='block';el.querySelectorAll('iframe[data-zeffy-embed-src]').forEach(function(f){f.src=f.getAttribute('data-zeffy-embed-src');});});">
             </script>
         </div>
-        <!-- ZEFFY INTEGRATION EMBED END -->
-
         <p class="disclaimer">The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. All financial contributions are fully tax-deductible under IRC Section 170. Legal Notice: This organization operates strictly as a mobile hygiene, social service, and transitional care continuum. The California Clean Slate Program does not provide legal counsel, record expungement, court representation, or criminal justice re-entry programming.</p>
     </section>
 
@@ -262,7 +256,6 @@
             <p style="margin-bottom: 20px;">We are currently in the final stages of customizing and fine-tuning a powerhouse non-profit organization designed to tackle the crisis on our streets head-on. We aren't just building a service; we are engineering a precision-based solution to meet the reality of Santa Cruz. </p>
             <p style="margin-bottom: 20px;"><strong>When you donate today, you are a founding partner in this mission.</strong> Your contribution is the capital that builds out the unit and equips our navigation team with the resources to drive this change home. You aren’t just helping; you are fueling the engine that will provide immediate relief to our unhoused residents, ease the burden on community resources and municipal budgets, and finally bridge the gap between temporary, band-aid solutions and a permanent clean slate.</p>
             
-            <!-- ZEFFY LINK FOR REPLACED LOWER BUTTON -->
             <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" class="gold-button" style="padding: 15px 30px; font-size: 1.1rem;">BECOME A FOUNDING DONOR</a>
             
             <p class="disclaimer" style="color: #eee;">The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. All financial contributions are fully tax-deductible under IRC Section 170. Legal Notice: This organization operates strictly as a mobile hygiene, social service, and transitional care continuum. The California Clean Slate Program does not provide legal counsel, record expungement, court representation, or criminal justice re-entry programming.</p>
