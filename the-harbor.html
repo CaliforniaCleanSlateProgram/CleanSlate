@@ -70,6 +70,7 @@
 
         p { font-size: 1.1rem; margin-bottom: 1.5rem; color: rgba(255, 255, 255, 0.9); text-align: left; }
 
+        /* Community Dedication Styles */
         .community-tribute {
             background-color: rgba(244, 211, 94, 0.08);
             border-left: 5px solid #f4d35e;
@@ -78,6 +79,21 @@
             border-radius: 0 12px 12px 0;
             text-align: left;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .community-tribute h3 {
+            color: #f4d35e; 
+            font-size: 1.4rem; 
+            font-weight: 800; 
+            margin-bottom: 12px; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px;
+        }
+        .community-tribute p {
+            font-size: 1.1rem; 
+            color: #ffffff; 
+            line-height: 1.6; 
+            margin-bottom: 0; 
+            text-align: left;
         }
 
         /* Partner/Sponsor Grid Layouts */
@@ -101,7 +117,7 @@
             .hub-right { flex: 1; }
         }
 
-        /* Gold Button Styling */
+        /* Gold Button Styling (GPU Optimized Performance) */
         .gold-button {
             display: inline-block;
             background: linear-gradient(to bottom, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
@@ -123,14 +139,20 @@
             width: 100%;
         }
         @media (min-width: 769px) { .gold-button { width: auto; } }
+        
         .gold-button::after {
             content: '';
             position: absolute;
-            top: 0; left: -100%; width: 100%; height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            transform: translateX(-100%);
             animation: shine 3s infinite;
         }
-        @keyframes shine { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }
+        @keyframes shine { 
+            0% { transform: translateX(-100%); } 
+            20% { transform: translateX(100%); } 
+            100% { transform: translateX(100%); } 
+        }
 
         /* Premium Form Elements */
         .inquiry-card {
@@ -165,6 +187,19 @@
         }
         .form-group textarea { height: 100px; resize: none; }
         
+        /* Screen Reader Only Class for a11y labels */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         .submit-q-btn {
             width: 100%;
             background: #0d3b66;
@@ -182,6 +217,15 @@
         .submit-q-btn:hover {
             background: #f4d35e;
             color: #0d3b66;
+        }
+
+        /* Legal Notice Styles */
+        .legal-notice-p {
+            font-size: 0.85rem; 
+            color: #bdc3c7; 
+            font-style: normal; 
+            text-align: left; 
+            margin-bottom: 0;
         }
 
         footer { text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); }
@@ -211,15 +255,13 @@
 
         <p>A vessel cannot weather a storm without a secure harbor. The individuals and businesses recognized below represent the foundations of our mission. Through their capital investments and workforce alignments, they provide the safe anchorage necessary to clear the path from survival to absolute stability for our unhoused neighbors.</p>
 
-        <!-- HARBOR THEMED COMMUNITY DEDICATION SECTION -->
         <div class="community-tribute">
-            <h3 style="color: #f4d35e; font-size: 1.4rem; font-weight: 800; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Guardians of the Coast: Keeping Santa Cruz Strong</h3>
-            <p style="font-size: 1.1rem; color: #ffffff; line-height: 1.6; margin-bottom: 0; text-align: left;">
+            <h3>Guardians of the Coast: Keeping Santa Cruz Strong</h3>
+            <p>
                 Santa Cruz is more than just a coordinate on a map—it is our home, our passion, and a beautiful community that we are deeply proud to protect. True community transformation is never a solo voyage, and the sponsors anchored here in The Harbor are recognized for far more than what they give to us. These local businesses, leaders, and neighbors are the standard-bearers of Santa Cruz hospitality, consistently pouring their time, hearts, and resources into countless initiatives that keep our county vibrant, resilient, and safe for everyone. By stepping up to build this mobile hygiene and restoration fleet, they aren't just funding an organization; they are actively investing in the preservation and wellness of the home we all love.
             </p>
         </div>
 
-        <!-- SECTION 1: FOUNDING BUSINESS PARTNERS -->
         <h2>Founding Business Partners</h2>
         <p>Our business partners form the industrial backbone of our continuum, offering the direct employment infrastructure, resources, and workforce integration channels required to cement permanent independence for our participants.</p>
         
@@ -234,11 +276,9 @@
             </div>
         </div>
 
-        <!-- SECTION 2: DONOR TIERS -->
         <h2>Our Fleet Sponsors</h2>
         <p>Philanthropic individuals and community leaders whose dedicated investments directly fund our physical fleet assets and daily field operational budgets.</p>
 
-        <!-- Founding Visionaries -->
         <div class="sponsor-tier-box" style="border-left: 5px solid #bf953f;">
             <div class="tier-header" style="color: #fcf6ba;">Founding Visionaries</div>
             <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); font-style: italic; margin-bottom: 15px;">High-impact stakeholders whose investments directly launch our major mobile fleet assets and industrial fabrications.</p>
@@ -247,7 +287,6 @@
             </div>
         </div>
 
-        <!-- Wave Catchers -->
         <div class="sponsor-tier-box" style="border-left: 5px solid #f4d35e;">
             <div class="tier-header">Wave Catchers</div>
             <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); font-style: italic; margin-bottom: 15px;">Mid-level sponsors creating an immediate, visible ripple of direct field impact across our active mobile units.</p>
@@ -256,7 +295,6 @@
             </div>
         </div>
 
-        <!-- Beachgoers -->
         <div class="sponsor-tier-box" style="border-left: 5px solid #bdc3c7;">
             <div class="tier-header" style="color: #bdc3c7;">Beachgoers</div>
             <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); font-style: italic; margin-bottom: 15px;">Our critical grassroots community foundation fueling the daily hygiene resource loops and outreach loops.</p>
@@ -265,35 +303,33 @@
             </div>
         </div>
 
-        <!-- SECTION 3: CALL TO ACTION HUB WITH SIDE-BY-SIDE INQUIRY FORM -->
         <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);">
             <h3 style="color: #f4d35e; font-size: 1.7rem; margin-bottom: 10px; text-align: left;">Anchor Our Mission Today</h3>
             
             <div class="harbor-action-hub">
-                <!-- Left Action Column -->
                 <div class="hub-left">
                     <p style="margin-bottom: 25px;">Ready to stand with us as a pillar of community transformation? Choose your level of investment securely through our Zeffy checkout pipeline and claim your permanent place in the Harbor.</p>
-                    <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="gold-button">Join The Harbor</a>
+                    <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="gold-button">Join The Harbor <span aria-hidden="true">↗</span><span class="sr-only">(opens in new window)</span></a>
                 </div>
 
-                <!-- Right Inquiry Form Column -->
                 <div class="hub-right">
                     <div class="inquiry-card">
                         <h4>Have Questions? Ask Us Directly</h4>
-                        <!-- WEB3FORMS PRODUCTION ACTION GATEWAY -->
                         <form action="https://api.web3forms.com/submit" method="POST">
-                            <!-- SECURE UNIQUE ACCESS KEY ASSIGNED VIA SCREENSHOT (31).PNG -->
                             <input type="hidden" name="access_key" value="43f648d3-7af4-439e-a9e6-171ca192a4c9">
                             <input type="hidden" name="subject" value="New Harbor Sponsorship Question">
                             
                             <div class="form-group">
-                                <input type="text" name="name" placeholder="Your Name / Company" required>
+                                <label for="form-name" class="sr-only">Your Name / Company</label>
+                                <input type="text" id="form-name" name="name" placeholder="Your Name / Company" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" placeholder="Your Email Address" required>
+                                <label for="form-email" class="sr-only">Your Email Address</label>
+                                <input type="email" id="form-email" name="email" placeholder="Your Email Address" required>
                             </div>
                             <div class="form-group">
-                                <textarea name="message" placeholder="Ask us about site staging, employment pipelines, or custom fleet wrap graphics..." required></textarea>
+                                <label for="form-message" class="sr-only">Your Message</label>
+                                <textarea id="form-message" name="message" placeholder="Ask us about site staging, employment pipelines, or custom fleet wrap graphics..." required></textarea>
                             </div>
                             <button type="submit" class="submit-q-btn">Submit Question</button>
                         </form>
@@ -302,9 +338,8 @@
             </div>
         </div>
 
-        <!-- MASTER LEGAL DISCLAIMER -->
         <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
-            <p style="font-size: 0.85rem; color: #bdc3c7; font-style: normal; text-align: left; margin-bottom: 0;">
+            <p class="legal-notice-p">
                 The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. All financial contributions are fully tax-deductible under IRC Section 170. Legal Notice: This organization operates strictly as a mobile hygiene, social service, and transitional care continuum. The California Clean Slate Program does not provide legal counsel, record expungement, court representation, or criminal justice re-entry programming.
             </p>
         </div>
