@@ -96,6 +96,14 @@
             text-align: left;
         }
 
+        /* Dynamic Coastal Gallery Styles */
+        .coastal-gallery-title { color: #f4d35e; font-size: 1.6rem; font-weight: bold; margin-top: 50px; margin-bottom: 20px; text-align: left; }
+        .coastal-grid { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 50px; justify-content: center; }
+        .coastal-card { flex: 1 1 280px; max-width: 300px; background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.2); transition: transform 0.3s; }
+        .coastal-card:hover { transform: translateY(-5px); border-color: #f4d35e; }
+        .gallery-img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        .gallery-caption { padding: 12px 15px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; text-align: center; color: #ffffff; background: rgba(13, 59, 102, 0.5); border-top: 2px solid rgba(244, 211, 94, 0.3); }
+
         /* Partner/Sponsor Grid Layouts */
         .sponsor-tier-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 30px; margin-bottom: 35px; text-align: left; }
         .tier-header { color: #f4d35e; font-weight: 800; font-size: 1.4rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
@@ -115,6 +123,7 @@
             .harbor-action-hub { flex-direction: row; align-items: flex-start; }
             .hub-left { flex: 1; }
             .hub-right { flex: 1; }
+            .coastal-grid { justify-content: space-between; }
         }
 
         /* Gold Button Styling */
@@ -260,6 +269,22 @@
             <p>
                 True transformation is never a solo voyage, and the sponsors anchored here in The Harbor are recognized for far more than what they give to us. These businesses, leaders, and neighbors are standard-bearers of community stewardship, consistently pouring their time, hearts, and resources into keeping our regions vibrant, resilient, and safe for everyone. By stepping up to build this mobile hygiene and restoration fleet, they aren't just funding an organization; they are actively investing in the preservation and wellness of our shared home. Through their commitment, they ensure that as we transition participants into stable lifestyles, we naturally prevent upstream contaminants from reaching our protected marine sanctuary—safeguarding native wildlife, vital channels, and our bay right from the source.
             </p>
+        </div>
+
+        <h3 class="coastal-gallery-title">Ecosystem Preservation: Our Area of Influence</h3>
+        <div class="coastal-grid">
+            <div class="coastal-card">
+                <img src="slrlaurelst.jpg" alt="Upstream Deployment Axis" class="gallery-img">
+                <div class="gallery-caption">1. Upstream Deployment Axis</div>
+            </div>
+            <div class="coastal-card">
+                <img src="slroutlet2.jpg" alt="Community Corridor Flow" class="gallery-img">
+                <div class="gallery-caption">2. Community Corridor Flow</div>
+            </div>
+            <div class="coastal-card">
+                <img src="SLRoutlet1.jpg" alt="Protected Marine Gateway" class="gallery-img">
+                <div class="gallery-caption">3. Protected Marine Gateway</div>
+            </div>
         </div>
 
         <h2>Founding Business Partners</h2>
