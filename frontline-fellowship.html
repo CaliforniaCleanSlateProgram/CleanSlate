@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontline Fellowship | California Clean Slate Program</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="The California Clean Slate Program's Frontline Fellowship offers flexible, paid street outreach and mobile hygiene logistics shifts for local veterans.">
+    <meta name="keywords" content="California Clean Slate Program, Frontline Fellowship, veteran jobs Santa Cruz, sponsor a vet, mobile hygiene, community stabilization">
+
+    <!-- Social Media Link Preview Tags (Open Graph) -->
+    <meta property="og:title" content="Frontline Fellowship | California Clean Slate Program">
+    <meta property="og:description" content="Supporting our regional veteran community through meaningful economic opportunities and paid outreach shifts. Sponsor a veteran shift today.">
+    <meta property="og:url" content="https://californiacleanslateprogram.org/frontline-fellowship">
+    <meta property="og:type" content="website">
+
     <style>
         :root {
             --primary: #1a365d;
@@ -11,59 +22,86 @@
             --dark: #2d3748;
             --light: #f7fafc;
             --accent: #dd6b20;
+            --success: #38a169;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--dark);
-            background-color: var(--light);
+            background-color: #edf2f7;
             margin: 0;
             padding: 0;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
+        
+        /* Next-Gen Hero Banner Section */
+        .hero-banner {
+            position: relative;
+            background-image: linear-gradient(rgba(26, 54, 93, 0.85), rgba(43, 108, 176, 0.85)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
             text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #e2e8f0;
         }
-        h1 {
-            color: var(--primary);
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .hero-banner h1 {
+            color: white;
+            font-size: 3rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
         }
-        h2 {
-            color: var(--secondary);
-            font-size: 1.8rem;
-            margin-top: 30px;
+        .hero-banner h3 {
+            color: #e2e8f0;
+            font-size: 1.5rem;
+            margin: 0;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
         }
-        h3 {
-            color: var(--dark);
-            font-size: 1.3rem;
+
+        .container {
+            max-width: 850px;
+            margin: -40px auto 60px auto;
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
         }
         .section {
-            margin: 40px 0;
+            margin-bottom: 30px;
             background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--secondary);
+        }
+        .section-accent {
+            border-top: 5px solid var(--accent);
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
         }
         .btn {
             display: inline-block;
             background-color: var(--secondary);
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
+            font-size: 1rem;
             margin-top: 15px;
-            transition: background 0.2s;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11);
         }
         .btn:hover {
             background-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
         }
         .btn-accent {
             background-color: var(--accent);
@@ -72,41 +110,65 @@
             background-color: #c05621;
         }
         ul {
-            padding-left: 20px;
+            padding-left: 0;
+            list-style: none;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         .tier-list {
-            list-style: none;
-            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
         }
         .tier-item {
-            background: var(--light);
-            padding: 15px;
-            margin-bottom: 10px;
-            border-left: 4px solid var(--accent);
-            border-radius: 0 4px 4px 0;
+            background: #f7fafc;
+            padding: 20px;
+            border-top: 4px solid var(--accent);
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .tier-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
         }
         .disclaimer {
             font-size: 0.85rem;
             color: #718096;
-            margin-top: 20px;
-            line-height: 1.4;
+            margin-top: 25px;
+            line-height: 1.5;
             font-style: italic;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Frontline Fellowship</h1>
-            <h3>Supporting the Regional Veteran Community Through Action</h3>
-        </header>
+    <!-- Next-Gen Visual Hero Header -->
+    <div class="hero-banner">
+        <h1>Frontline Fellowship</h1>
+        <h3>Supporting the Regional Veteran Community Through Action</h3>
+    </div>
 
+    <div class="container">
         <div class="section">
-            <p>The California Clean Slate Program is committed to supporting our community's veterans by creating direct, meaningful economic opportunities. We recognize the immense value, dedication, and operational excellence that members of the regional veteran community bring to local initiatives. Our Frontline Fellowship program is designed to keep local veterans at the forefront of our community stabilization and mobile hygiene logistics operations.</p>
+            <p style="font-size: 1.1rem; color: #4a5568; margin: 0;">The California Clean Slate Program is committed to supporting our community's veterans by creating direct, meaningful economic opportunities. We recognize the immense value, dedication, and operational excellence that members of the regional veteran community bring to local initiatives. Our Frontline Fellowship program is designed to keep local veterans at the forefront of our community stabilization and mobile hygiene logistics operations.</p>
         </div>
 
         <div class="section">
@@ -123,17 +185,29 @@
             <a href="mailto:Partnerships@californiacleanslateprogram.org?subject=Frontline%20Fellowship%20Inquiry" class="btn">Apply for a Frontline Fellowship Shift</a>
         </div>
 
-        <div class="section">
+        <div class="section section-accent">
             <h2>Sponsor a Veteran Outreach Shift</h2>
             <p>Help us fund paid employment opportunities for local veterans who are making a tangible difference in our shared community spaces. Through our <strong>Sponsor a Vet for a Day</strong> initiative, 100% of your targeted contribution goes directly into our workforce payroll fund to compensate a veteran outreach specialist for their time on the ground.</p>
             
+            <!-- Modern Grid Tier Layout -->
             <div class="tier-list">
-                <div class="tier-item"><strong>$50</strong> funds a half-shift stipend for a veteran outreach specialist.</div>
-                <div class="tier-item"><strong>$100</strong> fully sponsors a local veteran to manage a full day of field logistics.</div>
-                <div class="tier-item"><strong>$500</strong> funds a full week of community stabilization shifts.</div>
+                <div class="tier-item">
+                    <div class="tier-price">$50</div>
+                    <div>Funds a half-shift stipend for a veteran outreach specialist.</div>
+                </div>
+                <div class="tier-item">
+                    <div class="tier-price">$100</div>
+                    <div>Fully sponsors a local veteran to manage a full day of field logistics.</div>
+                </div>
+                <div class="tier-item">
+                    <div class="tier-price">$500</div>
+                    <div>Funds a full week of community stabilization shifts.</div>
+                </div>
             </div>
             
-            <a href="https://www.paypal.com/ncp/payment/9XEPJM8LRUEN2" target="_blank" class="btn btn-accent">Sponsor a Veteran Outreach Shift</a>
+            <div style="text-align: center;">
+                <a href="https://www.paypal.com/ncp/payment/9XEPJM8LRUEN2" target="_blank" class="btn btn-accent">Sponsor a Veteran Outreach Shift</a>
+            </div>
             
             <p class="disclaimer">The California Clean Slate Program is a registered 501(c)(3) organization. Contributions are tax-deductible to the extent permitted by law. No goods or services were provided in exchange for this contribution.</p>
         </div>
