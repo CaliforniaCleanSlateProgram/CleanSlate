@@ -28,7 +28,9 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.7;
             color: var(--dark);
-            background-color: #f1f5f9;
+            /* OlGlory Full Screen Fixed Background with a light clean overlay for readability */
+            background: linear-gradient(rgba(241, 245, 249, 0.92), rgba(241, 245, 249, 0.92)), url('olglory.jpg') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
         }
@@ -36,7 +38,6 @@
         /* Next-Gen Multiservice Tactical Custom Hero Header */
         .hero-banner {
             position: relative;
-            /* Creates a premium dark tactical carbon texture entirely in code */
             background: 
                 linear-gradient(rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.92)),
                 radial-gradient(circle at 50% 30%, rgba(30, 58, 138, 0.2), transparent 70%),
@@ -46,6 +47,26 @@
             padding: 110px 20px;
             text-align: center;
             box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4);
+        }
+
+        /* Combined Veteran Header Display Layout */
+        .hero-content-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .vetday-img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.15);
+            margin-bottom: 10px;
         }
         
         /* The Multiservice Ribbon of Service (Army, Marines, Navy, Air Force, Coast Guard, Space Force) */
@@ -69,7 +90,7 @@
         .hero-banner h1 {
             color: white;
             font-size: 3.4rem;
-            margin: 0 0 15px 0;
+            margin: 0 0 5px 0;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-weight: 900;
@@ -94,7 +115,7 @@
         }
         .section {
             margin-bottom: 35px;
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.98);
             padding: 45px;
             border-radius: 12px;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
@@ -199,8 +220,11 @@
 
     <!-- Unified Multiservice Tactical Header -->
     <div class="hero-banner">
-        <h1>Frontline Fellowship</h1>
-        <h3>Supporting the Regional Veteran Community Through Action</h3>
+        <div class="hero-content-wrapper">
+            <img src="VETDAY.jpg" alt="Honoring Veterans" class="vetday-img">
+            <h1>Frontline Fellowship</h1>
+            <h3>Supporting the Regional Veteran Community Through Action</h3>
+        </div>
         <div class="service-ribbon"></div>
     </div>
 
