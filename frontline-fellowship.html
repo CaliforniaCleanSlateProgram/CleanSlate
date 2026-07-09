@@ -18,7 +18,7 @@
     <style>
         :root {
             --primary: #0f172a; /* Deep Slate / Carbon */
-            --secondary: #1e3a8a; /* Service Blue */
+            --secondary: #1e3a8a; /* Service Blue / Navy */
             --dark: #334155;
             --light: #f8fafc;
             --accent: #b45309; /* Operational Amber/Gold */
@@ -27,9 +27,10 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.7;
-            color: var(--dark);
-            /* Applied flag1.jpg as the full screen background with an overlay */
-            background: linear-gradient(rgba(241, 245, 249, 0.8), rgba(241, 245, 249, 0.85)), 
+            color: #ffffff; /* Defaulted body text to white for context boxes */
+            
+            /* LIGHTENED OVERLAY: Dropped opacity down from 0.8 to 0.3-0.35 to make flag1.jpg clear and visible */
+            background: linear-gradient(rgba(241, 245, 249, 0.3), rgba(241, 245, 249, 0.35)), 
                         url('flag1.jpg') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
@@ -39,7 +40,6 @@
         /* Tactical Hero Header */
         .hero-banner {
             position: relative;
-            /* Removed header-specific background so main body background shows behind the graphic */
             color: white;
             padding: 110px 20px;
             text-align: center;
@@ -53,7 +53,6 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            /* Add shadow to text for better contrast against background image */
             text-shadow: 0 2px 10px rgba(0,0,0,0.8); 
         }
 
@@ -106,23 +105,31 @@
             z-index: 10;
             padding: 0 20px;
         }
+        
+        /* CONTEXT BOXES: Changed to Theme Navy Blue and tweaked interior text to clean white variants */
         .section {
             margin-bottom: 35px;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(30, 58, 138, 0.95); /* Deep Theme Navy Blue with slight layout blending */
+            color: #ffffff;
             padding: 45px;
             border-radius: 12px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
             border-left: 6px solid #475569;
+        }
+        .section p {
+            color: #f1f5f9; /* Soft off-white text for secondary paragraph blocks */
         }
         .section-accent {
             border-left: 6px solid var(--accent);
         }
+        
+        /* HEADERS INSIDE BOXES: High visibility styling */
         h2 {
-            color: #1e293b;
+            color: #ffffff;
             font-size: 1.8rem;
             margin-top: 0;
             margin-bottom: 25px;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.15);
             padding-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -164,12 +171,13 @@
             padding-left: 35px;
             position: relative;
             font-size: 1.05rem;
+            color: #f1f5f9;
         }
         li::before {
             content: "✓";
             position: absolute;
             left: 5px;
-            color: var(--success);
+            color: #4ade80; /* Brighter neon-green check for dark backgrounds */
             font-weight: bold;
             font-size: 1.3rem;
         }
@@ -180,31 +188,32 @@
             margin: 30px 0;
         }
         .tier-item {
-            background: #f8fafc;
+            background: rgba(15, 23, 42, 0.6); /* Translucent slate background inside dark grid elements */
+            color: #ffffff;
             padding: 25px 20px;
             border-top: 4px solid var(--accent);
             border-radius: 6px;
             text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
             transition: transform 0.2s;
         }
         .tier-item:hover {
             transform: translateY(-3px);
-           
+        }
         .tier-price {
             font-size: 2.2rem;
             font-weight: 800;
-            color: #1e293b;
+            color: #ffffff;
             margin-bottom: 8px;
         }
         .disclaimer {
             font-size: 0.85rem;
-            color: #64748b;
+            color: #cbd5e1; /* Clearer light gray style for fine print */
             margin-top: 30px;
             line-height: 1.6;
             font-style: italic;
             text-align: center;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
             padding-top: 20px;
         }
     </style>
@@ -223,7 +232,7 @@
 
     <div class="container">
         <div class="section">
-            <p style="font-size: 1.15rem; color: #334155; margin: 0; line-height: 1.8;">The California Clean Slate Program is committed to supporting our community's veterans by creating direct, meaningful economic opportunities. We recognize the immense value, dedication, and operational excellence that members of the regional veteran community bring to local initiatives. Our Frontline Fellowship program is designed to keep local veterans at the forefront of our community stabilization and mobile hygiene logistics operations.</p>
+            <p style="font-size: 1.15rem; color: #ffffff; margin: 0; line-height: 1.8;">The California Clean Slate Program is committed to supporting our community's veterans by creating direct, meaningful economic opportunities. We recognize the immense value, dedication, and operational excellence that members of the regional veteran community bring to local initiatives. Our Frontline Fellowship program is designed to keep local veterans at the forefront of our community stabilization and mobile hygiene logistics operations.</p>
         </div>
 
         <div class="section">
