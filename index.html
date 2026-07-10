@@ -15,12 +15,12 @@
     <meta property="og:url" content="https://californiacleanslateprogram.org">
     <meta property="og:type" content="website">
 
-    <!-- Tailwind CSS Framework CDN for Premium Visual UI Layout -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome Icons for clean vector markings -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body { 
             font-family: Arial, sans-serif; 
             background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('HC1.jpg') no-repeat center center fixed; 
@@ -28,6 +28,84 @@
             color: #333; 
             line-height: 1.6; 
         }
+
+        /* 1. TOP COMPLIANCE BAR STYLING */
+        .compliance-bar {
+            background-color: #0f172a;
+            color: #94a3b8;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #1e293b;
+        }
+        .compliance-left { display: flex; align-items: center; gap: 8px; }
+        .pulse-dot { w-width: 6px; height: 6px; background-color: #f59e0b; border-radius: 50%; display: inline-block; }
+        .compliance-right { display: flex; gap: 15px; }
+
+        /* 2. ENTERPRISE HEADER & FIXED RESPONSIVE NAVBAR STYLING */
+        header { 
+            background-color: rgba(255, 255, 255, 0.98); 
+            border-b: 1px solid #e2e8f0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 0 20px;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .logo-block { display: flex; align-items: center; gap: 12px; }
+        .logo-badge {
+            background-color: #0d3b66;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+        .logo-text-group { display: flex; flex-direction: column; }
+        .logo-title { font-size: 1.15rem; font-weight: 900; color: #0f172a; tracking-spacing: -0.3px; }
+        .logo-subtitle { font-size: 10px; font-weight: bold; color: #0d3b66; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+        
+        nav ul { list-style: none; display: flex; align-items: center; gap: 24px; }
+        nav ul li a { color: #475569; text-decoration: none; font-weight: bold; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.2s; }
+        nav ul li a:hover { color: #0d3b66; }
+        nav ul li a.active { color: #0d3b66; }
+
+        .header-btn {
+            background-color: #0d3b66;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+            box-shadow: 0 2px 4px rgba(13, 59, 102, 0.1);
+        }
+        .header-btn:hover { background-color: #0a2d52; }
+
+        /* Responsive Mobile Target Layouts */
+        .menu-icon-label { display: none; cursor: pointer; font-size: 1.3rem; color: #334155; user-select: none; }
+        #menu-toggle { display: none; }
+
+        /* 3. HERO LAYER */
         .hero { 
             position: relative; 
             height: 400px; 
@@ -45,8 +123,12 @@
         .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 20px; text-align: center; }
         .hero-branding h1 { font-size: 3.2rem; color: #f4d35e; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85); margin-bottom: 8px; font-weight: bold; }
         .hero-branding p { font-size: 1.6rem; font-weight: bold; color: #ffffff; letter-spacing: 0.5px; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85); }
+        
+        /* 4. CONTENT FRAMEWORKS */
         .impact-section { max-width: 1000px; margin: 40px auto; padding: 20px; text-align: center; }
         .impact-text { font-size: 1.4rem; font-weight: bold; font-style: italic; color: #0d3b66; text-shadow: 1px 1px 2px rgba(255,255,255,0.5); margin-bottom: 30px; max-width: 900px; margin-left: auto; margin-right: auto; text-align: left; line-height: 1.7; }
+        .scope-notice-box { margin-top: 25px; padding-top: 15px; border-top: 1px solid #e2e8f0; font-size: 0.85rem; color: #64748b; text-align: left; display: flex; align-items: flex-start; gap: 10px; font-weight: normal; }
+
         .disclaimer { font-size: 0.75rem; color: #555; margin-top: 15px; font-style: italic; line-height: 1.3; border-top: 1px dashed rgba(13, 59, 102, 0.2); padding-top: 10px; text-align: left; }
         .gold-button {
             display: inline-block; background: linear-gradient(to bottom, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
@@ -58,6 +140,7 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent); animation: shine 3s infinite;
         }
         @keyframes shine { 0% { left: -100%; } 20% { left: 100%; } 100% { left: 100%; } }
+        
         .continuum-grid { 
             display: flex; overflow-x: auto; gap: 20px; max-width: 1000px; margin: 25px auto 40px auto; padding: 40px 20px; 
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('SC26.jpg'); background-size: cover; background-position: center; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -65,6 +148,7 @@
         .phase-card { flex: 0 0 300px; background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 15px; color: #fff; text-align: center; text-decoration: none; display: block; border: 1px solid rgba(255,255,255,0.3); transition: transform 0.3s, background 0.3s; }
         .phase-card:hover { transform: scale(1.04); background: rgba(255, 255, 255, 0.3); border-color: #f4d35e; }
         .phase-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        
         .watershed-impact-section { max-width: 1000px; margin: 40px auto; padding: 20px; }
         .watershed-container { display: flex; background: #ffffff; border: 2px solid #0d3b66; border-left: 6px solid #f4d35e; border-radius: 16px; box-shadow: 0 10px 25px rgba(13, 59, 102, 0.15); overflow: hidden; gap: 0; }
         .watershed-visual { flex: 1 1 45%; position: relative; min-height: 380px; }
@@ -74,6 +158,7 @@
         .watershed-content { flex: 1 1 55%; padding: 40px 30px; text-align: left; display: flex; flex-direction: column; justify-content: center; background-color: #ffffff; }
         .watershed-title { color: #0d3b66; font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; letter-spacing: -0.5px; }
         .watershed-text { font-size: 1.05rem; line-height: 1.6; color: #333; margin-bottom: 15px; }
+        
         .fellowship-section { max-width: 1000px; margin: 40px auto; padding: 20px; }
         .fellowship-container { background: linear-gradient(135deg, #0d3b66 0%, #172554 100%); color: #ffffff; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(13, 59, 102, 0.3); border-bottom: 6px solid #f4d35e; text-align: center; position: relative; overflow: hidden; }
         .fellowship-container::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(to right, #10b981, #3b82f6, #dc2626, #f59e0b, #64748b); }
@@ -81,7 +166,43 @@
         .fellowship-text { font-size: 1.15rem; max-width: 800px; margin: 0 auto 25px auto; line-height: 1.7; color: #e2e8f0; }
         .fellowship-btn { display: inline-block; background-color: #f4d35e; color: #0d3b66; padding: 14px 30px; font-weight: bold; text-decoration: none; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.2s ease-in-out; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         .fellowship-btn:hover { background-color: #ffffff; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+
+        /* 5. DYNAMIC ROI GRID STRATEGY */
+        .transparency-section { background-color: #0f172a; color: white; padding: 80px 20px; border-top: 1px solid #1e293b; margin-top: 60px; }
+        .transparency-container { max-width: 1200px; margin: 0 auto; }
+        .matrix-title { color: #ffffff; font-size: 2.2rem; letter-spacing: -0.5px; margin-bottom: 10px; text-align: center; font-weight: bold; text-transform: uppercase; }
+        .matrix-subtitle { color: #94a3b8; text-align: center; font-size: 1.05rem; max-width: 750px; margin: 0 auto 50px auto; line-height: 1.6; }
+        .matrix-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 35px; text-align: left; }
+        .matrix-card { flex: 1 1 220px; max-width: 280px; background-color: #020617; border: 2px solid #1e293b; border-radius: 16px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,0.2); position: relative; transition: border-color 0.2s; }
+        .matrix-card:hover { border-color: #334155; }
+        .matrix-card.featured { border-color: #38bdf8; box-shadow: 0 6px 18px rgba(56, 189, 248, 0.08); }
+        .matrix-card.gold-featured { border-color: #f59e0b; box-shadow: 0 6px 18px rgba(245, 158, 11, 0.08); }
+        .matrix-card-header { border-bottom: 1px solid #1e293b; padding-bottom: 12px; margin-bottom: 15px; }
+        .matrix-unit-tag { font-size: 9px; font-weight: bold; text-transform: uppercase; tracking-spacing: 0.5px; color: #38bdf8; display: block; margin-bottom: 2px; }
+        .matrix-card.gold-featured .matrix-unit-tag { color: #f59e0b; }
+        .matrix-amt { color: #ffffff; font-size: 2.2rem; font-weight: 800; }
+        .matrix-label { color: #f1f5f9; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; line-height: 1.3; }
+        .matrix-desc { font-size: 0.85rem; line-height: 1.6; color: #94a3b8; margin-bottom: 20px; flex-grow: 1; }
+        .matrix-btn-action { display: block; text-align: center; color: #38bdf8; font-weight: bold; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid #1e293b; padding: 10px 0; border-radius: 8px; transition: all 0.2s; }
+        .matrix-btn-action:hover { border-color: #38bdf8; color: #ffffff; background-color: rgba(56,189,248,0.05); }
+        .matrix-card.featured .matrix-btn-action { background-color: #38bdf8; color: #020617; border-color: #38bdf8; }
+        .matrix-card.featured .matrix-btn-action:hover { background-color: #0ea5e9; border-color: #0ea5e9; color: #020617; }
+        .matrix-card.gold-featured .matrix-btn-action { background-color: #f59e0b; color: #020617; border-color: #f59e0b; }
+        .matrix-card.gold-featured .matrix-btn-action:hover { background-color: #d97706; border-color: #d97706; color: #020617; }
+        .matrix-deductible-tag { display: block; text-align: center; font-size: 9px; color: #475569; margin-top: 8px; italic; }
+        .matrix-tag { position: absolute; top: -11px; right: 20px; background: #38bdf8; color: #020617; font-size: 0.65rem; font-weight: 900; padding: 2px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .matrix-card.gold-featured .matrix-tag { background: #f59e0b; }
+
+        /* 6. RESPONSIVE MEDIA VIEWPORTS CODE */
         @media (max-width: 1023px) {
+            .compliance-bar { justify-content: center; gap: 8px; text-align: center; }
+            .menu-icon-label { display: block; block-margin: 0; }
+            nav { display: none; position: absolute; top: 80px; left: -20px; width: calc(100% + 40px); background-color: white; border-bottom: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); padding: 20px; }
+            nav ul { flex-direction: column; align-items: flex-start; gap: 16px; }
+            nav ul li { width: 100%; }
+            nav ul li a { display: block; padding: 6px 0; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
+            #menu-toggle:checked ~ nav { display: block; }
+            .header-btn { display: none; }
             .continuum-grid { flex-direction: column; overflow-x: visible; padding: 30px 15px; gap: 25px; }
             .phase-card { flex: 1 1 auto; width: 100%; background: rgba(13, 59, 102, 0.85); border-left: 4px solid #f4d35e; }
             .hero-branding h1 { font-size: 2.2rem; }
@@ -93,357 +214,261 @@
             .fellowship-container { padding: 30px 20px; }
             .fellowship-title { font-size: 1.6rem; }
         }
+
         .founding-partner-section { position: relative; max-width: 1000px; margin: 40px auto; padding: 60px 40px; background: url('To-Honor-Surfing-3cropped.jpg') no-repeat center center; background-size: cover; border-radius: 20px; color: #fff; display: flex; justify-content: flex-start; align-items: center; }
         .partner-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); border-radius: 20px; }
         .partner-content { position: relative; z-index: 1; max-width: 500px; }
         .partner-content h2 { color: #f4d35e; margin-bottom: 15px; }
         footer { background-color: #0d3b66; color: white; text-align: center; padding: 20px; margin-top: 40px; }
         .footer-branding-sub { color: #f4d35e; font-size: 0.85rem; letter-spacing: 1.5px; margin-top: 5px; text-transform: uppercase; font-weight: bold; }
-        .matrix-title { color: #0d3b66; font-size: 1.7rem; letter-spacing: -0.5px; margin-bottom: 10px; text-align: center; font-weight: bold; }
-        .matrix-subtitle { color: #555; text-align: center; font-size: 1rem; max-width: 750px; margin: 0 auto 35px auto; line-height: 1.5; }
-        .matrix-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 35px; text-align: left; }
-        .matrix-card { flex: 1 1 220px; max-width: 280px; background-color: rgba(13, 59, 102, 0.05); border: 2px solid #0d3b66; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: flex-start; box-shadow: 0 4px 12px rgba(0,0,0,0.08); position: relative; }
-        .matrix-card.featured { border-color: #bf953f; background-color: rgba(13, 59, 102, 0.08); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
-        .matrix-amt { color: #0d3b66; font-size: 1.8rem; font-weight: 800; margin-bottom: 5px; }
-        .matrix-card.featured .matrix-amt { color: #aa771c; }
-        .matrix-label { color: #333; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; letter-spacing: -0.2px; line-height: 1.3; }
-        .matrix-desc { font-size: 0.9rem; line-height: 1.5; color: #444; margin-bottom: 15px; flex-grow: 1; }
-        .matrix-card-link { color: #0d3b66; font-weight: bold; text-decoration: underline; font-size: 0.85rem; margin-top: auto; text-transform: uppercase; tracking-spacing: 0.5px; cursor: pointer; }
-        .matrix-card.featured .matrix-card-link { color: #aa771c; }
-        .matrix-tag { position: absolute; top: -11px; right: 15px; background: linear-gradient(to bottom, #bf953f, #aa771c); color: #fff; font-size: 0.65rem; font-weight: 900; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        
-        /* Mobile Navbar Menu Toggles */
-        #menu-toggle:checked ~ #mobile-menu { display: block; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body>
 
     <!-- 1. AGENCY & UEI FEDERAL COMPLIANCE HIGHLIGHT BANNER -->
-    <div class="bg-slate-900 text-slate-400 text-[11px] font-semibold tracking-widest uppercase py-2 px-4 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
-            <div class="flex items-center space-x-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
-                <span>Phase 1 Flagship Buildout: Santa Cruz County</span>
-            </div>
-            <div class="flex space-x-4">
-                <span>Active 501(c)(3) Status Status</span>
-                <span>UEI: UEBPQDK1L7E7</span>
-            </div>
+    <div class="compliance-bar">
+        <div class="compliance-left">
+            <span class="pulse-dot"></span>
+            <span>Phase 1 Flagship Buildout: Santa Cruz County</span>
+        </div>
+        <div class="compliance-right">
+            <span>Active 501(c)(3) Status Status</span>
+            <span>UEI: UEBPQDK1L7E7</span>
         </div>
     </div>
 
     <!-- 2. STICKY RESPONSIVE HEADER NAVIGATION -->
-    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
-            <div class="flex items-center space-x-3">
-                <div class="bg-teal-600 text-white px-3 py-2 rounded-lg font-black tracking-wider text-xl shadow-xs">CCSP</div>
-                <div>
-                    <span class="block text-lg font-black text-slate-900 tracking-tight leading-none">California Clean Slate Program</span>
-                    <span class="text-[10px] font-bold text-teal-600 uppercase tracking-widest mt-1 block">Bedrock to Buildout Initiative</span>
+    <header>
+        <div class="header-container">
+            <div class="logo-block">
+                <div class="logo-badge">CCSP</div>
+                <div class="logo-text-group">
+                    <span class="logo-title">California Clean Slate Program</span>
+                    <span class="logo-subtitle">Bedrock to Buildout Initiative</span>
                 </div>
             </div>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider text-slate-600">
-                <a href="index.html" class="text-teal-600 hover:text-teal-700 transition">Home</a>
-                <a href="#continuum" class="hover:text-teal-600 transition">Our Continuum</a>
-                <a href="frontline-fellowship.html" class="hover:text-teal-600 transition">Frontline Fellowship</a>
-                <a href="leadership-governance.html" class="hover:text-teal-600 transition">Leadership & Governance</a>
-                <a href="partnership.html" class="hover:text-teal-600 transition">Partner With Us</a>
-                <a href="the-harbor.html" class="hover:text-teal-600 transition">The Harbor & Our Bay</a>
-            </nav>
-
-            <!-- Responsive Mobile Burger Menu Interface -->
-            <input type="checkbox" id="menu-toggle" class="hidden">
-            <label for="menu-toggle" class="lg:hidden p-2 text-slate-700 cursor-pointer text-xl select-none">
+            <!-- Responsive Mobile Burger Checkbox Hook -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon-label">
                 <i class="fa-solid fa-bars"></i>
             </label>
 
-            <!-- Dropdown Menu Box for Small Devices -->
-            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl lg:hidden z-50 py-4 px-6 space-y-3 font-bold text-sm text-slate-700">
-                <a href="index.html" class="block text-teal-600 py-1 border-b border-slate-50">Home</a>
-                <a href="#continuum" class="block hover:text-teal-600 py-1 border-b border-slate-50">Our Continuum</a>
-                <a href="frontline-fellowship.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Frontline Fellowship</a>
-                <a href="leadership-governance.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Leadership & Governance</a>
-                <a href="partnership.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Partner With Us</a>
-                <a href="the-harbor.html" class="block hover:text-teal-600 py-1">The Harbor & Our Bay</a>
-            </div>
+            <!-- Navigation Links Wrapper -->
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#continuum">Our Continuum</a></li>
+                    <li><a href="frontline-fellowship.html">Frontline Fellowship</a></li>
+                    <li><a href="leadership-governance.html">Leadership & Governance</a></li>
+                    <li><a href="partnership.html">Partner With Us</a></li>
+                    <li><a href="the-harbor.html">The Harbor & Our Bay</a></li>
+                </ul>
+            </nav>
 
-            <div class="hidden sm:block">
-                <a href="#transparency" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-md">Fund The Buildout</a>
-            </div>
+            <a href="#transparency" class="header-btn">Fund The Buildout</a>
         </div>
     </header>
 
     <!-- 3. PREMIUM STRATEGIC HERO BLOCK -->
-    <section class="relative bg-slate-950 text-white py-28 px-4 overflow-hidden border-b border-slate-900" id="home">
-        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
-        <div class="absolute inset-0 z-0 opacity-25 pointer-events-none mix-blend-luminosity">
-            <img src="Harbor.jpg" alt="Santa Cruz Coastal Anchor" class="w-full h-full object-cover object-center">
-        </div>
-        <div class="relative z-10 max-w-5xl mx-auto text-center space-y-6">
-            <span class="inline-flex items-center px-3.5 py-1 rounded-full text-[10px] font-bold tracking-widest bg-teal-500/10 text-teal-400 border border-teal-500/20 uppercase">
-                <i class="fa-solid fa-layer-group mr-1.5 text-teal-400"></i> Public-Environmental Stabilization Asset
-            </span>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight max-w-4xl mx-auto leading-tight uppercase">
-                California Clean Slate Program
-            </h1>
-            <div class="pt-2">
-                <div class="inline-block bg-slate-900/80 backdrop-blur-xs border border-slate-800 px-6 py-3 rounded-xl">
-                    <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Our Guiding Core Slogan</p>
-                    <p class="text-lg md:text-xl font-extrabold text-teal-400 mt-0.5">"Street-Level Compassion. Life-Changing Direction."</p>
-                </div>
-            </div>
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content hero-branding">
+            <h1>California Clean Slate Program</h1>
+            <p>Street-Level Compassion. Life-Changing Direction.</p>
         </div>
     </section>
 
     <!-- 4. CORE IMPACT & ARCHITECTURE PANEL -->
-    <section class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 shadow-sm space-y-6">
-            <span class="text-[11px] font-bold tracking-widest text-teal-600 uppercase block">Strategic Framework</span>
-            <div class="text-slate-700 leading-relaxed text-base sm:text-lg space-y-6">
-                <p>
-                    The California Clean Slate Program is a highly disciplined, multi-phase public-environmental tech and human stabilization framework designed to scale from Santa Cruz to a statewide and national footprint. Founded and led by Mandel Coulter, a certified Substance Use Disorder professional, our team pairs professional care with rigorous military operational discipline to transform community services into structural public infrastructure.
-                </p>
-                <p>
-                    We are actively executing our <strong>"Bedrock to Buildout"</strong> phase right here in Santa Cruz County—assembling our resources, setting strict environmental compliance baselines, and refining our mobile fleet specifications before launching our initial operations.
-                </p>
-                <p>
-                    We don't believe in temporary band-aids. Our framework is engineered on the absolute principle that <strong>premium mobile hygiene and continuous hot showers are the vital point of entry</strong>. This essential dignity loop breaks down barriers and establishes the unshakeable street-level trust required to systematically transition participants off the streets and onto a permanent path of self-sufficiency.
-                </p>
-            </div>
-            <div class="pt-6 border-t border-slate-100">
-                <p class="text-xs text-slate-500 flex items-start">
-                    <i class="fa-solid fa-scale-balanced mr-2.5 mt-0.5 text-slate-400"></i>
-                    <span><strong>Strategic Scope Notice:</strong> Independent of the judicial system, this non-profit framework specializes completely in non-point source pollution mitigation, mobile wellness infrastructure, and stabilization services.</span>
-                </p>
+    <section class="impact-section">
+        <div class="impact-text">
+            <p style="margin-bottom: 20px;">
+                The California Clean Slate Program is a highly disciplined, multi-phase public-environmental tech and human stabilization framework designed to scale from Santa Cruz to a statewide and national footprint. Founded and led by Mandel Coulter, a certified Substance Use Disorder professional, our team pairs professional care with rigorous military operational discipline to transform community services into structural public infrastructure.
+            </p>
+            <p style="margin-bottom: 20px;">
+                We are actively executing our <strong>"Bedrock to Buildout"</strong> phase right here in Santa Cruz County—assembling our resources, setting strict environmental compliance baselines, and refining our mobile fleet specifications before launching our initial operations.
+            </p>
+            <p style="margin-bottom: 25px;">
+                We don't believe in temporary band-aids. Our framework is engineered on the absolute principle that <strong>premium mobile hygiene and continuous hot showers are the vital point of entry</strong>. This essential dignity loop breaks down barriers and establishes the unshakeable street-level trust required to systematically transition participants off the streets and onto a permanent path of self-sufficiency.
+            </p>
+            <div class="scope-notice-box">
+                <i class="fa-solid fa-scale-balanced" style="font-size: 1rem; color: #475569; margin-top: 2px;"></i>
+                <span><strong>Strategic Scope Notice:</strong> Independent of the judicial system, this non-profit framework specializes completely in non-point source pollution mitigation, mobile wellness infrastructure, and stabilization services.</span>
             </div>
         </div>
     </section>
 
     <!-- 5. FIVE-PHASE CONTINUUM TRACK -->
-    <section id="continuum" class="bg-slate-900 text-white py-20 border-t border-b border-slate-950 relative">
-        <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
-                <span class="text-[11px] font-bold tracking-widest text-teal-400 uppercase block">Human Stabilization Architecture</span>
-                <h2 class="text-3xl md:text-4xl font-black tracking-tight">Our 5-Phase "Streets to Sheets" Continuum</h2>
-                <p class="text-slate-400 text-sm">Click or tap a phase card below to review our step-by-step continuum documentation.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <a href="phase1.html" class="bg-slate-950 rounded-xl overflow-hidden border border-slate-800 p-4 group hover:border-teal-500/50 transition duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="rounded-lg overflow-hidden h-40 bg-slate-900 border border-slate-800">
-                            <img src="phase1.jpg.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Phase 1">
-                        </div>
-                        <span class="text-[10px] font-black text-slate-500 tracking-widest uppercase block mt-4">Phase 01</span>
-                        <h3 class="font-bold text-white text-base mt-1 group-hover:text-teal-400 transition">Street Outreach & Hygiene Anchor</h3>
-                    </div>
-                    <span class="text-teal-400 text-xs font-bold uppercase mt-4 flex items-center">Review Phase <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i></span>
-                </a>
-                <a href="phase2.html" class="bg-slate-950 rounded-xl overflow-hidden border border-slate-800 p-4 group hover:border-teal-500/50 transition duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="rounded-lg overflow-hidden h-40 bg-slate-900 border border-slate-800">
-                            <img src="SLR1 trailer.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Phase 2">
-                        </div>
-                        <span class="text-[10px] font-black text-slate-500 tracking-widest uppercase block mt-4">Phase 02</span>
-                        <h3 class="font-bold text-white text-base mt-1 group-hover:text-teal-400 transition">Mobile Service Units</h3>
-                    </div>
-                    <span class="text-teal-400 text-xs font-bold uppercase mt-4 flex items-center">Review Phase <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i></span>
-                </a>
-                <a href="phase3.html" class="bg-slate-950 rounded-xl overflow-hidden border border-slate-800 p-4 group hover:border-teal-500/50 transition duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="rounded-lg overflow-hidden h-40 bg-slate-900 border border-slate-800">
-                            <img src="phase3.jpg.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Phase 3">
-                        </div>
-                        <span class="text-[10px] font-black text-slate-500 tracking-widest uppercase block mt-4">Phase 03</span>
-                        <h3 class="font-bold text-white text-base mt-1 group-hover:text-teal-400 transition">Stabilization & Recovery</h3>
-                    </div>
-                    <span class="text-teal-400 text-xs font-bold uppercase mt-4 flex items-center">Review Phase <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i></span>
-                </a>
-                <a href="phase4.html" class="bg-slate-950 rounded-xl overflow-hidden border border-slate-800 p-4 group hover:border-teal-500/50 transition duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="rounded-lg overflow-hidden h-40 bg-slate-900 border border-slate-800">
-                            <img src="phase4.jpg.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Phase 4">
-                        </div>
-                        <span class="text-[10px] font-black text-slate-500 tracking-widest uppercase block mt-4">Phase 04</span>
-                        <h3 class="font-bold text-white text-base mt-1 group-hover:text-teal-400 transition">Sober Living Environments</h3>
-                    </div>
-                    <span class="text-teal-400 text-xs font-bold uppercase mt-4 flex items-center">Review Phase <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i></span>
-                </a>
-                <a href="phase5.html" class="bg-slate-950 rounded-xl overflow-hidden border border-slate-800 p-4 group hover:border-teal-500/50 transition duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="rounded-lg overflow-hidden h-40 bg-slate-900 border border-slate-800">
-                            <img src="phase5.jpg.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Phase 5">
-                        </div>
-                        <span class="text-[10px] font-black text-slate-500 tracking-widest uppercase block mt-4">Phase 05</span>
-                        <h3 class="font-bold text-white text-base mt-1 group-hover:text-teal-400 transition">Community Integration</h3>
-                    </div>
-                    <span class="text-teal-400 text-xs font-bold uppercase mt-4 flex items-center">Review Phase <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i></span>
-                </a>
-            </div>
-        </div>
-    </section>
+    <h2 id="continuum" style="text-align: center; margin-top: 40px; color: #0d3b66; margin-bottom: 5px; font-weight: bold; text-transform: uppercase;">Our 5-Phase "Streets to Sheets" Continuum</h2>
+    <p style="text-align: center; color: #555; font-style: italic; font-size: 1rem; margin-bottom: 25px; padding: 0 15px;">
+        Click or tap a phase below to review our step-by-step continuum.
+    </p>
+    
+    <div class="continuum-grid">
+        <a href="phase1.html" class="phase-card">
+            <img src="phase1.jpg.png" class="phase-img" alt="Phase 1">
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 1</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Street Outreach & Hygiene Anchor</p>
+        </a>
+        <a href="phase2.html" class="phase-card">
+            <img src="SLR1 trailer.png" class="phase-img" alt="Phase 2">
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 2</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Mobile Service Units</p>
+        </a>
+        <a href="phase3.html" class="phase-card">
+            <img src="phase3.jpg.png" class="phase-img" alt="Phase 3">
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 3</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Stabilization & Recovery</p>
+        </a>
+        <a href="phase4.html" class="phase-card">
+            <img src="phase4.jpg.png" class="phase-img" alt="Phase 4">
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 4</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Sober Living Environments</p>
+        </a>
+        <a href="phase5.html" class="phase-card">
+            <img src="phase5.jpg.png" class="phase-img" alt="Phase 5">
+            <h3 style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Phase 5</h3>
+            <p style="font-style: italic; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Community Integration</p>
+        </a>
+    </div>
 
     <!-- 6. DUAL-IMPACT WATERSHED LOOP -->
-    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
-            <div class="lg:col-span-5 relative min-h-[400px] h-full w-full">
-                <img src="slrlaurelst.jpg" alt="San Lorenzo River Corridor Upstream" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute bottom-4 left-4 right-4 bg-slate-900/95 backdrop-blur-xs text-white p-4 rounded-xl border border-slate-800 flex items-center">
-                    <i class="fa-solid fa-water text-teal-400 text-lg mr-3"></i>
-                    <span class="text-xs font-bold uppercase tracking-wider">Upstream Source Interception &bull; Santa Cruz</span>
+    <section class="watershed-impact-section">
+        <div class="watershed-container">
+            <div class="watershed-visual">
+                <img src="slrlaurelst.jpg" alt="San Lorenzo River Corridor Upstream" class="watershed-img">
+                <div class="watershed-badge">
+                    <span class="badge-icon">🌊</span> Upstream Source Interception &bull; Santa Cruz
                 </div>
             </div>
-            <div class="lg:col-span-7 p-8 sm:p-12 space-y-6">
-                <span class="text-[11px] font-bold tracking-widest text-teal-600 uppercase block">Ecological Integration</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Human Restoration. Sanctuary Preservation.</h2>
-                <div class="text-slate-600 space-y-4 text-sm sm:text-base leading-relaxed">
-                    <p>
-                        At the California Clean Slate Program, we evaluate community health through an integrated lens. Our upcoming field deployments are strategically optimized to target unhoused individuals along the critical San Lorenzo River corridors and adjacent urban waterways right here in Santa Cruz.
-                    </p>
-                    <p>
-                        By deploying our custom heavy-duty mobile hygiene units directly to these sensitive sectors, we build immediate, trusted rapport to move participants seamlessly into our 5-phase "Streets to Sheets" continuum of care. This framework acts as a vital upstream intervention mechanism: by providing human-centric alternatives right at the source channels, we create a measurable drop in accumulated waste, plastics, and debris before they can ever flow downstream into the Santa Cruz Harbor and the protected Monterey Bay National Marine Sanctuary.
-                    </p>
-                </div>
+            
+            <div class="watershed-content">
+                <h2 class="watershed-title">Human Restoration. Sanctuary Preservation.</h2>
+                <p class="watershed-text">
+                    At the California Clean Slate Program, we evaluate community health through an integrated lens. Our upcoming field deployments are strategically optimized to target unhoused individuals along the critical San Lorenzo River corridors and adjacent urban waterways right here in Santa Cruz. 
+                </p>
+                <p class="watershed-text">
+                    By deploying our custom heavy-duty mobile hygiene units directly to these sensitive sectors, we build immediate, trusted rapport to move participants seamlessly into our 5-phase "Streets to Sheets" continuum of care. This framework acts as a vital upstream intervention mechanism: by providing human-centric alternatives right at the source channels, we create a measurable drop in accumulated waste, plastics, and debris before they can ever flow downstream into the Santa Cruz Harbor and the protected Monterey Bay National Marine Sanctuary.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- 7. THE FRONTLINE FELLOWSHIP GRID ROW -->
-    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-r from-slate-900 to-slate-950 text-white rounded-2xl p-8 sm:p-12 shadow-xl border border-slate-800 relative overflow-hidden">
-            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-600"></div>
-            <div class="max-w-3xl space-y-4">
-                <span class="text-[11px] font-bold tracking-widest text-teal-400 uppercase block">Workforce Integration</span>
-                <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight">The Frontline Fellowship</h2>
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    True community stabilization requires unyielding operational discipline. Through our <strong>Frontline Fellowship</strong> program, we collaborate with our regional veteran community to manage heavy utility logistics, oversee technical greywater compliance, and execute precise street-level fleet deployments. Explore how we create meaningful local employment and structure our team for maximum community impact.
-                </p>
-                <div class="pt-4">
-                    <a href="frontline-fellowship.html" class="inline-flex items-center bg-teal-500 hover:bg-teal-600 text-slate-950 text-xs font-black uppercase tracking-wider px-6 py-3.5 rounded-xl transition shadow-lg shadow-teal-500/10">Explore the Fellowship</a>
-                </div>
-            </div>
+    <section class="fellowship-section">
+        <div class="fellowship-container">
+            <h2 class="fellowship-title">The Frontline Fellowship</h2>
+            <p class="fellowship-text">
+                True community stabilization requires unyielding operational discipline. Through our <strong>Frontline Fellowship</strong> program, we collaborate with our regional veteran community to manage heavy utility logistics, oversee technical greywater compliance, and execute precise street-level fleet deployments. Explore how we create meaningful local employment and structure our team for maximum community impact.
+            </p>
+            <a href="frontline-fellowship.html" class="fellowship-btn">Explore the Fellowship</a>
         </div>
     </section>
 
     <!-- 8. ABSOLUTE OPERATIONAL TRANSPARENCY DASHBOARD -->
-    <section id="transparency" class="py-20 bg-slate-900 text-white border-t border-slate-950 mt-12 relative">
-        <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                <span class="text-[11px] font-bold tracking-widest text-teal-400 uppercase block">Institutional Portfolio Due Diligence</span>
-                <h2 class="text-3xl md:text-4xl font-black tracking-tight">Operational Transparency: How Your Capital Deploys</h2>
-                <p class="text-slate-400 text-sm sm:text-base">
-                    We treat community capital with absolute financial discipline. Every funding tier is structurally optimized to cover direct physical supplies alongside the fleet construction, utility engineering, and institutional infrastructure required to scale successfully from Santa Cruz across the nation.
-                </p>
-            </div>
+    <section id="transparency" class="transparency-section">
+        <div class="transparency-container">
+            <h2 class="matrix-title">Operational Transparency: How Your Capital Deploys</h2>
+            <p class="matrix-subtitle">
+                We treat community capital with absolute financial discipline. Every funding tier is structurally optimized to cover direct physical supplies alongside the fleet construction, utility engineering, and institutional infrastructure required to scale successfully from Santa Cruz across the nation.
+            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16 text-left">
+            <div class="matrix-grid">
                 <!-- Card 1 -->
-                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
-                    <div>
-                        <span class="text-[9px] font-bold text-teal-400 uppercase tracking-wider block mb-1">Human Impact Unit</span>
-                        <div class="text-3xl font-black text-white border-b border-slate-800 pb-3">$30</div>
-                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">The Dignity Spark</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Fully subsidizes comprehensive mobile hygiene, warm tankless showers, thermal socks, and full on-site sanitation loops for <strong>6 individuals</strong> in crisis.</p>
+                <div class="matrix-card">
+                    <div class="matrix-card-header">
+                        <span class="matrix-unit-tag">Human Impact Unit</span>
+                        <div class="matrix-amt">$30</div>
                     </div>
-                    <div class="mt-6">
-                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" class="block text-center text-teal-400 hover:text-white font-bold text-xs uppercase tracking-wider border border-slate-800 hover:border-teal-500 py-2.5 rounded-xl transition">Deploy Unit Capital</a>
-                        <span class="block text-center text-[9px] text-slate-500 mt-1.5 italic">100% Tax-Deductible Contribution</span>
+                    <div class="matrix-label">The Dignity Spark</div>
+                    <p class="matrix-desc">Fully subsidizes comprehensive mobile hygiene, warm tankless showers, thermal socks, and full on-site sanitation loops for <strong>6 individuals</strong> in crisis.</p>
+                    <div>
+                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="matrix-btn-action">Deploy Unit Capital</a>
+                        <span class="matrix-deductible-tag">100% Tax-Deductible</span>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
-                    <div>
-                        <span class="text-[9px] font-bold text-teal-400 uppercase tracking-wider block mb-1">Field Scaling Asset</span>
-                        <div class="text-3xl font-black text-white border-b border-slate-800 pb-3">$50</div>
-                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">The Outreach Foundation</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Secures <strong>10 weather-resistant field kits</strong> packed with heavy-duty hygiene essentials and thermal apparel, completely scaling our active street outreach capabilities.</p>
+                <div class="matrix-card">
+                    <div class="matrix-card-header">
+                        <span class="matrix-unit-tag">Field Scaling Asset</span>
+                        <div class="matrix-amt">$50</div>
                     </div>
-                    <div class="mt-6">
-                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" class="block text-center text-teal-400 hover:text-white font-bold text-xs uppercase tracking-wider border border-slate-800 hover:border-teal-500 py-2.5 rounded-xl transition">Deploy Unit Capital</a>
-                        <span class="block text-center text-[9px] text-slate-500 mt-1.5 italic">100% Tax-Deductible Contribution</span>
+                    <div class="matrix-label">The Outreach Foundation</div>
+                    <p class="matrix-desc">Secures <strong>10 weather-resistant field kits</strong> packed with heavy-duty hygiene essentials and thermal apparel, completely scaling our active street outreach capabilities.</p>
+                    <div>
+                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="matrix-btn-action">Deploy Unit Capital</a>
+                        <span class="matrix-deductible-tag">100% Tax-Deductible</span>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
-                    <div>
-                        <span class="text-[9px] font-bold text-teal-400 uppercase tracking-wider block mb-1">Fleet Deployment Sponsor</span>
-                        <div class="text-3xl font-black text-white border-b border-slate-800 pb-3">$150</div>
-                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">Site Deployment Sponsor</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Sponsors a <strong>full morning of mobile fleet operations</strong>. Fully absorbs greywater compliance logistics, generator power systems, transit fuel, and asset maintenance buffers.</p>
+                <div class="matrix-card">
+                    <div class="matrix-card-header">
+                        <span class="matrix-unit-tag">Fleet Deployment Sponsor</span>
+                        <div class="matrix-amt">$150</div>
                     </div>
-                    <div class="mt-6">
-                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" class="block text-center text-teal-400 hover:text-white font-bold text-xs uppercase tracking-wider border border-slate-800 hover:border-teal-500 py-2.5 rounded-xl transition">Deploy Unit Capital</a>
-                        <span class="block text-center text-[9px] text-slate-500 mt-1.5 italic">100% Tax-Deductible Contribution</span>
+                    <div class="matrix-label">Site Deployment Sponsor</div>
+                    <p class="matrix-desc">Sponsors a <strong>full morning of mobile fleet operations</strong>. Fully absorbs greywater compliance logistics, generator power systems, transit fuel, and asset maintenance buffers.</p>
+                    <div>
+                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="matrix-btn-action">Deploy Unit Capital</a>
+                        <span class="matrix-deductible-tag">100% Tax-Deductible</span>
                     </div>
                 </div>
 
                 <!-- Card 4 (Featured) -->
-                <div class="bg-slate-950 border border-teal-500/40 rounded-2xl p-6 flex flex-col justify-between shadow-xl shadow-teal-500/5 hover:border-teal-500 transition relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-teal-500 text-slate-950 text-[8px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-bl-lg">Capital Campaign</div>
-                    <div>
-                        <span class="text-[9px] font-bold text-teal-400 uppercase tracking-wider block mb-1">Heavy Infrastructure</span>
-                        <div class="text-3xl font-black text-teal-400 border-b border-slate-800 pb-3">$500</div>
-                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">Fleet Capital Sponsor</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Deploys directly into custom industrial fabrication. Allocates dedicated structural capital toward heavy-duty chassis engineering, tankless heating loops, and utility vaults for our flawless <strong>$60k+ mobile fleet assets</strong>.</p>
+                <div class="matrix-card featured">
+                    <div class="matrix-tag">Capital Campaign</div>
+                    <div class="matrix-card-header">
+                        <span class="matrix-unit-tag">Heavy Infrastructure</span>
+                        <div class="matrix-amt">$500</div>
                     </div>
-                    <div class="mt-6">
-                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" class="block text-center bg-teal-500 hover:bg-teal-600 text-slate-950 font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl transition">Deploy Unit Capital</a>
-                        <span class="block text-center text-[9px] text-teal-400 mt-1.5 italic">100% Tax-Deductible Contribution</span>
+                    <div class="matrix-label">Fleet Capital Sponsor</div>
+                    <p class="matrix-desc">Deploys directly into custom industrial fabrication. Allocates dedicated structural capital toward heavy-duty chassis engineering, tankless heating loops, and utility vaults for our flawless <strong>$60k+ mobile fleet assets</strong>.</p>
+                    <div>
+                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="matrix-btn-action">Deploy Unit Capital</a>
+                        <span class="matrix-deductible-tag" style="color: #38bdf8;">100% Tax-Deductible</span>
                     </div>
                 </div>
 
                 <!-- Card 5 (Featured) -->
-                <div class="bg-slate-950 border border-amber-500/30 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500 transition relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-amber-500 text-slate-950 text-[8px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-bl-lg">Pipeline Guardian</div>
-                    <div>
-                        <span class="text-[9px] font-bold text-amber-400 uppercase tracking-wider block mb-1">Regional Sanctuary Protection</span>
-                        <div class="text-3xl font-black text-amber-400 border-b border-slate-800 pb-3">$2,500</div>
-                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">Channel Protector Steward</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Sponsors major care-framework pipelines. Directs funding to cover structural outreach loops, continuous asset navigation, fuel corridors, and comprehensive regional service logistics to safely shift pathways forward.</p>
+                <div class="matrix-card gold-featured">
+                    <div class="matrix-tag">Pipeline Guardian</div>
+                    <div class="matrix-card-header">
+                        <span class="matrix-unit-tag">Regional Sanctuary Protection</span>
+                        <div class="matrix-amt">$2,500</div>
                     </div>
-                    <div class="mt-6">
-                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" class="block text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl transition">Deploy Unit Capital</a>
-                        <span class="block text-center text-[9px] text-amber-400 mt-1.5 italic">100% Tax-Deductible Contribution</span>
+                    <div class="matrix-label">Channel Protector Steward</div>
+                    <p class="matrix-desc">Sponsors major care-framework pipelines. Directs funding to cover structural outreach loops, continuous asset navigation, fuel corridors, and comprehensive regional service logistics to safely shift pathways forward.</p>
+                    <div>
+                        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="matrix-btn-action">Deploy Unit Capital</a>
+                        <span class="matrix-deductible-tag" style="color: #f59e0b;">100% Tax-Deductible</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Primary Bottom Section Disclaimer -->
-            <div class="max-w-4xl mx-auto mt-16 text-[11px] text-slate-500 text-left border-t border-slate-800/60 pt-6 leading-relaxed italic">
-                The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. All financial contributions are fully tax-deductible under IRC Section 170. Legal Notice: This organization operates strictly as a mobile hygiene, social service, and transitional care continuum. The California Clean Slate Program does not provide legal counsel, record expungement, court representation, or criminal justice re-entry programming.
-            </div>
+            <p class="disclaimer" style="color: #94a3b8; border-color: #1e293b;">The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. All financial contributions are fully tax-deductible under IRC Section 170. Legal Notice: This organization operates strictly as a mobile hygiene, social service, and transitional care continuum. The California Clean Slate Program does not provide legal counsel, record expungement, court representation, or criminal justice re-entry programming.</p>
         </div>
     </section>
 
     <!-- 9. PRE-LAUNCH BUILDER / PARTNER HERO FOOT ROW -->
-    <section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 my-12">
-        <div class="relative bg-slate-950 text-white rounded-3xl p-8 sm:p-16 border border-slate-900 shadow-2xl overflow-hidden">
-            <div class="absolute inset-0 z-0 opacity-15 pointer-events-none mix-blend-luminosity">
-                <img src="To-Honor-Surfing-3cropped.jpg" alt="Santa Cruz Surf Heritage Line" class="w-full h-full object-cover object-center">
-            </div>
-            <div class="absolute inset-0 bg-slate-950/40 z-10"></div>
-            <div class="relative z-20 max-w-2xl space-y-6">
-                <h2 class="text-3xl font-black text-teal-400 uppercase tracking-tight">Fueling the Engine of Change</h2>
-                <div class="text-slate-300 space-y-4 text-sm sm:text-base leading-relaxed">
-                    <p>We are currently executing the final buildout stages of a powerhouse organization designed to address street-level crises through meticulous systems engineering. We aren't just deploying a service; we are structuring a precision solution meticulously tailored to the geography of Santa Cruz.</p>
-                    <p><strong class="text-white font-bold">When you back our capital campaign today, you are a foundational partner in this mission.</strong> Your contribution is the direct equity that fabricates our continuous-heat trailers and equips our field teams with the resources required to launch successfully. Your funding is the asset engine that will provide immediate baseline relief to our neighbors, ease structural strains on municipal budgets, and permanently bridge the gap between hyper-local temporary patches and a true clean slate.</p>
-                </div>
-                <div class="pt-4">
-                    <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" class="inline-block bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black px-8 py-4 rounded-xl tracking-wider text-xs uppercase shadow-xl transition transform hover:-translate-y-0.5">Become a Founding Donor</a>
-                </div>
-            </div>
+    <section class="founding-partner-section">
+        <div class="partner-overlay"></div>
+        <div class="partner-content">
+            <h2>Fueling the Engine of Change</h2>
+            <p style="margin-bottom: 20px;">We are currently executing the final buildout stages of a powerhouse organization designed to address street-level crises through meticulous systems engineering. We aren't just deploying a service; we are structuring a precision solution meticulously tailored to the geography of Santa Cruz.</p>
+            <p style="margin-bottom: 20px;"><strong>When you back our capital campaign today, you are a foundational partner in this mission.</strong> Your contribution is the direct equity that fabricates our continuous-heat trailers and equips our field teams with the resources required to launch successfully. Your funding is the asset engine that will provide immediate baseline relief to our neighbors, ease structural strains on municipal budgets, and permanently bridge the gap between hyper-local temporary patches and a true clean slate.</p>
+            
+            <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="gold-button" style="padding: 15px 30px; font-size: 1.1rem;">BECOME A FOUNDING DONOR</a>
+            
+            <p class="disclaimer" style="color: #eee; border-color: rgba(255,255,255,0.15);">The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. All financial contributions are fully tax-deductible under IRC Section 170. Legal Notice: This organization operates strictly as a mobile hygiene, social service, and transitional care continuum. The California Clean Slate Program does not provide legal counsel, record expungement, court representation, or criminal justice re-entry programming.</p>
         </div>
     </section>
 
     <!-- 10. ENTERPRISE FOOTER BRAND MATRIX -->
-    <footer class="bg-white border-t border-slate-200 py-12 text-slate-500 text-xs font-medium text-center">
+    <footer>
         <p>&copy; 2026 California Clean Slate Program. All Rights Reserved.</p>
-        <p class="text-teal-600 font-bold tracking-wider uppercase text-[10px] mt-1.5">Mobile Hygiene & Stabilization Utility &bull; Watershed Preservation &bull; Santa Cruz County</p>
+        <p class="footer-branding-sub">Mobile Hygiene & Stabilization Utility &bull; Watershed Preservation &bull; Santa Cruz County</p>
     </footer>
 
 </body>
