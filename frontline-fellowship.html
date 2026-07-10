@@ -15,267 +15,194 @@
     <meta property="og:url" content="https://californiacleanslateprogram.org/frontline-fellowship">
     <meta property="og:type" content="website">
 
-    <style>
-        :root {
-            --primary: #0f172a; /* Deep Slate / Carbon */
-            --secondary: #1e3a8a; /* Service Blue / Navy */
-            --dark: #334155;
-            --light: #f8fafc;
-            --accent: #b45309; /* Operational Amber/Gold */
-            --success: #16a34a;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: #ffffff; /* Defaulted body text to white for context boxes */
-            
-            /* LIGHTENED OVERLAY: Dropped opacity down from 0.8 to 0.3-0.35 to make flag1.jpg clear and visible */
-            background: linear-gradient(rgba(241, 245, 249, 0.3), rgba(241, 245, 249, 0.35)), 
-                        url('flag1.jpg') no-repeat center center fixed;
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Tactical Hero Header */
-        .hero-banner {
-            position: relative;
-            color: white;
-            padding: 110px 20px;
-            text-align: center;
-        }
-
-        /* Combined Veteran Header Display Layout */
-        .hero-content-wrapper {
-            max-width: 850px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8); 
-        }
-
-        .vetday-img {
-            max-width: 320px;
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.15);
-            margin-bottom: 10px;
-        }
-        
-        /* The Multiservice Ribbon of Service */
-        .service-ribbon {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(to right, 
-                #10b981 0%, #10b981 16.6%,    /* Coast Guard */
-                #3b82f6 16.6%, #3b82f6 33.2%,  /* Air Force / Navy Blue */
-                #dc2626 33.2%, #dc2626 49.8%,  /* Marine Corps Scarlet */
-                #f59e0b 49.8%, #f59e0b 66.4%,  /* Army Gold */
-                #64748b 66.4%, #64748b 83%,    /* Space Force */
-                #0f172a 83%, #0f172a 100%     /* Joint Command */
-            );
-        }
-
-        .hero-banner h1 {
-            font-size: 3.4rem;
-            margin: 0 0 5px 0;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 900;
-        }
-        .hero-banner h3 {
-            font-size: 1.3rem;
-            margin: 0;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: -35px auto 60px auto;
-            position: relative;
-            z-index: 10;
-            padding: 0 20px;
-        }
-        
-        /* CONTEXT BOXES: Changed to Theme Navy Blue and tweaked interior text to clean white variants */
-        .section {
-            margin-bottom: 35px;
-            background: rgba(30, 58, 138, 0.95); /* Deep Theme Navy Blue with slight layout blending */
-            color: #ffffff;
-            padding: 45px;
-            border-radius: 12px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-            border-left: 6px solid #475569;
-        }
-        .section p {
-            color: #f1f5f9; /* Soft off-white text for secondary paragraph blocks */
-        }
-        .section-accent {
-            border-left: 6px solid var(--accent);
-        }
-        
-        /* HEADERS INSIDE BOXES: High visibility styling */
-        h2 {
-            color: #ffffff;
-            font-size: 1.8rem;
-            margin-top: 0;
-            margin-bottom: 25px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-            padding-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #475569;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 1.05rem;
-            margin-top: 15px;
-            transition: all 0.2s ease-in-out;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.15);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .btn:hover {
-            background-color: #0f172a;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2);
-        }
-        .btn-accent {
-            background-color: var(--accent);
-            color: white; 
-        }
-        .btn-accent:hover {
-            background-color: #92400e;
-        }
-        ul {
-            padding-left: 0;
-            list-style: none;
-        }
-        li {
-            margin-bottom: 18px;
-            padding-left: 35px;
-            position: relative;
-            font-size: 1.05rem;
-            color: #f1f5f9;
-        }
-        li::before {
-            content: "✓";
-            position: absolute;
-            left: 5px;
-            color: #4ade80; /* Brighter neon-green check for dark backgrounds */
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-        .tier-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        .tier-item {
-            background: rgba(15, 23, 42, 0.6); /* Translucent slate background inside dark grid elements */
-            color: #ffffff;
-            padding: 25px 20px;
-            border-top: 4px solid var(--accent);
-            border-radius: 6px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        .tier-item:hover {
-            transform: translateY(-3px);
-        }
-        .tier-price {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-        .disclaimer {
-            font-size: 0.85rem;
-            color: #cbd5e1; /* Clearer light gray style for fine print */
-            margin-top: 30px;
-            line-height: 1.6;
-            font-style: italic;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            padding-top: 20px;
-        }
-    </style>
+    <!-- Tailwind CSS Framework CDN for Premium Visual UI Layout -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Unified multiservice tactical header displays with flag1.jpg in the background -->
-    <div class="hero-banner">
-        <div class="hero-content-wrapper">
-            <img src="VETDAY.jpg" alt="Honoring Veterans" class="vetday-img">
-            <h1>Frontline Fellowship</h1>
-            <h3>Supporting the Regional Veteran Community Through Action</h3>
+    <!-- 1. AGENCY & COMPLIANCE BANNER -->
+    <div class="bg-slate-900 text-slate-400 text-[11px] font-semibold tracking-widest uppercase py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
+            <div class="flex items-center space-x-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
+                <span>Flagship Base Initiative &bull; Santa Cruz County</span>
+            </div>
+            <div class="flex space-x-4">
+                <span>Active 501(c)(3) Public Charity Status</span>
+                <span>Workforce Stabilization Pipeline</span>
+            </div>
         </div>
-        <div class="service-ribbon"></div>
     </div>
 
-    <div class="container">
-        <div class="section">
-            <p style="font-size: 1.15rem; color: #ffffff; margin: 0; line-height: 1.8;">The California Clean Slate Program is committed to supporting our community's veterans by creating direct, meaningful economic opportunities. We recognize the immense value, dedication, and operational excellence that members of the regional veteran community bring to local initiatives. Our Frontline Fellowship program is designed to keep local veterans at the forefront of our community stabilization and mobile hygiene logistics operations.</p>
-        </div>
-
-        <div class="section">
-            <h2>Paid Outreach & Logistics Shifts</h2>
-            <p>Are you a local veteran looking for flexible, paid work that makes an immediate impact? We invite you to explore our open operational roles.</p>
-            <p>We offer flexible community deployment shifts managing our mobile hygiene logistics and executing street-level engagement. Whether you are looking to cover a few shifts a week to meet immediate financial needs or join our ongoing deployment schedule, we provide an accessible, mission-driven environment.</p>
-            
-            <ul>
-                <li><strong>Competitive Hourly Pay & Stipends</strong> – Direct compensation for your hours in the field.</li>
-                <li><strong>Flexible Scheduling</strong> – Easily work around school schedules, family commitments, or existing routines.</li>
-                <li><strong>Streamlined Onboarding</strong> – A straightforward, peer-to-peer review process built to get you deployed quickly without unnecessary administrative delays.</li>
-            </ul>
-            
-            <a href="mailto:Partnerships@californiacleanslateprogram.org?subject=Frontline%20Fellowship%20Inquiry" class="btn">Apply for a Frontline Fellowship Shift</a>
-        </div>
-
-        <div class="section section-accent">
-            <h2>Sponsor a Veteran Outreach Shift</h2>
-            <p>Help us fund paid employment opportunities for local veterans who are making a tangible difference in our shared community spaces. Through our <strong>Sponsor a Vet for a Day</strong> initiative, 100% of your targeted contribution goes directly into our workforce payroll fund to compensate a veteran outreach specialist for their time on the ground.</p>
-            
-            <!-- Modern Grid Tier Layout -->
-            <div class="tier-list">
-                <div class="tier-item">
-                    <div class="tier-price">$50</div>
-                    <div>Funds a half-shift stipend for a veteran outreach specialist.</div>
-                </div>
-                <div class="tier-item">
-                    <div class="tier-price">$100</div>
-                    <div>Fully sponsors a local veteran to manage a full day of field logistics.</div>
-                </div>
-                <div class="tier-item">
-                    <div class="tier-price">$500</div>
-                    <div>Funds a full week of community stabilization shifts.</div>
+    <!-- 2. HIGH-INTEGRITY STICKY HEADER & MULTI-PAGE NAVIGATION -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-teal-600 text-white px-3 py-2 rounded-lg font-black tracking-wider text-xl shadow-xs">CCSP</div>
+                <div>
+                    <span class="block text-lg font-black text-slate-900 tracking-tight leading-none">California Clean Slate Program</span>
+                    <span class="text-[10px] font-bold text-teal-600 uppercase tracking-widest mt-1 block">Bedrock to Buildout Initiative</span>
                 </div>
             </div>
-            
-            <div style="text-align: center;">
-                <a href="https://www.paypal.com/ncp/payment/9XEPJM8LRUEN2" target="_blank" class="btn btn-accent">Sponsor a Veteran Outreach Shift</a>
+            <!-- Multi-page paths perfectly aligned with index structure -->
+            <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider text-slate-600">
+                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+                <a href="index.html#continuum" class="hover:text-teal-600 transition">Our Continuum</a>
+                <a href="frontline-fellowship.html" class="text-teal-600 hover:text-teal-700 transition">Frontline Fellowship</a>
+                <a href="leadership-governance.html" class="hover:text-teal-600 transition">Leadership & Governance</a>
+                <a href="partnership.html" class="hover:text-teal-600 transition">Partner With Us</a>
+                <a href="the-harbor.html" class="hover:text-teal-600 transition">The Harbor & Our Bay</a>
+            </nav>
+            <div>
+                <a href="#sponsor" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-md">Sponsor A Shift</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. PREMIUM STRATEGIC HERO BLOCK -->
+    <section class="relative bg-slate-950 text-white py-28 px-4 overflow-hidden border-b border-slate-900">
+        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+        
+        <!-- Background Asset merged via mix-blend-luminosity -->
+        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-luminosity">
+            <img src="flag1.jpg" alt="American Flag Blueprint Backdrop" class="w-full h-full object-cover object-center">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+            <div class="flex justify-center mb-4">
+                <img src="VETDAY.jpg" alt="Honoring Veterans" class="max-w-xs w-full h-auto rounded-xl border border-slate-800 shadow-2xl">
+            </div>
+            <span class="inline-flex items-center px-3.5 py-1 rounded-full text-[10px] font-bold tracking-widest bg-teal-500/10 text-teal-400 border border-teal-500/20 uppercase">
+                <i class="fa-solid fa-award mr-1.5"></i> Mission-Driven Action
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight uppercase">
+                Frontline Fellowship
+            </h1>
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal">
+                Supporting the Regional Veteran Community Through Direct Economic Action, Tactical Field Operations, and Dignity Loops.
+            </p>
+        </div>
+        
+        <!-- Master Ribbon Matrix Line -->
+        <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 via-blue-500 via-red-500 via-amber-500 via-slate-500 to-slate-950"></div>
+    </section>
+
+    <!-- 4. PURPOSE PANEL -->
+    <section class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 shadow-sm space-y-6 text-left">
+            <p class="text-slate-700 leading-relaxed text-base sm:text-lg font-medium">
+                The California Clean Slate Program is committed to supporting our community's veterans by creating direct, meaningful economic opportunities. We recognize the immense value, dedication, and operational excellence that members of the regional veteran community bring to local initiatives. Our Frontline Fellowship program is designed to keep local veterans at the forefront of our community stabilization and mobile hygiene logistics operations.
+            </p>
+        </div>
+    </section>
+
+    <!-- 5. PAID OUTREACH LOGISTICS SHIFTS PANEL -->
+    <section class="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-xs space-y-8 text-left">
+            <div class="border-b border-slate-100 pb-4">
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight">Paid Outreach & Logistics Shifts</h2>
+                <p class="text-sm text-slate-500 mt-1">Direct Field Deployments &bull; Santa Cruz Base</p>
             </div>
             
-            <p class="disclaimer">The California Clean Slate Program is a registered 501(c)(3) organization. Contributions are tax-deductible to the extent permitted by law. No goods or services were provided in exchange for this contribution.</p>
+            <div class="text-slate-600 space-y-4 text-sm sm:text-base">
+                <p>Are you a local veteran looking for flexible, paid work that makes an immediate impact? We invite you to explore our open operational roles.</p>
+                <p>We offer flexible community deployment shifts managing our mobile hygiene logistics and executing street-level engagement. Traditional multi-week employment structures and traditional banking processes create barriers for those facing survival hurdles. We cut through the red tape: our fellowship framework is designed specifically for an immediate, mission-driven environment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 pt-2">
+                <div class="flex items-start p-4 bg-slate-50 rounded-xl border border-slate-200/60">
+                    <i class="fa-solid fa-circle-check text-emerald-500 text-lg mr-3.5 mt-0.5"></i>
+                    <div>
+                        <strong class="text-slate-900 block text-sm font-bold">Competitive Hourly Pay & Stipends</strong>
+                        <span class="text-xs text-slate-500 leading-relaxed block mt-0.5">Direct compensation loops built to value your field leadership and deliver rapid, reliable access to funding.</span>
+                    </div>
+                </div>
+                <div class="flex items-start p-4 bg-slate-50 rounded-xl border border-slate-200/60">
+                    <i class="fa-solid fa-circle-check text-emerald-500 text-lg mr-3.5 mt-0.5"></i>
+                    <div>
+                        <strong class="text-slate-900 block text-sm font-bold">Flexible Scheduling matrix</strong>
+                        <span class="text-xs text-slate-500 leading-relaxed block mt-0.5">Easily work around school schedules, family commitments, or fluid routines with flexible field blocks.</span>
+                    </div>
+                </div>
+                <div class="flex items-start p-4 bg-slate-50 rounded-xl border border-slate-200/60">
+                    <i class="fa-solid fa-circle-check text-emerald-500 text-lg mr-3.5 mt-0.5"></i>
+                    <div>
+                        <strong class="text-slate-900 block text-sm font-bold">Streamlined Peer-to-Peer Onboarding</strong>
+                        <span class="text-xs text-slate-500 leading-relaxed block mt-0.5">A straightforward review process built to get you deployed quickly without unnecessary administrative delays.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-4 text-center sm:text-left">
+                <a href="mailto:Partnerships@californiacleanslateprogram.org?subject=Frontline%20Fellowship%20Inquiry" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-white text-xs font-black uppercase tracking-wider px-6 py-4 rounded-xl transition shadow-md">
+                    Apply for a Frontline Fellowship Shift <i class="fa-solid fa-envelope ml-2 text-[10px]"></i>
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- 6. SPONSOR A VETERAN SHIFT (PayPal Direct Matrix Dashboard) -->
+    <section id="sponsor" class="py-20 bg-slate-900 text-white border-t border-slate-950 mt-12 relative">
+        <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
+            <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+                <span class="text-[11px] font-bold tracking-widest text-teal-400 uppercase block">Workforce Mobilization Capital</span>
+                <h2 class="text-3xl font-black tracking-tight uppercase">Sponsor a Veteran Outreach Shift</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Help us fund direct economic opportunities for local veterans who are making a tangible difference in our shared community spaces. Through our **Sponsor a Vet for a Day** initiative, 100% of your targeted contribution goes directly into our fellowship workforce pool to compensate a veteran outreach specialist for their time on the ground.
+                </p>
+            </div>
+
+            <!-- Pricing Grid Tiers with Tax Deductible tag lines -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <div class="text-3xl font-black text-white border-b border-slate-800 pb-3">$50</div>
+                        <h4 class="font-bold text-sm text-teal-400 mt-4 mb-2 uppercase tracking-wide">Half-Shift Stipend</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Sponsors an essential half-shift field stipend for a veteran outreach specialist driving mobile operations.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 border border-teal-500/40 rounded-2xl p-6 flex flex-col justify-between shadow-xl shadow-teal-500/5 hover:border-teal-500 transition relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-teal-500 text-slate-950 text-[8px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-bl-lg">High Impact</div>
+                    <div>
+                        <div class="text-3xl font-black text-teal-400 border-b border-slate-800 pb-3">$100</div>
+                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2 uppercase tracking-wide">Full-Day Mobilization</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Fully sponsors a local veteran outreach coordinator to manage a complete full day of field logistics.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <div class="text-3xl font-black text-white border-b border-slate-800 pb-3">$500</div>
+                        <h4 class="font-bold text-sm text-amber-400 mt-4 mb-2 uppercase tracking-wide">Weekly Operations Buffer</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Secures a comprehensive week-long block of tactical mobile hygiene and community stabilization shifts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PayPal Direct Gateway Terminal button -->
+            <div class="text-center space-y-3 max-w-sm mx-auto">
+                <a href="https://www.paypal.com/ncp/payment/9XEPJM8LRUEN2" target="_blank" class="block w-full text-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs uppercase tracking-widest py-4 rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
+                    Sponsor via PayPal Merchant Gateway <i class="fa-brands fa-paypal ml-1"></i>
+                </a>
+                <span class="block text-center text-[10px] text-slate-500 italic">100% Tax-Deductible Operational Contribution</span>
+            </div>
+
+            <!-- Precise Non-Profit Designation Disclaimer to mitigate liabilities -->
+            <div class="max-w-3xl mx-auto mt-16 text-[11px] text-slate-500 text-center border-t border-slate-800/60 pt-6 leading-relaxed italic">
+                The California Clean Slate Program is a registered 501(c)(3) public charity organization. Contributions are tax-deductible to the extent permitted by law. No goods or services are provided in exchange for this financial contribution. Legal Notice: Frontline Fellowship funds are structurally managed as non-employment educational/stabilization stipends and workforce training allocations, ensuring independent operational compliance without corporate liability.
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ENTERPRISE FOOTER BRAND MATRIX -->
+    <footer class="bg-white border-t border-slate-200 py-12 text-slate-500 text-xs font-medium text-center">
+        <p>&copy; 2026 California Clean Slate Program. All Rights Reserved.</p>
+        <p class="text-teal-600 font-bold tracking-wider uppercase text-[10px] mt-1.5">Mobile Hygiene & Stabilization Utility &bull; Watershed Preservation &bull; Santa Cruz County</p>
+    </footer>
 
 </body>
 </html>
