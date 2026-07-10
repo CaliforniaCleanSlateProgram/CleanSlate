@@ -18,6 +18,10 @@
     <!-- Tailwind CSS Framework CDN for Premium Visual UI Layout -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        #menu-toggle:checked ~ #mobile-menu { display: block; }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
@@ -29,7 +33,7 @@
                 <span>Flagship Base Initiative &bull; Santa Cruz County</span>
             </div>
             <div class="flex space-x-4">
-                <span>Active 501(c)(3) Public Charity Status</span>
+                <span>UEI: UEBPQDK1L7E7</span>
                 <span>Workforce Stabilization Pipeline</span>
             </div>
         </div>
@@ -37,7 +41,7 @@
 
     <!-- 2. HIGH-INTEGRITY STICKY HEADER & MULTI-PAGE NAVIGATION -->
     <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
             <div class="flex items-center space-x-3">
                 <div class="bg-teal-600 text-white px-3 py-2 rounded-lg font-black tracking-wider text-xl shadow-xs">CCSP</div>
                 <div>
@@ -45,7 +49,8 @@
                     <span class="text-[10px] font-bold text-teal-600 uppercase tracking-widest mt-1 block">Bedrock to Buildout Initiative</span>
                 </div>
             </div>
-            <!-- Multi-page paths perfectly aligned with index structure -->
+
+            <!-- Desktop Navigation Links -->
             <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider text-slate-600">
                 <a href="index.html" class="hover:text-teal-600 transition">Home</a>
                 <a href="index.html#continuum" class="hover:text-teal-600 transition">Our Continuum</a>
@@ -54,21 +59,35 @@
                 <a href="partnership.html" class="hover:text-teal-600 transition">Partner With Us</a>
                 <a href="the-harbor.html" class="hover:text-teal-600 transition">The Harbor & Our Bay</a>
             </nav>
-            <div>
+
+            <!-- Mobile Menu Interface Elements -->
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="lg:hidden p-2 text-slate-700 cursor-pointer text-xl select-none">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <!-- Responsive Mobile Link List Toggle Container -->
+            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl lg:hidden z-50 py-4 px-6 space-y-3 font-bold text-sm text-slate-700">
+                <a href="index.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Home</a>
+                <a href="index.html#continuum" class="block hover:text-teal-600 py-1 border-b border-slate-50">Our Continuum</a>
+                <a href="frontline-fellowship.html" class="block text-teal-600 py-1 border-b border-slate-50">Frontline Fellowship</a>
+                <a href="leadership-governance.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Leadership & Governance</a>
+                <a href="partnership.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Partner With Us</a>
+                <a href="the-harbor.html" class="block hover:text-teal-600 py-1">The Harbor & Our Bay</a>
+            </div>
+
+            <div class="hidden sm:block">
                 <a href="#sponsor" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-md">Sponsor A Shift</a>
             </div>
         </div>
     </header>
 
-    <!-- 3. PREMIUM STRATEGIC HERO BLOCK -->
+    <!-- 3. HERO CONTENT -->
     <section class="relative bg-slate-950 text-white py-28 px-4 overflow-hidden border-b border-slate-900">
         <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
-        
-        <!-- Background Asset merged via mix-blend-luminosity -->
         <div class="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-luminosity">
-            <img src="flag1.jpg" alt="American Flag Blueprint Backdrop" class="w-full h-full object-cover object-center">
+            <img src="flag1.jpg" alt="American Flag Blueprint" class="w-full h-full object-cover object-center">
         </div>
-
         <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
             <div class="flex justify-center mb-4">
                 <img src="VETDAY.jpg" alt="Honoring Veterans" class="max-w-xs w-full h-auto rounded-xl border border-slate-800 shadow-2xl">
@@ -76,15 +95,11 @@
             <span class="inline-flex items-center px-3.5 py-1 rounded-full text-[10px] font-bold tracking-widest bg-teal-500/10 text-teal-400 border border-teal-500/20 uppercase">
                 <i class="fa-solid fa-award mr-1.5"></i> Mission-Driven Action
             </span>
-            <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight uppercase">
-                Frontline Fellowship
-            </h1>
+            <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight uppercase">Frontline Fellowship</h1>
             <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal">
                 Supporting the Regional Veteran Community Through Direct Economic Action, Tactical Field Operations, and Dignity Loops.
             </p>
         </div>
-        
-        <!-- Master Ribbon Matrix Line -->
         <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 via-blue-500 via-red-500 via-amber-500 via-slate-500 to-slate-950"></div>
     </section>
 
@@ -104,12 +119,10 @@
                 <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight">Paid Outreach & Logistics Shifts</h2>
                 <p class="text-sm text-slate-500 mt-1">Direct Field Deployments &bull; Santa Cruz Base</p>
             </div>
-            
             <div class="text-slate-600 space-y-4 text-sm sm:text-base">
                 <p>Are you a local veteran looking for flexible, paid work that makes an immediate impact? We invite you to explore our open operational roles.</p>
                 <p>We offer flexible community deployment shifts managing our mobile hygiene logistics and executing street-level engagement. Traditional multi-week employment structures and traditional banking processes create barriers for those facing survival hurdles. We cut through the red tape: our fellowship framework is designed specifically for an immediate, mission-driven environment.</p>
             </div>
-
             <div class="grid grid-cols-1 gap-4 pt-2">
                 <div class="flex items-start p-4 bg-slate-50 rounded-xl border border-slate-200/60">
                     <i class="fa-solid fa-circle-check text-emerald-500 text-lg mr-3.5 mt-0.5"></i>
@@ -121,7 +134,7 @@
                 <div class="flex items-start p-4 bg-slate-50 rounded-xl border border-slate-200/60">
                     <i class="fa-solid fa-circle-check text-emerald-500 text-lg mr-3.5 mt-0.5"></i>
                     <div>
-                        <strong class="text-slate-900 block text-sm font-bold">Flexible Scheduling matrix</strong>
+                        <strong class="text-slate-900 block text-sm font-bold">Flexible Scheduling Matrix</strong>
                         <span class="text-xs text-slate-500 leading-relaxed block mt-0.5">Easily work around school schedules, family commitments, or fluid routines with flexible field blocks.</span>
                     </div>
                 </div>
@@ -133,7 +146,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pt-4 text-center sm:text-left">
                 <a href="mailto:Partnerships@californiacleanslateprogram.org?subject=Frontline%20Fellowship%20Inquiry" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-white text-xs font-black uppercase tracking-wider px-6 py-4 rounded-xl transition shadow-md">
                     Apply for a Frontline Fellowship Shift <i class="fa-solid fa-envelope ml-2 text-[10px]"></i>
@@ -145,7 +157,6 @@
     <!-- 6. SPONSOR A VETERAN SHIFT (PayPal Direct Matrix Dashboard) -->
     <section id="sponsor" class="py-20 bg-slate-900 text-white border-t border-slate-950 mt-12 relative">
         <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
-        
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
             <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
                 <span class="text-[11px] font-bold tracking-widest text-teal-400 uppercase block">Workforce Mobilization Capital</span>
@@ -154,8 +165,6 @@
                     Help us fund direct economic opportunities for local veterans who are making a tangible difference in our shared community spaces. Through our **Sponsor a Vet for a Day** initiative, 100% of your targeted contribution goes directly into our fellowship workforce pool to compensate a veteran outreach specialist for their time on the ground.
                 </p>
             </div>
-
-            <!-- Pricing Grid Tiers with Tax Deductible tag lines -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
                     <div>
@@ -164,7 +173,6 @@
                         <p class="text-xs text-slate-400 leading-relaxed">Sponsors an essential half-shift field stipend for a veteran outreach specialist driving mobile operations.</p>
                     </div>
                 </div>
-
                 <div class="bg-slate-950 border border-teal-500/40 rounded-2xl p-6 flex flex-col justify-between shadow-xl shadow-teal-500/5 hover:border-teal-500 transition relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-teal-500 text-slate-950 text-[8px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-bl-lg">High Impact</div>
                     <div>
@@ -173,7 +181,6 @@
                         <p class="text-xs text-slate-400 leading-relaxed">Fully sponsors a local veteran outreach coordinator to manage a complete full day of field logistics.</p>
                     </div>
                 </div>
-
                 <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
                     <div>
                         <div class="text-3xl font-black text-white border-b border-slate-800 pb-3">$500</div>
@@ -182,23 +189,19 @@
                     </div>
                 </div>
             </div>
-
-            <!-- PayPal Direct Gateway Terminal button -->
             <div class="text-center space-y-3 max-w-sm mx-auto">
                 <a href="https://www.paypal.com/ncp/payment/9XEPJM8LRUEN2" target="_blank" class="block w-full text-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs uppercase tracking-widest py-4 rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
                     Sponsor via PayPal Merchant Gateway <i class="fa-brands fa-paypal ml-1"></i>
                 </a>
                 <span class="block text-center text-[10px] text-slate-500 italic">100% Tax-Deductible Operational Contribution</span>
             </div>
-
-            <!-- Precise Non-Profit Designation Disclaimer to mitigate liabilities -->
             <div class="max-w-3xl mx-auto mt-16 text-[11px] text-slate-500 text-center border-t border-slate-800/60 pt-6 leading-relaxed italic">
                 The California Clean Slate Program is a registered 501(c)(3) public charity organization. Contributions are tax-deductible to the extent permitted by law. No goods or services are provided in exchange for this financial contribution. Legal Notice: Frontline Fellowship funds are structurally managed as non-employment educational/stabilization stipends and workforce training allocations, ensuring independent operational compliance without corporate liability.
             </div>
         </div>
     </section>
 
-    <!-- 7. ENTERPRISE FOOTER BRAND MATRIX -->
+    <!-- 7. FOOTER -->
     <footer class="bg-white border-t border-slate-200 py-12 text-slate-500 text-xs font-medium text-center">
         <p>&copy; 2026 California Clean Slate Program. All Rights Reserved.</p>
         <p class="text-teal-600 font-bold tracking-wider uppercase text-[10px] mt-1.5">Mobile Hygiene & Stabilization Utility &bull; Watershed Preservation &bull; Santa Cruz County</p>
