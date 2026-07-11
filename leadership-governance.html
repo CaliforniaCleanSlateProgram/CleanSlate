@@ -4,357 +4,248 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leadership & Governance | California Clean Slate Program</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Meet the leadership and board behind the California Clean Slate Program. Combining frontline operational capability with strict fiscal accountability.">
+    <meta name="keywords" content="California Clean Slate Program, Leadership, Governance, Board of Directors, Mandel Coulter, Blake Macwood, Richelle Laquerre">
+
+    <!-- Social Media Link Preview Tags (Open Graph) -->
+    <meta property="og:title" content="Leadership & Governance | California Clean Slate Program">
+    <meta property="og:description" content="Combining frontline operational capability with strict fiscal accountability to build lasting community infrastructure.">
+    <meta property="og:url" content="https://californiacleanslateprogram.org/leadership-governance.html">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS Engine for Premium Visual Layout -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            background: linear-gradient(rgba(13, 59, 102, 0.95), rgba(13, 59, 102, 0.95)), url('scnight.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff; 
-            line-height: 1.7; 
-            padding-bottom: 60px;
-        }
-
-        header { 
-            background-color: #0d3b66; 
-            padding: 2rem 1rem; 
-            text-align: center; 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .logo-text {
-            font-size: 1.75rem;
-            font-weight: 800;
-            color: #f4d35e;
-            letter-spacing: -0.5px;
-            margin-bottom: 15px;
-        }
-
-        nav ul { 
-            list-style: none; 
-            padding: 0; 
-            display: flex; 
-            justify-content: center; 
-            gap: 25px; 
-            flex-wrap: wrap;
-        }
-
-        nav ul li a { 
-            color: #ffffff; 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover { 
-            color: #f4d35e; 
-        }
-
-        .container { 
-            max-width: 1100px; 
-            margin: 50px auto; 
-            padding: 60px 50px; 
-            background: #0d3b66; 
-            border-radius: 16px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-            border-top: 6px solid #f4d35e;
-        }
-
-        .page-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title { 
-            color: #f4d35e; 
-            font-size: 2.5rem; 
-            letter-spacing: -0.5px;
-            margin-bottom: 10px;
-        }
-
-        .section-subtitle {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .section-divider {
-            text-align: center;
-            margin: 60px 0 40px 0;
-            position: relative;
-        }
-
-        .section-divider h2 {
-            background: #0d3b66;
-            display: inline-block;
-            padding: 0 20px;
-            color: #f4d35e;
-            font-size: 1.75rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .section-divider::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.1);
-            z-index: 1;
-        }
-
-        /* Executive Section Layout */
-        .executive-block {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .img-frame {
-            margin-bottom: 25px;
-            display: inline-block;
-        }
-
-        .profile-name {
-            font-size: 2rem;
-            color: #ffffff;
-            margin-bottom: 5px;
-            font-weight: 700;
-        }
-
-        .profile-title {
-            color: #f4d35e;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .executive-bio {
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 1.75rem;
-            color: rgba(255, 255, 255, 0.9);
-            text-align: left;
-        }
-
-        .highlight-quote {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-left: 5px solid #f4d35e;
-            padding: 30px;
-            margin: 35px 0;
-            font-style: italic;
-            font-size: 1.15rem;
-            border-radius: 0 8px 8px 0;
-            text-align: left;
-            line-height: 1.6;
-        }
-
-        /* Board Governance Grid Layout */
-        .board-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .board-card {
-            flex: 1;
-            min-width: 300px;
-            max-width: 480px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 40px 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* Transparency Compliance Block */
-        .compliance-box {
-            background-color: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 35px;
-            border-radius: 12px;
-            margin-top: 60px;
-        }
-
-        .compliance-box h3 {
-            color: #f4d35e;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            text-align: center;
-            letter-spacing: 0.5px;
-        }
-
-        .compliance-box p {
-            font-size: 0.95rem;
-            color: #bdc3c7;
-            margin-bottom: 0;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        footer { 
-            text-align: center; 
-            padding-top: 40px;
-            margin-top: 40px; 
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        footer p {
-            text-align: center;
-            margin-bottom: 0;
-        }
+        /* Mobile Navbar Checkbox Hidden Toggle Controller */
+        #menu-toggle:checked ~ #mobile-menu { display: block; }
     </style>
 </head>
-<body>
-    <header>
-        <div class="logo-text">California Clean Slate Program</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#continuum">Our Continuum</a></li>
-                <li><a href="leadership-governance.html">Leadership & Governance</a></li>
-                <li><a href="partnership.html">Partner With Us</a></li>
-                <!-- SIDE-BY-SIDE ADDITION: Keeping your network page and adding the new sponsors menu link -->
-                <li><a href="the-harbor.html">The Harbor (Our Partners/Sponsors)</a></li>
-            </ul>
-        </nav>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- 1. INSTARS / FEDERAL COMPLIANCE BANNER -->
+    <div class="bg-slate-900 text-slate-400 text-[11px] font-semibold tracking-widest uppercase py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
+            <div class="flex items-center space-x-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                <span>Phase 1 Flagship Buildout: Santa Cruz County</span>
+            </div>
+            <div class="flex space-x-4">
+                <span>Active 501(c)(3) Status Approved</span>
+                <span>UEI: UEBPQDK1L7E7</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. STICKY SYSTEM NAVIGATION & RESPONSIVE BURGER DRAWER -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+            <div class="flex items-center space-x-3">
+                <div class="bg-teal-600 text-white px-3 py-2 rounded-lg font-black tracking-wider text-xl shadow-xs">CCSP</div>
+                <div>
+                    <span class="block text-lg font-black text-slate-900 tracking-tight leading-none">California Clean Slate Program</span>
+                    <span class="text-[10px] font-bold text-teal-600 uppercase tracking-widest mt-1 block">Bedrock to Buildout Initiative</span>
+                </div>
+            </div>
+
+            <!-- Desktop View Navigation anchors -->
+            <nav class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider text-slate-600">
+                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+                <a href="index.html#continuum" class="hover:text-teal-600 transition">Our Continuum</a>
+                <a href="frontline-fellowship.html" class="hover:text-teal-600 transition">Frontline Fellowship</a>
+                <a href="leadership-governance.html" class="text-teal-600 hover:text-teal-700 transition">Leadership & Governance</a>
+                <a href="partnership.html" class="hover:text-teal-600 transition">Partner With Us</a>
+                <a href="the-harbor.html" class="hover:text-teal-600 transition">The Harbor & Our Bay</a>
+            </nav>
+
+            <!-- Responsive Toggle Elements -->
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="lg:hidden p-2 text-slate-700 cursor-pointer text-xl select-none">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <!-- Clean Dropdown Panel for Handheld Displays -->
+            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl lg:hidden z-50 py-4 px-6 space-y-3 font-bold text-sm text-slate-700">
+                <a href="index.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Home</a>
+                <a href="index.html#continuum" class="block hover:text-teal-600 py-1 border-b border-slate-50">Our Continuum</a>
+                <a href="frontline-fellowship.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Frontline Fellowship</a>
+                <a href="leadership-governance.html" class="block text-teal-600 py-1 border-b border-slate-50">Leadership & Governance</a>
+                <a href="partnership.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Partner With Us</a>
+                <a href="the-harbor.html" class="block hover:text-teal-600 py-1">The Harbor & Our Bay</a>
+            </div>
+
+            <div class="hidden sm:block">
+                <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-md">Fund The Buildout</a>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
+    <!-- 3. HERO: ENTERPRISE STRATEGY CORRIDOR -->
+    <section class="relative bg-slate-950 text-white py-24 px-4 overflow-hidden border-b border-slate-900">
+        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
         
-        <!-- Top Title Headings -->
-        <div class="page-header">
-            <h1 class="section-title">Leadership & Governance</h1>
-            <p class="section-subtitle">Combining frontline operational capability with strict fiscal accountability to build lasting community infrastructure.</p>
-        </div>
-        
-        <!-- SECTION 1: EXECUTIVE LEADERSHIP -->
-        <div class="executive-block">
-            <div class="img-frame">
-                <svg width="168" height="168" viewBox="0 0 168 168" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <clipPath id="mandelCircle">
-                            <circle cx="84" cy="84" r="80" />
-                        </clipPath>
-                    </defs>
-                    <g clip-path="url(#mandelCircle)">
-                        <image x="0" y="0" height="100%" width="100%" preserveAspectRatio="xMidYMid slice" xlink:href="me2.jpg"></image>
-                    </g>
-                    <circle cx="84" cy="84" r="80" fill="none" stroke="#f4d35e" stroke-width="4" />
-                </svg>
-            </div>
-            
-            <h2 class="profile-name">Mandel Coulter</h2>
-            <div class="profile-title">Founder & Executive Director</div>
-            
-            <div class="executive-bio">
-                <p>Mandel Coulter brings a unique combination of tactical leadership, disciplined execution, and profound community empathy to the California Clean Slate Program. A former Deputy Sheriff and Coroner III, Mandel spent years operating within complex, high-stakes public safety systems. Transitioning his commitment to service into systemic community advocacy, he later served as a Substance Abuse Counselor within local treatment facilities and pursued specialized behavioral science and counseling studies at Modesto Junior College. This rare continuum of experience—from public safety systems to frontline behavioral health—drives his passion for engineering the critical path from crisis to self-sufficiency.</p>
-                
-                <div class="highlight-quote">
-                    "I bring more than just professional credentials to the table; I bring the perspective of someone who has personally navigated the road to recovery. That experience is why I am entirely focused on creating a transparent, accountability-driven continuum of care—because I know exactly what it takes to reclaim a life."
-                </div>
-                
-                <p>Through these distinct professional lenses, Mandel has analyzed the homelessness and addiction crisis from every angle—balancing the raw, human needs of unhoused individuals with the structural security required by local business communities. As Executive Director, he oversees strategic vision, field deployments, and operational partnerships, engineering long-term programs that systematically restore personal self-worth, rebuild families, and foster long-term community wellness.</p>
-            </div>
+        <!-- Fixed Background Image Placement mirrored with proper overlay parameters -->
+        <div class="absolute inset-0 z-0 opacity-15 pointer-events-none mix-blend-luminosity">
+            <img src="scnight.jpg" alt="Santa Cruz Night Background" class="w-full h-full object-cover object-center">
         </div>
 
-        <!-- SECTION 2: BOARD OF DIRECTORS OVERSIGHT -->
-        <div class="section-divider">
-            <h2>Board of Directors</h2>
-        </div>
-
-        <div class="board-grid">
-            
-            <!-- CFO & TREASURER -->
-            <div class="board-card">
-                <div class="img-frame">
-                    <svg width="168" height="168" viewBox="0 0 168 168" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <clipPath id="blakeCircle">
-                                <circle cx="84" cy="84" r="80" />
-                            </clipPath>
-                        </defs>
-                        <g clip-path="url(#blakeCircle)">
-                            <image x="0" y="0" height="100%" width="100%" preserveAspectRatio="xMidYMid slice" xlink:href="CFO.png"></image>
-                        </g>
-                        <circle cx="84" cy="84" r="80" fill="none" stroke="#f4d35e" stroke-width="4" />
-                    </svg>
-                </div>
-                <h3 class="profile-name">Blake P. Macwood</h3>
-                <div class="profile-title">Chief Financial Officer & Treasurer</div>
-                <p>Blake Macwood steers the fiscal governance, financial reporting frameworks, and strategic capital allocation for the California Clean Slate Program. With a strict emphasis on financial transparency and compliance controls, Blake ensures all grant capital, corporate sponsorships, and philanthropic donations directly optimize frontline community infrastructure. He maintains oversight of the organization's budgetary checks and balances, risk mitigation, and long-term asset management protocols.</p>
-            </div>
-
-            <!-- BOARD SECRETARY -->
-            <div class="board-card">
-                <div class="img-frame">
-                    <svg width="168" height="168" viewBox="0 0 168 168" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <clipPath id="richelleCircle">
-                                <circle cx="84" cy="84" r="80" />
-                            </clipPath>
-                        </defs>
-                        <g clip-path="url(#richelleCircle)">
-                            <image x="0" y="0" height="100%" width="100%" preserveAspectRatio="xMidYMid slice" xlink:href="secretary.jpg"></image>
-                        </g>
-                        <circle cx="84" cy="84" r="80" fill="none" stroke="#f4d35e" stroke-width="4" />
-                    </svg>
-                </div>
-                <h3 class="profile-name">Richelle A. Laquerre</h3>
-                <div class="profile-title">Secretary of the Board</div>
-                <p>Richelle Laquerre manages corporate compliance, official archives, and legal governance records for the corporation. Richelle is responsible for validating that all organizational acts, regulatory state filings, and corporate resolutions strictly align with California public benefit corporation statutes. Her rigorous focus on institutional administrative standards ensures the clear transparency metrics required to seamlessly pass independent foundation audits.</p>
-            </div>
-
-        </div>
-
-        <!-- SECTION 3: INSTITUTIONAL COMPLIANCE BLOCK -->
-        <div class="compliance-box">
-            <h3>Fiduciary Transparency & Compliance</h3>
-            <p>The California Clean Slate Program is a registered California Nonprofit Public Benefit Corporation officially incorporated on May 8, 2026. Our independent Board of Directors operates under formal corporate bylaws and a strict Conflict of Interest Policy to maintain total fiscal integrity and operational accountability. The organization is a recognized 501(c)(3) public charity and all financial contributions are fully tax-deductible under IRC Section 170. For institutional due diligence vetting, foundational inquiries, or copies of regulatory filings, please contact our administrative offices directly.</p>
-        </div>
-
-        <!-- BOTTOM BUTTON NAVIGATION -->
-        <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
-                
-                <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" style="background-color: #f4d35e; color: #0d3b66; padding: 16px 35px; text-decoration: none; font-weight: 800; border-radius: 8px; font-size: 1.25rem; display: inline-block; box-shadow: 0 6px 15px rgba(0,0,0,0.3); transition: transform 0.2s;">
-                    Support Our Mission
-                </a>
-                
-                <!-- UPDATED ACTION COMPONENT: Changed tracking text and targeted straight to the new page asset -->
-                <a href="the-harbor.html" style="background-color: rgba(255, 255, 255, 0.1); color: #f4d35e; border: 2px solid #f4d35e; padding: 14px 35px; text-decoration: none; font-weight: 700; border-radius: 8px; font-size: 1.25rem; display: inline-block; transition: 0.3s; box-sizing: border-box;">
-                    Visit The Harbor →
-                </a>
-                
-            </div>
-            
-            <!-- MASTER LEGAL DISCLAIMER -->
-            <p style="font-size: 0.85rem; color: #bdc3c7; margin-top: 20px; font-style: normal; text-align: left;">
-                The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. All financial contributions are fully tax-deductible under IRC Section 170. Legal Notice: This organization operates strictly as a mobile hygiene, social service, and transitional care continuum. The California Clean Slate Program does not provide legal counsel, record expungement, court representation, or criminal justice re-entry programming.
+        <div class="relative z-10 max-w-5xl mx-auto text-center space-y-4">
+            <span class="text-[10px] font-black text-teal-400 tracking-widest uppercase block">Institutional Oversight</span>
+            <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight max-w-4xl mx-auto uppercase">
+                Leadership & Governance
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">
+                Combining frontline operational capability with strict fiscal accountability to build lasting community infrastructure.
             </p>
         </div>
+    </section>
 
-        <!-- FIXED FOOTER INSIDE CONTAINER -->
-        <footer>
-            <p>&copy; 2026 California Clean Slate Program. All Rights Reserved.</p>
-        </footer>
+    <!-- 4. EXECUTIVE BLOCK SECTION PANEL -->
+    <section class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 shadow-sm space-y-12">
+            
+            <!-- EXECUTIVE LEADERSHIP: MANDEL COULTER -->
+            <div class="flex flex-col items-center text-center space-y-6">
+                <div class="inline-block relative">
+                    <svg width="168" height="168" viewBox="0 0 168 168" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <clipPath id="mandelCircle">
+                                <circle cx="84" cy="84" r="80" />
+                            </clipPath>
+                        </defs>
+                        <g clip-path="url(#mandelCircle)">
+                            <image x="0" y="0" height="100%" width="100%" preserveAspectRatio="xMidYMid slice" xlink:href="me2.jpg"></image>
+                        </g>
+                        <circle cx="84" cy="84" r="80" fill="none" stroke="#0d9488" stroke-width="4" />
+                    </svg>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-black text-slate-900 tracking-tight uppercase">Mandel Coulter</h2>
+                    <span class="text-xs font-black text-teal-600 uppercase tracking-widest mt-1 block">Founder & Executive Director</span>
+                </div>
 
-    </div>
+                <div class="text-slate-600 leading-relaxed text-base text-left max-w-4xl space-y-6 pt-4 border-t border-slate-100">
+                    <p>
+                        Mandel Coulter brings a unique combination of tactical leadership, disciplined execution, and profound community empathy to the California Clean Slate Program. A former Deputy Sheriff and Coroner III, Mandel spent years operating within complex, high-stakes public safety systems. Transitioning his commitment to service into systemic community advocacy, he later served as a Substance Abuse Counselor within local treatment facilities and pursued specialized behavioral science and counseling studies at Modesto Junior College. This rare continuum of experience—from public safety systems to frontline behavioral health—drives his passion for engineering the critical path from crisis to self-sufficiency.
+                    </p>
+
+                    <!-- Founder Note re-styled into master blueprint asset class -->
+                    <div class="bg-slate-900 rounded-xl border border-slate-800 p-6 sm:p-8 text-white shadow-md">
+                        <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">Executive Commitment</p>
+                        <p class="text-base font-medium italic text-slate-200 leading-relaxed">
+                            "I bring more than just professional credentials to the table; I bring the perspective of someone who has personally navigated the road to recovery. That experience is why I am entirely focused on creating a transparent, accountability-driven continuum of care—because I know exactly what it takes to reclaim a life."
+                        </p>
+                    </div>
+
+                    <p>
+                        Through these distinct professional lenses, Mandel has analyzed the homelessness and addiction crisis from every angle—balancing the raw, human needs of unhoused individuals with the structural security required by local business communities. As Executive Director, he oversees strategic vision, field deployments, and operational partnerships, engineering long-term programs that systematically restore personal self-worth, rebuild families, and foster long-term community wellness.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION BREAK: BOARD OF DIRECTORS -->
+            <div class="pt-8 border-t border-slate-200">
+                <div class="text-center space-y-2 mb-12">
+                    <span class="text-[11px] font-bold tracking-widest text-teal-600 uppercase block">Governance Body</span>
+                    <h2 class="text-2xl font-black text-slate-900 tracking-tight uppercase">Board of Directors</h2>
+                    <div class="w-12 h-1 bg-teal-600 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Board Card Rows Configuration -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- CFO & TREASURER -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 sm:p-8 flex flex-col items-center text-center justify-between shadow-xs">
+                        <div class="flex flex-col items-center space-y-4">
+                            <svg width="168" height="168" viewBox="0 0 168 168" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="blakeCircle">
+                                        <circle cx="84" cy="84" r="80" />
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#blakeCircle)">
+                                    <image x="0" y="0" height="100%" width="100%" preserveAspectRatio="xMidYMid slice" xlink:href="CFO.png"></image>
+                                </g>
+                                <circle cx="84" cy="84" r="80" fill="none" stroke="#0d9488" stroke-width="4" />
+                            </svg>
+                            <div>
+                                <h3 class="text-xl font-black text-slate-900 uppercase tracking-tight">Blake P. Macwood</h3>
+                                <span class="text-[10px] font-bold text-teal-600 uppercase tracking-wider block mt-1">Chief Financial Officer & Treasurer</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed text-left pt-2">
+                                Blake Macwood steers the fiscal governance, financial reporting frameworks, and strategic capital allocation for the California Clean Slate Program. With a strict emphasis on financial transparency and compliance controls, Blake ensures all grant capital, corporate sponsorships, and philanthropic donations directly optimize frontline community infrastructure. He maintains oversight of the organization's budgetary checks and balances, risk mitigation, and long-term asset management protocols.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BOARD SECRETARY -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 sm:p-8 flex flex-col items-center text-center justify-between shadow-xs">
+                        <div class="flex flex-col items-center space-y-4">
+                            <svg width="168" height="168" viewBox="0 0 168 168" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="richelleCircle">
+                                        <circle cx="84" cy="84" r="80" />
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#richelleCircle)">
+                                    <image x="0" y="0" height="100%" width="100%" preserveAspectRatio="xMidYMid slice" xlink:href="secretary.jpg"></image>
+                                </g>
+                                <circle cx="84" cy="84" r="80" fill="none" stroke="#0d9488" stroke-width="4" />
+                            </svg>
+                            <div>
+                                <h3 class="text-xl font-black text-slate-900 uppercase tracking-tight">Richelle A. Laquerre</h3>
+                                <span class="text-[10px] font-bold text-teal-600 uppercase tracking-wider block mt-1">Secretary of the Board</span>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed text-left pt-2">
+                                Richelle Laquerre manages corporate compliance, official archives, and legal governance records for the corporation. Richelle is responsible for validating that all organizational acts, regulatory state filings, and corporate resolutions strictly align with California public benefit corporation statutes. Her rigorous focus on institutional administrative standards ensures the clear transparency metrics required to seamlessly pass independent foundation audits.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- COMPLIANCE & ACCREDITATION TRANSPARENCY BLOCK -->
+            <div class="bg-slate-900 text-white rounded-xl border border-slate-800 p-6 sm:p-8 space-y-3">
+                <h3 class="text-lg font-black text-teal-400 uppercase tracking-wider text-center sm:text-left">
+                    <i class="fa-solid fa-scale-balanced mr-2"></i> Fiduciary Transparency & Compliance
+                </h3>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed text-left">
+                    The California Clean Slate Program is a registered California Nonprofit Public Benefit Corporation officially incorporated on May 8, 2026. Our independent Board of Directors operates under formal corporate bylaws and a strict Conflict of Interest Policy to maintain total fiscal integrity and operational accountability. The organization is a recognized 501(c)(3) public charity and all financial contributions are fully tax-deductible under IRC Section 170. For institutional due diligence vetting, foundational inquiries, or copies of regulatory filings, please contact our administrative offices directly.
+                </p>
+            </div>
+
+            <!-- NAVIGATION BUTTON ROW DESKTOP GRID & FULL WIDTH MOBILE -->
+            <div class="pt-6 border-t border-slate-100 text-center space-y-6">
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-16895" target="_blank" class="w-full sm:w-auto text-center bg-teal-600 hover:bg-teal-700 text-white font-black px-8 py-4 rounded-xl tracking-wider text-sm uppercase shadow-md transition transform hover:-translate-y-0.5">
+                        Support Our Mission
+                    </a>
+                    <a href="the-harbor.html" class="w-full sm:w-auto text-center bg-slate-950 hover:bg-slate-900 text-teal-400 border border-slate-800 font-bold px-8 py-4 rounded-xl tracking-wider text-sm uppercase transition flex items-center justify-center">
+                        Visit The Harbor <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. MANDATORY LEGAL SYSTEM DISCLAIMER -->
+    <section class="py-12 bg-slate-900 text-white border-t border-slate-950 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-slate-400 text-[11px] leading-relaxed italic text-left">
+            The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. All financial contributions are fully tax-deductible under IRC Section 170. Legal Notice: This organization operates strictly as a mobile hygiene, social service, and transitional care continuum. The California Clean Slate Program does not provide legal counsel, record expungement, court representation, or criminal justice re-entry programming.
+        </div>
+    </section>
+
+    <!-- 6. ENTERPRISE FOOTER BRAND MATRIX -->
+    <footer class="bg-white border-t border-slate-200 py-12 text-slate-500 text-xs font-medium text-center">
+        <p>&copy; 2026 California Clean Slate Program. All Rights Reserved.</p>
+        <p class="text-teal-600 font-bold tracking-wider uppercase text-[10px] mt-1.5">Mobile Hygiene & Stabilization Utility &bull; Watershed Preservation &bull; Santa Cruz County</p>
+    </footer>
+
 </body>
 </html>
