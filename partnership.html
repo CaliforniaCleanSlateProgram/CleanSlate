@@ -4,257 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partner With Us | California Clean Slate Program</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Partner with the California Clean Slate Program to support street-level compassion and non-profit mobile hygiene infrastructure scaling within Santa Cruz County.">
+    <meta name="keywords" content="California Clean Slate Program partnerships, support unhoused Santa Cruz, second-chance employment, sponsor mobile hygiene fleet">
+
+    <!-- Social Media Link Preview Tags (Open Graph) -->
+    <meta property="og:title" content="Partner With Us | California Clean Slate Program">
+    <meta property="og:description" content="Join our mission as a site host, employment partner, founding volunteer, or donor to bring next-generation human stabilization to live field operations.">
+    <meta property="og:url" content="https://californiacleanslateprogram.org/partnership.html">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS Engine for Premium Visual Layout -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            background: linear-gradient(rgba(13, 59, 102, 0.9), rgba(13, 59, 102, 0.9)), url('scnight.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff; 
-            line-height: 1.7; 
-            padding: 40px 15px; /* Slightly looser padding for mobile screens */
-        }
-        
-        .content-box { 
-            max-width: 800px; 
-            margin: auto; 
-            background: #0d3b66; 
-            padding: 40px 25px; /* Responsive internal padding */
-            border-radius: 16px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-            border-top: 6px solid #f4d35e;
-        }
-
-        @media (min-width: 600px) {
-            body { padding: 60px 20px; }
-            .content-box { padding: 50px; }
-        }
-
-        h1 { 
-            color: #f4d35e; 
-            font-size: 2.2rem; 
-            letter-spacing: -0.5px; 
-            margin-bottom: 20px; 
-            text-align: center;
-        }
-
-        @media (min-width: 600px) {
-            h1 { font-size: 2.5rem; }
-        }
-
-        .intro-p {
-            font-size: 1.15rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #e0e0e0;
-        }
-
-        h2 { 
-            color: #f4d35e; 
-            margin-top: 35px; 
-            font-size: 1.5rem; 
-            letter-spacing: -0.3px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid rgba(244, 211, 94, 0.3);
-            padding-bottom: 5px;
-        }
-
-        p {
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-        }
-
-        strong {
-            color: #f4d35e;
-        }
-
-        .back-link { 
-            color: #f4d35e; 
-            font-weight: 600; 
-            text-decoration: none; 
-            transition: 0.3s; 
-            display: inline-block; 
-            margin-bottom: 25px;
-        }
-
-        .back-link:hover { 
-            opacity: 0.8; 
-        }
-
-        /* Strategic Partnership Banner Image Panel */
-        .partner-banner-container {
-            width: 100%;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .partner-banner-img {
-            width: 100%;
-            height: auto;
-            max-height: 350px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Premium CTA Zone with Mobile Overflow Mitigations */
-        .cta-section { 
-            background-color: rgba(255, 255, 255, 0.08); 
-            border-left: 5px solid #f4d35e;
-            padding: 30px 20px; 
-            border-radius: 0 12px 12px 0; 
-            margin-top: 50px; 
-            text-align: center;
-            overflow: hidden; /* Ensures no content pushes layout lines */
-        }
-
-        @media (min-width: 600px) {
-            .cta-section { padding: 35px; }
-        }
-
-        .cta-section h3 {
-            color: #f4d35e;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .cta-section p {
-            font-size: 1.05rem;
-            margin-bottom: 0;
-        }
-
-        /* The Ironclad Mobile Email Wrap Shield */
-        .partner-email {
-            color: #f4d35e;
-            text-decoration: none;
-            font-weight: 700;
-            border-bottom: 1px dashed #f4d35e;
-            transition: 0.2s;
-            display: inline-block;
-            max-width: 100%;
-            word-wrap: break-word;
-            word-break: break-all; /* Forces break on ultra-narrow viewports */
-            vertical-align: bottom;
-        }
-
-        .partner-email:hover {
-            color: #ffffff;
-            border-bottom-color: #ffffff;
-        }
-
-        /* Operational Transparency Grid Styles */
-        .matrix-title { color: #f4d35e; font-size: 1.6rem; letter-spacing: -0.5px; margin-bottom: 10px; text-align: center; font-weight: bold; }
-        .matrix-subtitle { color: #bdc3c7; text-align: center; font-size: 1rem; max-width: 700px; margin: 0 auto 35px auto; line-height: 1.5; }
-        .matrix-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 40px; text-align: left; }
-        .matrix-card { flex: 1 1 220px; max-width: 280px; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: flex-start; box-shadow: 0 4px 15px rgba(0,0,0,0.2); position: relative; }
-        .matrix-card.featured { border: 2px solid #f4d35e; background-color: rgba(255, 255, 255, 0.08); box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
-        .matrix-amt { color: #f4d35e; font-size: 1.8rem; font-weight: 800; margin-bottom: 5px; }
-        .matrix-label { color: #ffffff; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; letter-spacing: -0.2px; line-height: 1.3; }
-        .matrix-desc { font-size: 0.9rem; line-height: 1.5; color: #e0e0e0; margin-bottom: 0; }
-        .matrix-tag { position: absolute; top: -11px; right: 15px; background: #f4d35e; color: #0d3b66; font-size: 0.65rem; font-weight: 900; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        /* Mobile Navbar Checkbox Hidden Toggle Controller */
+        #menu-toggle:checked ~ #mobile-menu { display: block; }
     </style>
 </head>
-<body>
-    <div class="content-box">
-        <a href="index.html" class="back-link">← Back to Home</a>
-        
-        <h1>Partner With Us</h1>
-        <p class="intro-p">Building the foundation for a safer, stronger, and completely restored community framework.</p>
-        
-        <p>The California Clean Slate Program is entirely focused on a single mission: building a comprehensive, five-phase continuum of care that bridges our unhoused and struggling neighbors from the streets back into permanent independence. Right now, we are an officially recognized 501(c)(3) public charity—actively gathering the baseline resources, land access, and community power required to launch our operations. We are built on raw community discipline, and we are looking for dedicated partners ready to join us on the ground floor.</p>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-        <h2>1. Mobile Staging Site Hosts</h2>
-        <p>Our street outreach and mobile hygiene units depend entirely on reliable, predictable geographic access. We are seeking partnerships with commercial property owners, faith-based organizations, and land owners who are willing to open a baseline staging footprint for our mobile shower and laundry trailers. We seek <strong>repeatable, scheduled days and times</strong> to establish a consistent pattern of trust with our participants. Our staging operations are entirely self-contained, professionally managed, and secure. We handle all logistics, security monitoring, and post-service cleanup, ensuring your lot remains a pristine, respected asset to the neighborhood.</p>
-        
-        <h2>2. Second-Chance Employment Partners</h2>
-        <p>The final, vital milestone of our continuum is guiding participants into steady, gainful employment. We look to form direct relationships with business owners, commercial managers, and contractors willing to act as an intentional employment pipeline. By partnering with us, you are not taking on a blind risk; you are gaining access to motivated, drug-free individuals who have been stabilized through our treatment partnerships, held accountable by our sober living environments, and are fully equipped with the discipline to work hard and protect your team.</p>
+    <!-- 1. INSTARS / FEDERAL COMPLIANCE BANNER -->
+    <div class="bg-slate-900 text-slate-400 text-[11px] font-semibold tracking-widest uppercase py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
+            <div class="flex items-center space-x-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                <span>Phase 1 Flagship Buildout: Santa Cruz County</span>
+            </div>
+            <div class="flex space-x-4">
+                <span>Active 501(c)(3) Status Approved</span>
+                <span>UEI: UEBPQDK1L7E7</span>
+            </div>
+        </div>
+    </div>
 
-        <h2>3. Founding Volunteers & Community Leaders</h2>
-        <p>Because we are scaling up our infrastructure as a newly approved 501(c)(3) organization, <strong>every single position in our organization is currently voluntary.</strong> We are building the engine right now, and we do not have a paid payroll yet. We are calling on eager, community-minded professionals, leaders, and ground-level volunteers who want to invest their skills—whether in administration, legal tracking, logistics, or field outreach—to build solid infrastructure. What we offer you is skin in the game and a proud seat at the table of an organization built to fix a systemic crisis.</p>
+    <!-- 2. STICKY SYSTEM NAVIGATION & RESPONSIVE BURGER DRAWER -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+            <div class="flex items-center space-x-3">
+                <div class="bg-teal-600 text-white px-3 py-2 rounded-lg font-black tracking-wider text-xl shadow-xs">CCSP</div>
+                <div>
+                    <span class="block text-lg font-black text-slate-900 tracking-tight leading-none">California Clean Slate Program</span>
+                    <span class="text-[10px] font-bold text-teal-600 uppercase tracking-widest mt-1 block">Bedrock to Buildout Initiative</span>
+                </div>
+            </div>
 
-        <h2>4. Seed Funding & Resource Backing</h2>
-        <p>For community members who want to accelerate this deployment but cannot volunteer their time or lot space, your direct financial backing is what turns this blueprint into real infrastructure. Your financial contributions are deployed directly into securing outreach gear, sanitation assets, and mobile fleet equipment. Every resource stays local, directly funding the recovery ecosystem.</p>
+            <!-- Desktop View Navigation anchors -->
+            <nav class="hidden lg:flex space-x-5 text-xs font-bold uppercase tracking-wider text-slate-600 items-center">
+                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
+                <a href="index.html#continuum" class="hover:text-teal-600 transition">Our Continuum</a>
+                <a href="project-beachfront.html" class="bg-amber-500/10 text-amber-700 hover:bg-amber-500/20 px-2.5 py-1 rounded-md transition font-black flex items-center gap-1"><i class="fa-solid fa-water text-xs"></i> Project Beachfront</a>
+                <a href="frontline-fellowship.html" class="hover:text-teal-600 transition">Frontline Fellowship</a>
+                <a href="leadership-governance.html" class="hover:text-teal-600 transition">Leadership & Governance</a>
+                <a href="partnership.html" class="text-teal-600 hover:text-teal-700 transition">Partner With Us</a>
+                <a href="the-harbor.html" class="hover:text-teal-600 transition">The Harbor & Our Bay</a>
+            </nav>
+
+            <!-- Responsive Toggle Elements -->
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="lg:hidden p-2 text-slate-700 cursor-pointer text-xl select-none">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <!-- Clean Dropdown Panel for Handheld Displays -->
+            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl lg:hidden z-50 py-4 px-6 space-y-3 font-bold text-sm text-slate-700">
+                <a href="index.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Home</a>
+                <a href="index.html#continuum" class="block hover:text-teal-600 py-1 border-b border-slate-50">Our Continuum</a>
+                <a href="project-beachfront.html" class="block text-amber-600 py-1 border-b border-slate-50 font-black"><i class="fa-solid fa-water mr-1 text-xs"></i> Project Beachfront</a>
+                <a href="frontline-fellowship.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Frontline Fellowship</a>
+                <a href="leadership-governance.html" class="block hover:text-teal-600 py-1 border-b border-slate-50">Leadership & Governance</a>
+                <a href="partnership.html" class="block text-teal-600 py-1 border-b border-slate-50">Partner With Us</a>
+                <a href="the-harbor.html" class="block hover:text-teal-600 py-1">The Harbor & Our Bay</a>
+            </div>
+
+            <div class="hidden sm:block">
+                <a href="#transparency" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-md">Fund The Buildout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. HERO CORRIDOR -->
+    <section class="relative bg-slate-950 text-white py-24 px-4 overflow-hidden border-b border-slate-900">
+        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
         
-        <!-- STRATEGIC PARTNERSHIP BANNER IMAGE PANEL -->
-        <div class="partner-banner-container">
-            <img src="partners.jpg" alt="Strategic Partnership and Global Alignment" class="partner-banner-img">
+        <!-- Background Image Matching Layout Depth -->
+        <div class="absolute inset-0 z-0 opacity-25 pointer-events-none mix-blend-luminosity">
+            <img src="scnight.jpg" alt="Partner With Us Backdrop" class="w-full h-full object-cover object-center">
         </div>
 
-        <!-- AUTHORITATIVE DONOR IMPACT MATRIX START -->
-        <div style="margin-top: 40px; padding-top: 35px; border-top: 1px solid rgba(255, 255, 255, 0.15);">
-            <h2 class="matrix-title">Operational Transparency: How Your Capital Deploys</h2>
-            <p class="matrix-subtitle">
-                We treat community capital with absolute operational discipline. Every donation tier is structurally optimized to cover direct physical supplies alongside the fleet logistics, utility management, and capital development infrastructure required to scale.
+        <div class="relative z-10 max-w-5xl mx-auto text-center space-y-4">
+            <a href="index.html" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-teal-400 hover:text-teal-300 transition mb-2">
+                <i class="fa-solid fa-arrow-left mr-2 text-[10px]"></i> Back to Home
+            </a>
+            <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight uppercase leading-none">
+                Partner With Us
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base font-bold tracking-wide uppercase max-w-2xl mx-auto">
+                Building the foundation for a safer, stronger, and completely restored community framework.
             </p>
+        </div>
+    </section>
 
-            <div class="matrix-grid">
-                <!-- Tier 1 Card -->
-                <div class="matrix-card">
-                    <div class="matrix-amt">$30</div>
-                    <div class="matrix-label">The Dignity Spark</div>
-                    <p class="matrix-desc">
-                        Fully subsidizes comprehensive mobile hygiene, warm tankless showers, thermal socks, and full on-site sanitation loops for <strong>6 individuals</strong> in crisis.
-                    </p>
+    <!-- 4. MAIN LAYOUT AND CONTENT BOX -->
+    <section class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 shadow-sm space-y-10">
+            
+            <div class="text-slate-700 leading-relaxed text-base sm:text-lg">
+                <p>The California Clean Slate Program is entirely focused on a single mission: building a comprehensive, five-phase continuum of care that bridges our unhoused and struggling neighbors from the streets back into permanent independence. Right now, we are an officially recognized 501(c)(3) public charity—actively gathering the baseline resources, land access, and community power required to launch our operations. We are built on raw community discipline, and we are looking for dedicated partners ready to join us on the ground floor.</p>
+            </div>
+
+            <!-- Row Modules -->
+            <div class="space-y-8 pt-4 border-t border-slate-100">
+                <div class="space-y-2">
+                    <h2 class="text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                        <span class="text-teal-600 text-xs font-black bg-teal-50 px-2 py-1 rounded">01</span> Mobile Staging Site Hosts
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">Our street outreach and mobile hygiene units depend entirely on reliable, predictable geographic access. We are seeking partnerships with commercial property owners, faith-based organizations, and land owners who are willing to open a baseline staging footprint for our mobile shower and laundry trailers. We seek <strong>repeatable, scheduled days and times</strong> to establish a consistent pattern of trust with our participants. Our staging operations are entirely self-contained, professionally managed, and secure. We handle all logistics, security monitoring, and post-service cleanup, ensuring your lot remains a pristine, respected asset to the neighborhood.</p>
                 </div>
 
-                <!-- Tier 2 Card -->
-                <div class="matrix-card">
-                    <div class="matrix-amt">$50</div>
-                    <div class="matrix-label">The Outreach Foundation</div>
-                    <p class="matrix-desc">
-                        Secures <strong>10 weather-resistant field kits</strong> packed with heavy-duty hygiene essentials and thermal apparel, completely scaling our active street outreach capabilities.
-                    </p>
+                <div class="space-y-2">
+                    <h2 class="text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                        <span class="text-teal-600 text-xs font-black bg-teal-50 px-2 py-1 rounded">02</span> Second-Chance Employment Partners
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">The final, vital milestone of our continuum is guiding participants into steady, gainful employment. We look to form direct relationships with business owners, commercial managers, and contractors willing to act as an intentional employment pipeline. By partnering with us, you are not taking on a blind risk; you are gaining access to motivated, drug-free individuals who have been stabilized through our treatment partnerships, held accountable by our sober living environments, and are fully equipped with the discipline to work hard and protect your team.</p>
                 </div>
 
-                <!-- Tier 3 Card -->
-                <div class="matrix-card">
-                    <div class="matrix-amt">$150</div>
-                    <div class="matrix-label">Site Deployment Sponsor</div>
-                    <p class="matrix-desc">
-                        Sponsors a <strong>full morning of mobile fleet operations</strong>. Fully absorbs greywater compliance logistics, generator power systems, transit fuel, and asset maintenance buffers.
-                    </p>
+                <div class="space-y-2">
+                    <h2 class="text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                        <span class="text-teal-600 text-xs font-black bg-teal-50 px-2 py-1 rounded">03</span> Founding Volunteers & Community Leaders
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">Because we are scaling up our infrastructure as a newly approved 501(c)(3) organization, <strong>every single position in our organization is currently voluntary.</strong> We are building the engine right now, and we do not have a paid payroll yet. We are calling on eager, community-minded professionals, leaders, and ground-level volunteers who want to invest their skills—whether in administration, legal tracking, logistics, or field outreach—to build solid infrastructure. What we offer you is skin in the game and a proud seat at the table of an organization built to fix a systemic crisis.</p>
                 </div>
 
-                <!-- Tier 4 Card -->
-                <div class="matrix-card featured">
-                    <div class="matrix-tag">Capital Campaign</div>
-                    <div class="matrix-amt">$500</div>
-                    <div class="matrix-label">Fleet Capital Unit Sponsor</div>
-                    <p class="matrix-desc">
-                        Deploys directly into industrial fabrication. Allocates dedicated structural capital toward heavy-duty chassis engineering, tankless heating loops, and utility vaults for our flawless $60k+ mobile fleet assets.
-                    </p>
+                <div class="space-y-2">
+                    <h2 class="text-xl font-black text-slate-900 tracking-tight uppercase flex items-center gap-2">
+                        <span class="text-teal-600 text-xs font-black bg-teal-50 px-2 py-1 rounded">04</span> Seed Funding & Resource Backing
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">For community members who want to accelerate this deployment but cannot volunteer their time or lot space, your direct financial backing is what turns this blueprint into real infrastructure. Your financial contributions are deployed directly into securing outreach gear, sanitation assets, and mobile fleet equipment. Every resource stays local, directly funding the recovery ecosystem.</p>
+                </div>
+            </div>
+
+            <!-- STRATEGIC PARTNERSHIP BANNER IMAGE PANEL -->
+            <div class="rounded-xl overflow-hidden border border-slate-200 shadow-xs mt-6">
+                <img src="partners.jpg" alt="Strategic Partnership and Global Alignment" class="w-full h-auto max-h-[350px] object-cover block">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. ABSOLUTE OPERATIONAL TRANSPARENCY DASHBOARD -->
+    <section id="transparency" class="py-20 bg-slate-900 text-white border-t border-slate-950 relative">
+        <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-[11px] font-bold tracking-widest text-teal-400 uppercase block">Institutional Portfolio Due Diligence</span>
+                <div class="text-3xl md:text-4xl font-black tracking-tight uppercase">Operational Transparency: How Your Capital Deploys</div>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    We treat community capital with absolute operational discipline. Every donation tier is structurally optimized to cover direct physical supplies alongside the fleet logistics, utility management, and capital development infrastructure required to scale.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 text-left">
+                <!-- Card 1 -->
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <span class="text-[9px] font-bold text-teal-400 uppercase tracking-wider block mb-1">Human Impact Unit</span>
+                        <div class="text-3xl font-black text-white border-b border-slate-800 pb-3">$30</div>
+                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">The Dignity Spark</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Fully subsidizes comprehensive mobile hygiene, warm tankless showers, thermal socks, and full on-site sanitation loops for <strong>6 individuals</strong> in crisis.</p>
+                    </div>
                 </div>
 
-                <!-- NEW Tier 5 Card ($2,500 CHASSIS WITH PLURAL TAGGING) -->
-                <div class="matrix-card featured">
-                    <div class="matrix-tag">Bay Guardians Pipeline</div>
-                    <div class="matrix-amt">$2,500</div>
-                    <div class="matrix-label">Channel Protector Steward</div>
-                    <p class="matrix-desc">
-                        Sponsors major care-framework pipelines. Directs funding to cover structural outreach loops, continuous asset navigation, fuel corridors, and comprehensive regional service logistics to safely shift pathways forward.
-                    </p>
+                <!-- Card 2 -->
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <span class="text-[9px] font-bold text-teal-400 uppercase tracking-wider block mb-1">Field Scaling Asset</span>
+                        <div class="text-3xl font-black text-white border-b border-slate-800 pb-3">$50</div>
+                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">The Outreach Foundation</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Secures <strong>10 weather-resistant field kits</strong> packed with heavy-duty hygiene essentials and thermal apparel, completely scaling our active street outreach capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <span class="text-[9px] font-bold text-teal-400 uppercase tracking-wider block mb-1">Fleet Deployment Sponsor</span>
+                        <div class="text-3xl font-black text-white border-b border-slate-800 pb-3">$150</div>
+                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">Site Deployment Sponsor</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Sponsors a <strong>full morning of mobile fleet operations</strong>. Fully absorbs greywater compliance logistics, generator power systems, transit fuel, and asset maintenance buffers.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 (Featured) -->
+                <div class="bg-slate-950 border border-teal-500/40 rounded-2xl p-6 flex flex-col justify-between shadow-xl shadow-teal-500/5 hover:border-teal-500 transition relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-teal-500 text-slate-950 text-[8px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-bl-lg">Capital Campaign</div>
+                    <div>
+                        <span class="text-[9px] font-bold text-teal-400 uppercase tracking-wider block mb-1">Heavy Infrastructure</span>
+                        <div class="text-3xl font-black text-teal-400 border-b border-slate-800 pb-3">$500</div>
+                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">Fleet Capital Unit Sponsor</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Deploys directly into industrial fabrication. Allocates dedicated structural capital toward heavy-duty chassis engineering, tankless heating loops, and utility vaults for our flawless $60k+ mobile fleet assets.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 (Featured) -->
+                <div class="bg-slate-950 border border-amber-500/30 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500 transition relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-amber-500 text-slate-950 text-[8px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-bl-lg">Bay Guardians Pipeline</div>
+                    <div>
+                        <span class="text-[9px] font-bold text-amber-400 uppercase tracking-wider block mb-1">Regional Sanctuary Protection</span>
+                        <div class="text-3xl font-black text-amber-400 border-b border-slate-800 pb-3">$2,500</div>
+                        <h4 class="font-bold text-sm text-slate-200 mt-4 mb-2">Channel Protector Steward</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Sponsors major care-framework pipelines. Directs funding to cover structural outreach loops, continuous asset navigation, fuel corridors, and comprehensive regional service logistics to safely shift pathways forward.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- AUTHORITATIVE DONOR IMPACT MATRIX END -->
+    </section>
 
-        <!-- Action Hub & Navigation Combo Zone -->
-        <div class="cta-section">
-            <h3>Ready to Stand With Us?</h3>
-            <p style="margin-bottom: 25px;">
-                Email our operations lead directly at <a href="mailto:partnerships@californiacleanslateprogram.org" class="partner-email">partnerships@californiacleanslateprogram.org</a> to begin a direct conversation about hosting a mobile unit, joining our founding volunteer network, or establishing an employment pipeline.
+    <!-- 6. ACTION HUB & NAVIGATION COMBO ZONE -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-gradient-to-r from-slate-900 to-slate-950 text-white rounded-2xl p-8 sm:p-12 shadow-xl border-l-4 border-amber-500 relative overflow-hidden text-center">
+            <h3 class="text-xl sm:text-2xl font-black uppercase tracking-tight text-amber-500 mb-4">Ready to Stand With Us?</h3>
+            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-6">
+                Email our operations lead directly at <a href="mailto:partnerships@californiacleanslateprogram.org" class="text-teal-400 font-bold hover:underline break-all">partnerships@californiacleanslateprogram.org</a> to begin a direct conversation about hosting a mobile unit, joining our founding volunteer network, or establishing an employment pipeline.
             </p>
 
             <!-- LIVE INLINE ZEFFY DONATION CHECKOUT EMBED MODULE -->
-            <div style="margin: 30px 0 35px 0;">
+            <div class="my-8 overflow-hidden rounded-xl bg-white p-2">
                 <div data-zeffy-embed data-form-url="/embed/donation-form/donate-to-change-lives-16895"></div>
                 <div data-zeffy-embed-fallback style="display:none;">
-                    <div style="position:relative;overflow:hidden;height:450px;width:100%;"><iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' data-zeffy-embed-src='https://www.zeffy.com/embed/donation-form/donate-to-change-lives-16895' allowpaymentrequest allowTransparency="true"></iframe></div>
+                    <div class="relative overflow-hidden h-[450px] w-full"><iframe title='Donation form powered by Zeffy' class="absolute border-0 top-0 left-0 bottom-0 right-0 w-full h-full" data-zeffy-embed-src='https://www.zeffy.com/embed/donation-form/donate-to-change-lives-16895' allowpaymentrequest allowTransparency="true"></iframe></div>
                 </div>
                 <script
                     src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
@@ -263,19 +244,25 @@
             </div>
 
             <!-- Responsive Button Wrapper -->
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-                <!-- Internal Pipeline Navigation -->
-                <a href="the-harbor.html" style="background-color: rgba(255, 255, 255, 0.1); color: #f4d35e; border: 2px solid #f4d35e; padding: 12px 28px; text-decoration: none; font-weight: 700; border-radius: 8px; font-size: 1.1rem; display: inline-block; transition: 0.3s; box-sizing: border-box;">
-                    Visit The Harbor →
+            <div class="flex flex-wrap justify-center gap-4 mt-6">
+                <a href="the-harbor.html" class="bg-transparent hover:bg-white/5 text-amber-500 border-2 border-amber-500 px-6 py-3 text-xs font-black uppercase tracking-wider rounded-xl transition">
+                    Visit The Harbor <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
                 </a>
             </div>
             
             <!-- MASTER LEGAL DISCLAIMER -->
-            <p style="font-size: 0.85rem; color: #bdc3c7; margin-top: 30px; font-style: normal; text-align: left; line-height: 1.5;">
+            <p class="text-[11px] text-slate-500 text-left border-t border-slate-800/60 pt-6 mt-8 leading-relaxed italic">
                 The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. All financial contributions are fully tax-deductible under IRC Section 170.<br><br>
                 <strong>Legal Notice:</strong> This organization operates strictly as a mobile hygiene, social service, and transitional care continuum. The California Clean Slate Program does not provide legal counsel, record expungement, court representation, or criminal justice re-entry programming.
             </p>
         </div>
-    </div>
+    </section>
+
+    <!-- 7. ENTERPRISE FOOTER BRAND MATRIX -->
+    <footer class="bg-white border-t border-slate-200 py-12 text-slate-500 text-xs font-medium text-center">
+        <p>&copy; 2026 California Clean Slate Program. All Rights Reserved.</p>
+        <p class="text-teal-600 font-bold tracking-wider uppercase text-[10px] mt-1.5">Mobile Hygiene & Stabilization Utility &bull; Watershed Preservation &bull; Santa Cruz County</p>
+    </footer>
+
 </body>
 </html>
