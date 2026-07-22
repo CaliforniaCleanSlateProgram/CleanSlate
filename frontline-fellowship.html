@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontline Fellowship | California Clean Slate Program</title>
+    <title>Frontline Fellowship — California Clean Slate Program | Santa Cruz County Veteran Relief</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Emergency extractions, wilderness decompression, and direct relief stabilization for transition-age veterans in Santa Cruz County. 501(c)(3) public charity.">
+    <meta name="keywords" content="veteran relief, Santa Cruz veterans, emergency hotel vouchers, wilderness therapy, veteran stabilization, California Clean Slate Program, frontline fellowship">
+    <link rel="canonical" href="https://californiacleanslateprogram.org/frontline-fellowship">
 
-    <!-- SEO & Metadata -->
-    <meta name="description" content="The California Clean Slate Program's Frontline Fellowship offers emergency hotel extractions, peer fellowship gatherings across Santa Cruz County, and transitional advancement support for local veterans.">
-    <meta name="keywords" content="California Clean Slate Program, Frontline Fellowship, veteran program Santa Cruz, sponsor a vet, veteran relief fund, emergency hotel voucher, peer support">
-    <link rel="canonical" href="https://californiacleanslateprogram.org/frontline-fellowship.html">
-
-    <!-- Social Media Open Graph Tags -->
-    <meta property="og:title" content="Frontline Fellowship | California Clean Slate Program">
-    <meta property="og:description" content="Supporting our regional veteran community through emergency extractions, Santa Cruz wilderness and beach fellowship, and direct advancement grants.">
-    <meta property="og:url" content="https://californiacleanslateprogram.org/frontline-fellowship.html">
+    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://californiacleanslateprogram.org/VETDAY.jpg">
-    <meta property="og:image:alt" content="Honoring Veterans - California Clean Slate Program Frontline Fellowship">
+    <meta property="og:url" content="https://californiacleanslateprogram.org/frontline-fellowship">
+    <meta property="og:title" content="Frontline Fellowship | California Clean Slate Program">
+    <meta property="og:description" content="We cut through the red tape to deliver emergency extractions, wilderness decompression, and real advancement support across Santa Cruz County.">
+    <meta property="og:image" content="https://californiacleanslateprogram.org/images/frontline-fellowship-share.jpg">
+    <meta property="og:site_name" content="California Clean Slate Program">
 
-    <!-- Twitter Card Tags -->
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Frontline Fellowship | California Clean Slate Program">
-    <meta name="twitter:description" content="Direct emergency relief grants, isolation intervention, and transitional support for local veterans in Santa Cruz County.">
-    <meta name="twitter:image" content="https://californiacleanslateprogram.org/VETDAY.jpg">
+    <meta name="twitter:description" content="Emergency extractions, wilderness decompression, and direct relief stabilization for transition-age veterans in Santa Cruz County.">
+    <meta name="twitter:image" content="https://californiacleanslateprogram.org/images/frontline-fellowship-share.jpg">
 
-    <!-- Structured Data (JSON-LD NGO) -->
+    <!-- JSON-LD Structured Data for Nonprofit & Donation Action -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -32,217 +32,288 @@
       "name": "California Clean Slate Program",
       "alternateName": "CCSP",
       "url": "https://californiacleanslateprogram.org",
-      "logo": "https://californiacleanslateprogram.org/VETDAY.jpg",
+      "logo": "https://californiacleanslateprogram.org/images/logo.png",
+      "taxID": "UEBPQDK1L7E7",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Santa Cruz",
         "addressRegion": "CA",
         "addressCountry": "US"
       },
-      "areaServed": "Santa Cruz County",
-      "taxID": "UEBPQDK1L7E7"
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Santa Cruz County"
+      },
+      "sameAs": [
+        "https://californiacleanslateprogram.org"
+      ]
     }
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <!-- Tailwind CSS / Theme Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0b1329',
+                        brandSlate: '#111c38',
+                        brandTeal: '#0ea5e9',
+                        brandAccent: '#38bdf8'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        #menu-toggle:checked ~ #mobile-menu { display: block; }
+        body {
+            background-color: #0b1329;
+            color: #f8fafc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased text-base leading-relaxed">
+<body class="bg-brandDark text-slate-100 antialiased selection:bg-brandTeal selection:text-brandDark">
 
-    <!-- Top Notice Bar -->
-    <div class="bg-slate-900 text-slate-300 text-xs sm:text-sm font-semibold tracking-wide uppercase py-2.5 px-4 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
-            <div class="flex items-center space-x-2">
-                <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
-                <span>Flagship Base Initiative &bull; Santa Cruz County</span>
-            </div>
-            <div class="flex space-x-4">
-                <span>UEI: UEBPQDK1L7E7</span>
-                <span>Workforce Readiness & Stabilization Pipeline</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header / Navigation -->
-    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+    <!-- Header Navigation -->
+    <header class="border-b border-slate-800 bg-brandDark/95 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="bg-teal-600 text-white px-3.5 py-2 rounded-lg font-black tracking-wider text-xl shadow-xs">CCSP</div>
-                <div>
-                    <span class="block text-lg sm:text-xl font-black text-slate-900 tracking-tight leading-none">California Clean Slate Program</span>
-                    <span class="text-xs font-bold text-teal-600 uppercase tracking-wider mt-1 block">Bedrock to Buildout Initiative</span>
-                </div>
+                <span class="text-xs uppercase tracking-widest bg-brandTeal/10 text-brandTeal border border-brandTeal/30 px-2.5 py-1 rounded font-semibold">501(c)(3) • UEI: UEBPQDK1L7E7</span>
+                <span class="hidden md:inline text-xs text-slate-400 font-mono">Santa Cruz County</span>
             </div>
-
-            <nav class="hidden lg:flex space-x-6 text-sm font-bold uppercase tracking-wider text-slate-700">
-                <a href="index.html" class="hover:text-teal-600 transition">Home</a>
-                <a href="index.html#continuum" class="hover:text-teal-600 transition">Our Continuum</a>
-                <a href="frontline-fellowship.html" class="text-teal-600 hover:text-teal-700 transition">Frontline Fellowship</a>
-                <a href="leadership-governance.html" class="hover:text-teal-600 transition">Leadership & Governance</a>
-                <a href="partnership.html" class="hover:text-teal-600 transition">Partner With Us</a>
-                <a href="the-harbor.html" class="hover:text-teal-600 transition">The Harbor & Our Bay</a>
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="/" class="hover:text-brandTeal transition">Home</a>
+                <a href="#continuum" class="hover:text-brandTeal transition">Our Continuum</a>
+                <a href="#terrain" class="hover:text-brandTeal transition">The Terrain &amp; Tribe</a>
+                <a href="#fund" class="hover:text-brandTeal transition font-semibold text-brandTeal">Back The Fellowship</a>
             </nav>
-
-            <input type="checkbox" id="menu-toggle" class="hidden">
-            <label for="menu-toggle" class="lg:hidden p-2 text-slate-700 cursor-pointer text-2xl select-none">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-
-            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl lg:hidden z-50 py-4 px-6 space-y-4 font-bold text-base text-slate-800">
-                <a href="index.html" class="block hover:text-teal-600 py-2 border-b border-slate-100">Home</a>
-                <a href="index.html#continuum" class="block hover:text-teal-600 py-2 border-b border-slate-100">Our Continuum</a>
-                <a href="frontline-fellowship.html" class="block text-teal-600 py-2 border-b border-slate-100">Frontline Fellowship</a>
-                <a href="leadership-governance.html" class="block text-teal-600 py-2 border-b border-slate-100">Leadership & Governance</a>
-                <a href="partnership.html" class="block hover:text-teal-600 py-2 border-b border-slate-100">Partner With Us</a>
-                <a href="the-harbor.html" class="block hover:text-teal-600 py-2">The Harbor & Our Bay</a>
-            </div>
-
-            <div class="hidden sm:block">
-                <a href="#sponsor" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition shadow-md">Back The Fellowship</a>
+            <div>
+                <a href="#fund" class="bg-brandTeal hover:bg-sky-400 text-brandDark font-bold px-5 py-2.5 rounded-lg text-sm transition shadow-lg shadow-sky-500/10">
+                    Donate Direct
+                </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-slate-950 text-white py-28 px-4 overflow-hidden border-b border-slate-900">
-        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
-        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-luminosity">
-            <img src="flag1.jpg" alt="American Flag Blueprint" class="w-full h-full object-cover object-center">
+    <section class="relative overflow-hidden pt-16 pb-24 border-b border-slate-800">
+        <div class="absolute inset-0 z-0 opacity-25">
+            <img src="https://californiacleanslateprogram.org/images/redwoods-mist-trail.jpg" alt="Misty Santa Cruz redwood forest trail at dawn with veteran walking in the distance" class="w-full h-full object-cover">
         </div>
-        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
-            <div class="flex justify-center mb-4">
-                <img src="VETDAY.jpg" alt="Honoring Veterans" class="max-w-xs w-full h-auto rounded-xl border border-slate-800 shadow-2xl">
-            </div>
-            <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold tracking-widest bg-teal-500/10 text-teal-400 border border-teal-500/20 uppercase">
-                <i class="fa-solid fa-shield-halved mr-2"></i> The Code: Never Leave a Man Behind
+        <div class="absolute inset-0 bg-gradient-to-b from-brandDark/80 via-brandDark/90 to-brandDark z-10"></div>
+        
+        <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block text-xs uppercase tracking-widest text-brandTeal font-bold mb-4 bg-sky-950/80 border border-brandTeal/30 px-3 py-1.5 rounded-full">
+                Flagship Base Initiative • Santa Cruz County
             </span>
-            <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight uppercase">Frontline Fellowship</h1>
-            <p class="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto font-normal leading-relaxed">
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white mb-6 uppercase">
+                Workforce Readiness &amp; <span class="text-brandTeal">Stabilization Pipeline</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10">
                 The uniform comes off. The heavy silence begins. We cut through the red tape to deliver emergency extractions, wilderness decompression, and real advancement support across Santa Cruz County.
             </p>
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 via-blue-500 via-red-500 via-amber-500 via-slate-500 to-slate-950"></div>
-    </section>
-
-    <!-- Narrative Section: The Raw Truth & The Stakes -->
-    <section class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 shadow-sm space-y-6 text-left">
-            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 uppercase tracking-tight">The Transition Cliff & The Real Enemy</h2>
-            
-            <p class="text-slate-700 leading-relaxed text-lg sm:text-xl font-medium">
-                You pull out of the gate, turn in the badge or the uniform, and watch the doors close. The silence in the truck is heavy. One minute you have a unit, a mission, and a fixed grid; the next minute you're navigating a civilian world that moves at a crawl and speaks a language you don't recognize.
-            </p>
-
-            <p class="text-slate-700 leading-relaxed text-base sm:text-lg">
-                When your nervous system is wired for the field, a stale office feels like a cage. But the real enemy isn't just bureaucracy—it’s the slow poison of <strong>isolation</strong>. When a veteran is left alone with their head after service, compounding with PTSD and the crushing weight of civilian survival, the spiral is fast: self-medication, substance abuse, despair, and the final, preventable tragedy of suicide. 
-            </p>
-
-            <p class="text-slate-700 leading-relaxed text-base sm:text-lg">
-                We aren’t running a comfort retreat. We are running an intervention pipeline. 
-            </p>
-
-            <div class="bg-slate-900 text-slate-100 border-l-4 border-teal-500 p-6 sm:p-8 rounded-r-xl my-6">
-                <strong class="block text-teal-400 uppercase tracking-wider text-sm mb-2">The Code is Life or Death</strong>
-                <p class="text-base sm:text-lg font-medium italic leading-relaxed">We don’t do corporate runarounds, and we don't leave people to rot behind 30-day waiting lists. They clocked in for us when the world was on fire. It’s our turn to clock in for them before it's too late. <strong>Never leave a man behind.</strong></p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#fund" class="bg-brandTeal hover:bg-sky-400 text-brandDark font-bold px-8 py-4 rounded-xl text-lg transition shadow-xl shadow-sky-500/20">
+                    Back The Frontline Fund
+                </a>
+                <a href="#veterans" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-8 py-4 rounded-xl text-lg border border-slate-700 transition">
+                    Honoring Veterans
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Operations Ground Zero: Santa Cruz County -->
-    <section class="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="space-y-8">
-            <div class="text-center sm:text-left">
-                <span class="text-xs sm:text-sm font-bold tracking-widest text-teal-600 uppercase block">Local Infrastructure & Sanctuary</span>
-                <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight mt-1">Operations Ground Zero: Santa Cruz County</h2>
-                <p class="text-slate-700 text-base sm:text-lg mt-2 max-w-2xl leading-relaxed">We are stationed in a region with deep natural sanctuary—and we use our local geography and infrastructure to bring guys back to center, away from clinical waiting rooms and corporate red tape.</p>
+    <!-- Trust & Impact Strip -->
+    <section class="bg-slate-900/60 border-b border-slate-800 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+                <div class="text-2xl sm:text-3xl font-black text-white">100%</div>
+                <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Direct Field Relief</div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xs">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl font-bold mb-4">
-                            <i class="fa-solid fa-hotel"></i>
-                        </div>
-                        <h4 class="font-bold text-lg text-slate-900 mb-3 uppercase tracking-wide">Emergency Extractions</h4>
-                        <p class="text-sm sm:text-base text-slate-700 leading-relaxed">When a veteran hits a critical wall in the elements—caught in freezing weather or severe crisis—our pooled fund deploys immediate hotel vouchers across our local network. No paperwork bottlenecks. Just a safe door that locks, a hot shower, and a night of real, uninterrupted rest.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-teal-500/40 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-md shadow-teal-500/5 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-teal-600 text-white text-[10px] uppercase tracking-widest font-black px-3 py-1 rounded-bl-lg">The Unit</div>
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl font-bold mb-4">
-                            <i class="fa-solid fa-fire"></i>
-                        </div>
-                        <h4 class="font-bold text-lg text-slate-900 mb-3 uppercase tracking-wide">Sanctuary & Community</h4>
-                        <p class="text-sm sm:text-base text-slate-700 leading-relaxed">We leverage our local environment across Santa Cruz County—taking trail hikes deep through the redwoods, gathering around evening beach fires on the Monterey Bay, and breaking bread over coffee at local spots. It’s about getting out of isolation and back into real human connection.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xs">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl font-bold mb-4">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <h4 class="font-bold text-lg text-slate-900 mb-3 uppercase tracking-wide">Tools for the Next Mission</h4>
-                        <p class="text-sm sm:text-base text-slate-700 leading-relaxed">Survival is step one. When a veteran is ready to pivot back into the civilian economy, we back their next move—covering trade school textbooks, job skill materials, or dialing in a professional resume to break through civilian hiring walls.</p>
-                    </div>
-                </div>
+            <div>
+                <div class="text-2xl sm:text-3xl font-black text-brandTeal">0 Days</div>
+                <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Bureaucratic Wait Time</div>
+            </div>
+            <div>
+                <div class="text-2xl sm:text-3xl font-black text-white">Santa Cruz</div>
+                <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Dedicated Local Operations</div>
+            </div>
+            <div>
+                <div class="text-2xl sm:text-3xl font-black text-brandTeal">501(c)(3)</div>
+                <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Tax-Deductible Status</div>
             </div>
         </div>
     </section>
 
-    <!-- Sponsor Section: Pooled General Fund & PayPal Gateway -->
-    <section id="sponsor" class="py-20 bg-slate-900 text-white border-t border-slate-950 mt-12 relative">
-        <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_bottom,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:30px_30px]"></div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
-            <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
-                <span class="text-xs sm:text-sm font-bold tracking-widest text-teal-400 uppercase block">Pooled General Fund & Direct Action</span>
-                <h2 class="text-3xl sm:text-4xl font-black tracking-tight uppercase">Fuel the Fellowship. Fund the Mission.</h2>
-                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-                    No rigid, generic charity tiers. One pooled fund dedicated entirely to direct field operations, emergency hotel extractions, peer fellowship gatherings, and veteran advancement across Santa Cruz County.
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24">
+
+        <!-- The Transition Cliff -->
+        <section id="veterans" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center space-x-2 text-brandTeal font-mono text-sm tracking-widest uppercase">
+                    <span>// American Flag Blueprint</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
+                    The Transition Cliff &amp; <span class="text-brandTeal">The Real Enemy</span>
+                </h2>
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    You pull out of the gate, turn in the badge or the uniform, and watch the doors close. The silence in the truck is heavy. One minute you have a unit, a mission, and a fixed grid; the next minute you're navigating a civilian world that moves at a crawl and speaks a language you don't recognize.
+                </p>
+                <p class="text-slate-300 leading-relaxed">
+                    When your nervous system is wired for the field, a stale office feels like a cage. But the real enemy isn't just bureaucracy—it’s the slow poison of isolation. When a veteran is left alone with their head after service, compounding with PTSD and the crushing weight of civilian survival, the spiral is fast: self-medication, substance abuse, despair, and the final, preventable tragedy of suicide.
+                </p>
+                <div class="p-6 bg-slate-900 border-l-4 border-brandTeal rounded-r-xl">
+                    <p class="text-white font-medium italic">
+                        "We aren’t running a comfort retreat. We are running an intervention pipeline."
+                    </p>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-1 bg-gradient-to-r from-brandTeal to-sky-600 rounded-2xl blur opacity-30"></div>
+                <div class="relative bg-brandSlate border border-slate-800 p-8 rounded-2xl space-y-6 shadow-2xl">
+                    <h3 class="text-xl font-bold text-white uppercase tracking-wider">The Code: Never Leave a Man Behind</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        We don’t do corporate runarounds, and we don't leave people to rot behind 30-day waiting lists. They clocked in for us when the world was on fire. It’s our turn to clock in for them before it's too late.
+                    </p>
+                    <div class="border-t border-slate-800 pt-6 space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-brandTeal mt-2 flex-shrink-0"></div>
+                            <p class="text-sm text-slate-300"><strong class="text-white">Emergency Extractions:</strong> Instant hotel voucher deployments across our local network when crisis hits in the elements.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-brandTeal mt-2 flex-shrink-0"></div>
+                            <p class="text-sm text-slate-300"><strong class="text-white">Wilderness Decompression:</strong> Utilizing the natural topography of Santa Cruz to break isolation and reset neural trauma.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-brandTeal mt-2 flex-shrink-0"></div>
+                            <p class="text-sm text-slate-300"><strong class="text-white">Advancement Support:</strong> Covering trade textbooks, credentials, and civilian workforce entry paths.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Local Terrain & Infrastructure -->
+        <section id="terrain" class="space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-xs uppercase tracking-widest text-brandTeal font-mono">Operations Ground Zero</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight">Santa Cruz County Terrain &amp; Tribe</h2>
+                <p class="text-slate-300">
+                    We are stationed in one of the most naturally restorative landscapes in the country—and we use every inch of it to bring our guys back to center, away from corporate boardrooms and clinical waiting rooms.
                 </p>
             </div>
 
-            <div class="max-w-xl mx-auto bg-slate-950 border border-teal-500/40 rounded-3xl p-8 sm:p-12 text-center shadow-2xl relative overflow-hidden space-y-6">
-                <div class="absolute top-0 right-0 bg-teal-500 text-slate-950 text-xs uppercase tracking-widest font-black px-3.5 py-1.5 rounded-bl-xl">Direct Impact Pool</div>
-                
-                <div class="space-y-3">
-                    <span class="text-teal-400 font-bold uppercase tracking-widest text-xs sm:text-sm">Frontline Fellowship General Relief</span>
-                    <h3 class="text-3xl sm:text-4xl font-black text-white">Back the Mission Today</h3>
-                    <p class="text-sm sm:text-base text-slate-300 max-w-md mx-auto leading-relaxed">
-                        Your contribution goes straight into active Santa Cruz relief lines: securing an emergency hotel voucher tonight, fueling a beach fire fellowship gathering, or stocking trade textbooks for a veteran's next chapter.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brandSlate border border-slate-800 rounded-2xl p-8 space-y-4 hover:border-brandTeid transition">
+                    <div class="w-12 h-12 rounded-xl bg-sky-950 border border-brandTeal/30 flex items-center justify-center text-brandTeal font-bold text-xl">01</div>
+                    <h3 class="text-xl font-bold text-white uppercase">Emergency Extractions</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        When a veteran hits a critical wall in the elements—caught in freezing weather or severe crisis—our pooled fund deploys immediate hotel vouchers across our local network. No paperwork bottlenecks. Just a safe door that locks, a hot shower, and a night of real, uninterrupted rest.
                     </p>
+                    <div class="pt-2 text-xs font-mono text-brandTeal">IMAGE: Safe Hotel Refuge Door</div>
                 </div>
 
-                <div class="pt-4">
-                    <a href="https://www.paypal.com/ncp/payment/9XEPJM8LRUEN2" target="_blank" class="block w-full text-center bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-400 hover:to-teal-500 text-slate-950 font-black text-sm uppercase tracking-widest py-5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
-                        Back The Frontline Fund <i class="fa-brands fa-paypal ml-1.5 text-base"></i>
-                    </a>
-                    <span class="block text-center text-xs text-slate-400 mt-4 italic">100% Tax-Deductible Program Contribution &bull; Managed via SCCCU Accounts</span>
+                <!-- Card 2 -->
+                <div class="bg-brandSlate border border-slate-800 rounded-2xl p-8 space-y-4 hover:border-brandTeal transition">
+                    <div class="w-12 h-12 rounded-xl bg-sky-950 border border-brandTeal/30 flex items-center justify-center text-brandTeal font-bold text-xl">02</div>
+                    <h3 class="text-xl font-bold text-white uppercase">The Terrain &amp; Tribe</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        We leverage our backyard across Santa Cruz County—taking trail hikes deep through the redwoods, gathering around evening beach fires on the Monterey Bay, and breaking bread over coffee at local spots. It’s about getting out of isolation and back into the unit.
+                    </p>
+                    <div class="pt-2 text-xs font-mono text-brandTeal">IMAGE: Beach Fire Fellowship Gathering</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brandSlate border border-slate-800 rounded-2xl p-8 space-y-4 hover:border-brandTeal transition">
+                    <div class="w-12 h-12 rounded-xl bg-sky-950 border border-brandTeal/30 flex items-center justify-center text-brandTeal font-bold text-xl">03</div>
+                    <h3 class="text-xl font-bold text-white uppercase">Tools for the Next Mission</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Survival is step one. When a veteran is ready to pivot back into the civilian economy, we back their next move—covering trade school textbooks, job skill materials, or dialing in a professional resume to break through civilian hiring walls.
+                    </p>
+                    <div class="pt-2 text-xs font-mono text-brandTeal">IMAGE: Workforce Readiness &amp; Trade Tools</div>
                 </div>
             </div>
+        </section>
 
-            <div class="pt-10 text-center">
-                <a href="mailto:Partnerships@californiacleanslateprogram.org?subject=Frontline%20Fellowship%20Inquiry" class="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white text-sm font-black uppercase tracking-wider px-8 py-4 rounded-xl transition shadow-lg">
-                    Connect With Our Fellowship Team <i class="fa-solid fa-envelope ml-2.5 text-xs"></i>
-                </a>
-            </div>
+        <!-- Pooled General Fund & Donation Portal -->
+        <section id="fund" class="bg-gradient-to-br from-slate-900 to-brandSlate border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brandTeal/5 rounded-full blur-3xl pointer-events-none"></div>
             
-            <div class="max-w-3xl mx-auto mt-16 text-xs sm:text-sm text-slate-400 text-center border-t border-slate-800/60 pt-8 leading-relaxed italic">
-                The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. Contributions are fully tax-deductible under IRC Section 170. No goods, commercial products, or direct services are provided in exchange for financial support. Legal Notice: The Frontline Fellowship operates strictly as a charitable human-welfare and educational stabilization fund. All distributed funds are managed as direct philanthropic emergency relief grants and stabilization allocations, ensuring full adherence to federal tax guidelines and nonprofit provisions without employment liabilities.
+            <div class="max-w-3xl mx-auto text-center space-y-6 relative z-10">
+                <span class="text-xs uppercase tracking-widest text-brandTeal font-mono bg-sky-950 border border-brandTeal/30 px-3 py-1.5 rounded-full inline-block">
+                    Direct Action Pipeline
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
+                    Fuel the Fellowship. <span class="text-brandTeal">Fund the Mission.</span>
+                </h2>
+                <p class="text-slate-300 text-lg leading-relaxed">
+                    No rigid, generic charity tiers. One pooled fund dedicated entirely to direct field operations, emergency hotel extractions, peer fellowship gatherings, and veteran advancement across Santa Cruz County.
+                </p>
+
+                <div class="bg-brandDark/80 border border-slate-800 rounded-2xl p-6 text-left space-y-4">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-brandTeal">Direct Impact Pool Allocation</h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brandTeal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+<span>Securing an emergency hotel voucher tonight in Santa Cruz County</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brandTeal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Fueling beach fire fellowship gatherings and trailhead decompression sessions</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brandTeal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Stocking trade school textbooks and career transition assets for veterans</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <!-- Standard PayPal / Donation Button Integration -->
+                    <a href="https://www.paypal.com/donate" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-brandTeal hover:bg-sky-400 text-brandDark font-extrabold px-10 py-4 rounded-xl text-lg transition shadow-xl shadow-sky-500/20 text-center uppercase tracking-wide">
+                        Back The Frontline Fund
+                    </a>
+                </div>
+                <p class="text-xs text-slate-400 font-mono">
+                    100% Tax-Deductible Program Contribution • Managed via SCCCU Accounts
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 py-12 text-slate-600 text-sm font-medium text-center space-y-2">
-        <p>&copy; 2026 California Clean Slate Program. All Rights Reserved.</p>
-        <p class="text-teal-600 font-bold tracking-wider uppercase text-xs">Mobile Hygiene & Stabilization Utility &bull; Watershed Preservation &bull; Santa Cruz County</p>
+    <footer class="border-t border-slate-800 bg-brandDark text-slate-400 text-xs py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-800 pb-8 gap-4">
+                <div class="space-y-1 text-center md:text-left">
+                    <div class="text-white font-bold text-sm tracking-wider uppercase">California Clean Slate Program</div>
+                    <div>Mobile Hygiene &amp; Stabilization Utility • Watershed Preservation • Santa Cruz County</div>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="/" class="hover:text-brandTeal transition">Home</a>
+                    <a href="#continuum" class="hover:text-brandTeal transition">Our Continuum</a>
+                    <a href="#terrain" class="hover:text-brandTeal transition">Terrain &amp; Tribe</a>
+                    <a href="#fund" class="hover:text-brandTeal transition">Back The Mission</a>
+                </div>
+            </div>
+            
+            <div class="space-y-4 max-w-4xl text-slate-400 leading-relaxed">
+                <p>
+                    The California Clean Slate Program is a registered California non-profit corporation and a recognized 501(c)(3) public charity. Contributions are fully tax-deductible under IRC Section 170. No goods, commercial products, or direct services are provided in exchange for financial support.
+                </p>
+                <p>
+                    <strong class="text-slate-300">Legal Notice:</strong> The Frontline Fellowship operates strictly as a charitable human-welfare and educational stabilization fund. All distributed funds are managed as direct philanthropic emergency relief grants and stabilization allocations, ensuring full adherence to federal tax guidelines and nonprofit provisions without employment liabilities.
+                </p>
+                <p class="font-mono text-slate-300">
+                    &copy; 2026 California Clean Slate Program. All Rights Reserved. UEI: UEBPQDK1L7E7
+                </p>
+            </div>
+        </div>
     </footer>
 
 </body>
